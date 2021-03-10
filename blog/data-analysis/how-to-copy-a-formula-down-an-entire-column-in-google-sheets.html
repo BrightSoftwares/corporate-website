@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/img/logos/large/brightsoftwares-dark.png">
+
+<!-- The favicon items -->
+<link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon.ico/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon.ico/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon.ico/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon.ico/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon.ico/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon.ico/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon.ico/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon.ico/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon.ico/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicon.ico/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon.ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon.ico/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon.ico/favicon-16x16.png">
+<link rel="manifest" href="../assets/favicon.ico/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="../assets/favicon.ico/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>How to Copy a Formula Down an Entire Column in Google Sheets | Bright Softwares</title>
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>How to Copy a Formula Down an Entire Column in Google Sheets | Bright Softwares</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="How to Copy a Formula Down an Entire Column in Google Sheets" />
+<meta name="author" content="Full" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="You are working inside a Google Spreadsheet where a formula needs to copied down to the last row of the sheet. You also need the formula to be added automatically when a new row is added to the Google Sheet." />
+<meta property="og:description" content="You are working inside a Google Spreadsheet where a formula needs to copied down to the last row of the sheet. You also need the formula to be added automatically when a new row is added to the Google Sheet." />
+<link rel="canonical" href="https://bright-softwares.com/blog/data-analysis/how-to-copy-a-formula-down-an-entire-column-in-google-sheets" />
+<meta property="og:url" content="https://bright-softwares.com/blog/data-analysis/how-to-copy-a-formula-down-an-entire-column-in-google-sheets" />
+<meta property="og:site_name" content="Bright Softwares" />
+<meta property="og:image" content="https://sergioafanou.github.io/blog/assets/images/12.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-12T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://sergioafanou.github.io/blog/assets/images/12.jpg" />
+<meta property="twitter:title" content="How to Copy a Formula Down an Entire Column in Google Sheets" />
+<script type="application/ld+json">
+{"description":"You are working inside a Google Spreadsheet where a formula needs to copied down to the last row of the sheet. You also need the formula to be added automatically when a new row is added to the Google Sheet.","url":"https://bright-softwares.com/blog/data-analysis/how-to-copy-a-formula-down-an-entire-column-in-google-sheets","@type":"BlogPosting","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://bright-softwares.com/img/logos/large/brightsoftwares-light.png"},"name":"Full"},"headline":"How to Copy a Formula Down an Entire Column in Google Sheets","dateModified":"2020-02-12T00:00:00+00:00","datePublished":"2020-02-12T00:00:00+00:00","image":"https://sergioafanou.github.io/blog/assets/images/12.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://bright-softwares.com/blog/data-analysis/how-to-copy-a-formula-down-an-entire-column-in-google-sheets"},"author":{"@type":"Person","name":"Full"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+<!-- change your GA id in _config.yml -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-134921119-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/img/logos/large/brightsoftwares-dark.png" alt="Bright Softwares">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/#services">Services</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#portfolio">Portfolio</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/blog/index.html">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#team">Team</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#contact">Contact</a>
+                </li>
+
+                <!--
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/"> Docs</a>
+                </li>
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-wordpress/"><i class="fab fa-wordpress-simple"></i> WP Version</a>
+                </li>
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-ghost/"><i class="fab fa-snapchat-ghost"></i> Ghost Version</a>
+                </li>
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://github.com/wowthemesnet/mediumish-theme-jekyll"><i class="fab fa-github"></i> Fork on Github</a>
+                </li>
+                -->
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<!-- <div class="mainheading">
+    <h1 class="sitetitle">Bright Softwares</h1>
+    <p class="lead">
+        We provide solutions to our customers challenges. Our teams based in Paris and Lomé provide high value expertise to engineer the best solutions.
+    </p>
+</div>
+-->
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=How to Copy a Formula Down an Entire Column in Google Sheets&url=https://bright-softwares.com/blog/data-analysis/how-to-copy-a-formula-down-an-entire-column-in-google-sheets" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=https://bright-softwares.com/blog/data-analysis/how-to-copy-a-formula-down-an-entire-column-in-google-sheets" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://bright-softwares.com/blog/data-analysis/how-to-copy-a-formula-down-an-entire-column-in-google-sheets" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+
+    </ul>
+    
+    <div class="sep">
+    </div>
+    <ul>
+        <li>
+        <a class="small smoothscroll" href="#disqus_thread"></a>
+        </li>
+    </ul>
+    
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/?s=250&d=mm&r=x" alt="">
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark" href=""></a><a target="_blank" href="" class="btn follow">Follow</a>
+                        <span class="author-description"></span>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">How to Copy a Formula Down an Entire Column in Google Sheets</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid" src="https://sergioafanou.github.io/blog/assets/images/12.jpg" alt="How to Copy a Formula Down an Entire Column in Google Sheets">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>You are working inside a Google Spreadsheet where a formula needs to copied down to the last row of the sheet. You also need the formula to be added automatically when a new row is added to the Google Sheet.
+There are several ways to solve this problem.</p>
+<h1 id="copy-formula-down-in-google-sheets">Copy Formula Down in Google Sheets</h1>
+
+<p>The easiest approach to copy down formulas is to use the fill handle in Google Sheets. Write your formula in the first row of your spreadsheet, and then point your mouse to the lower right corner of the formula cell.</p>
+
+<p>The pointer changes into a fill handle (black plus symbol) that you can drag to the last row of the sheet. The fill handle will not just copy down the formulas to all the adjacent cells but also copies the visual formatting.
+If you need to copy the formulas across cells but sans any formatting, select the cell that contains the formatting and press Ctrl+C to copy it to the clipboard. Next, select the range where that formula needs to applied, right-click, choose Paste Special and Paste Formula only.</p>
+
+<h1 id="apply-formula-to-the-entire-column-in-google-sheets">Apply Formula to the Entire Column in Google Sheets</h1>
+
+<p>If you have hundreds of rows in a Google Spreadsheet and you want to apply the same formula to all rows of a particular column, there’s a more efficient solution than copy-paste - Array Formulas.
+Highlight the first cell in the column and type the formula as earlier. However, instead of specifying a single cell as a parameter, we’ll specify the entire column using the B2:B notation (start from cell B2 and go all the way down to the last row of column B).
+Then press Ctrl+Shift+Enter, or Cmd+Shift+Enter on Mac, and Google Sheets will automatically surround your formula with ARRAYFORMULA function.</p>
+
+<p>Thus, we could apply the formula to the entire column of the spreadsheet with only a single cell. Array Formulas are more efficient as they process a batch of rows in one go. They are also easier to maintain as you only need to modify a single cell to edit the formula.
+One issue that you may have noticed with the above formulae is that it applies to every row in the column where you have only want to add formulas to rows that contain data and skip the blank rows.
+This can be done by adding an IF contain to our ARRAYFORMULA so that it doesn’t apply the formula the any of the blank rows.
+Google Spreadsheet offers two functions to help test whether a cell is empty or now.
+ISBLANK(A1) - Returns TRUE if the referenced cell is empty.
+LEN(A1) &lt;&gt; 0 - Returns TRUE if the referenced cell not empty, FALSE otherwise
+Our modified Array Formulas would therefore read:</p>
+<h2 id="using-isblankcell-reference">Using ISBLANK(Cell Reference):</h2>
+
+<p>There are several other ways to test if a cell is blank or not:</p>
+
+<p>=ArrayFormula(IF(ISBLANK(B2:B), “”, ROUND(B2:B<em>18%, 2)))
+=ArrayFormula(IF(LEN(B2:B)&lt;&gt;0, ROUND(B2:B</em>18%, 2), “”))
+=ArrayFormula(IF(B2:B=””, “”, ROUND(B2:B*18%, 2)))</p>
+
+<h3 id="use-array-formulas-inside-column-headers">Use Array Formulas inside Column Headers</h3>
+
+<p>In our previous examples, the text of the column titles (like Tax, Total Amount) was pre-populated and the formulas were only added to the first row of the dataset.
+We can further improve our formula so that they can be applied to the column header itself. If the index of the current row is 1, calculated using the ROW() function, the formula outputs the column title else it performs the calculation using the formula.
+=ArrayFormula(IF(ROW(B:B)=1,”Tax”,IF(ISBLANK(B:B),”“,ROUND(B:B*18%, 2))))</p>
+
+<h3 id="auto-fill-formulas-into-google-form-submissions">Auto Fill Formulas into Google Form Submissions</h3>
+
+<p>ARRAYFORMULA functions are particularly useful for Google Forms when the form responses are getting saved inside a Google Sheet. You cannot do live calculations inside Google Forms but they can be performed inside the spreadsheet that is collecting the responses.
+You can create new columns inside the Google Spreadsheet and apply the ARRAYFORMULA to the first row of the added columns.
+When a new form submission is received, a new row would be added to the Google Sheet and the formulas would be cloned and automatically applied to the new rows without you have to copy-paste stuff.</p>
+
+<h3 id="how-to-use-vlookup-inside-arrayformula">How to Use VLOOKUP inside ARRAYFORMULA</h3>
+
+<p>You can combine ARRAYFORMULA with VLOOKUP to quickly perform a lookup across an entire column.
+Say you have a “Fruits” sheet that lists the fruit names in column A and the corresponding prices in column B. The second sheet “Orders” has fruit names in column A, the quantity in column B and you are supposed to calculate the order amount in column C.</p>
+
+<p>=ArrayFormula(
+  IF(ROW(A:A)=1,
+  “Total”,
+  IF(NOT(ISBLANK(A:A)), VLOOKUP(A:A, Fruits!A2:B6, 2, FALSE) * B:B, “”)))</p>
+
+<p>In simple English, if the row of the current cell is 1, output the column title in plain text. If the row is greater than 1 and the column A of the current row is not empty, perform a VLOOKUP to fetch the price of the item from the Fruits sheet. Then multiply that price with the quantity in cell B and output the value in cell C.
+If your VLOOKUP range is in another Google Spreadsheet, use the IMPORTRANGE() function with the ID of the other Google Sheet.
+Please note that you may have to use semicolons in the spreadsheet formulas instead of commas for some locales.</p>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2020-02-12">12 Feb 2020 (1 year and 3 weeks ago)</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#data-analysis">data-analysis</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="/blog/aws/amazons-t3-who-should-use-it-when-how-and-the-why"> &laquo; Amazon’s T3 – Who should use it, when, how and the why?</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="/blog/aws/migrate-your-current-vps-linode-rackspace-aws-ec2-to-digitalocean">Migrate Your Current VPS (Linode, Rackspace, AWS EC2) to DigitalOcean &raquo; </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+    <div class="container">
+        <div id="comments" class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = ''; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            </div>
+        </div>
+    </div>
+
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+
+</div>
+
+
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#aws">aws (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#data-analysis">data-analysis (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#kubernetes">kubernetes (5)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#docker">docker (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#web-development">web development (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#wordpress">wordpress (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#slack">slack (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ubuntu">ubuntu (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#javascript">javascript (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#database">database (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#productivity">productivity (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#backup-restore">backup-restore (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#fax">fax (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#screenshot">screenshot (1)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © 2021 Bright Softwares 
+            </div>
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+                <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//.disqus.com/count.js"></script>
+
+
+</body>
+</html>

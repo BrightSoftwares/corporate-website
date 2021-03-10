@@ -1,0 +1,1761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bright Softwares</title>
+    <description>We provide solutions to our customers challenges. Our teams based in Paris and Lomé provide high value expertise to engineer the best solutions.</description>
+    <link>https://bright-softwares.com/</link>
+    <atom:link href="https://bright-softwares.com/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 10 Mar 2021 12:02:26 +0000</pubDate>
+    <lastBuildDate>Wed, 10 Mar 2021 12:02:26 +0000</lastBuildDate>
+    <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>How to take a screenshot in Windows</title>        
+        
+        <description>
+        <![CDATA[
+            <img src="https://sergio.afanou.com/assets/images/image-midres-52.jpg" alt="How to take a screenshot in Windows">
+            <h1 id="windows">Windows</h1>
+
+<h2 id="how-do-i-take-a-screenshot">How do I take a screenshot?</h2>
+
+<p>press   PrtScn  =  Windows captures the entire <strong>screen</strong> and copies it to the (invisible) <strong>clipboard</strong>. Note: On some notebooks you have to hold Fn and then press PrtScn instead.     ###  Where can I find that key?</p>
+
+<p>PrtScn ScrLk Pause    Look for this group of keys at the <strong>upper right</strong> of your keyboard. Note: <strong>Print Screen</strong> (PrtScn) might have been abbreviated differently on your keyboard.</p>
+
+<h2 id="how-do-i-take-a-screenshot-of-a-single-window">How do I take a screenshot of a single window?</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> hold down   Alt   and press   PrtScn  =  Windows captures only the currently active **window** and copies it to the **clipboard**.        
+</code></pre></div></div>
+
+<h2 id="how-do-i-take-a-screenshot-of-a-specific-area">How do I take a screenshot of a specific area?</h2>
+
+<p>hold down   ⊞   and   Shift   and press   S  =  Use your mouse to draw a <strong>rectangle</strong> in order to specify what to capture. Windows then copies it to the <strong>clipboard</strong>. Since: Windows 10 Creators Update.        I guess it’s in the <a href="https://how-to-copy-and-paste.appspot.com/">clipboard</a> now.</p>
+
+<h2 id="how-can-i-paste-it-into-a-document-or-something">How can I paste it into a document or something?</h2>
+
+<p>hold down   Ctrl   and press   V  =  Windows pastes the screenshot (that is in the <strong>clipboard</strong>) into a document or image you are currently editing.</p>
+
+<h3 id="where-should-i-paste-it">Where should I paste it?</h3>
+
+<p>I just need a (graphics) file.</p>
+
+<p>Start “Paint”
+Paste
+Save
+type “paint” into the search field</p>
+
+<h2 id="how-do-i-take-a-screenshot-and-have-it-directly-as-a-file">How do I take a screenshot and have it directly as a file?</h2>
+
+<p>Hold down   ⊞   and press   PrtScn  =  Windows (8 or 10) captures the entire <strong>screen</strong> and saves it as a file to your <strong>Pictures</strong> &gt; <strong>Screenshots</strong> folder.</p>
+
+<h2 id="is-there-a-dedicated-program-for-taking-screenshots-how-can-i-find-it">Is there a dedicated program for taking screenshots? How can I find it?</h2>
+
+<p>type “snip” into the search field</p>
+
+        ]]>
+        </description>
+        <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+        <link>https://bright-softwares.com/blog/screenshot/how-to-take-a-screenshot-in-windows</link>
+        <guid isPermaLink="true">https://bright-softwares.com/blog/screenshot/how-to-take-a-screenshot-in-windows</guid>
+        
+        
+        <category>screenshot</category>
+        
+      </item>
+    
+      <item>
+        <title>How to Send and Receive Faxes Online Without a Fax Machine or Phone Line</title>        
+        
+        <description>
+        <![CDATA[
+            <img src="https://sergio.afanou.com/assets/images/image-midres-26.jpg" alt="How to Send and Receive Faxes Online Without a Fax Machine or Phone Line">
+            <p>Some slow-moving businesses and government agencies may not accept documents over email, forcing you to fax them in. If you are forced to send a fax, you can do it from your computer for free.</p>
+
+<h2 id="how-fax-machines-work-and-why-theyre-so-inconvenient">How Fax Machines Work (and Why They’re So Inconvenient)</h2>
+
+<p>This isn’t as easy as it should be. Fax machines are all connected to the plain old telephone lines. When you use a standard fax machine, that fax machine places a phone call to the number you specify. The fax machine at the destination number answers and the document is transmitted over a telephone call.</p>
+
+<p>This process was invented before the Internet and seems laughably archaic at this point. To perform a fax, a person may type up a document, print it out, and scan it into the fax machine which sends it over the phone line. The person receiving the fax may then scan the faxed document and turn it back into a digital file. They’ve come full circle — the document was sent from one computer to another computer with much additional work and lost image quality.</p>
+
+<p>Ideally, you’d be able to submit a document via email or a more secure online method. Many businesses consider fax a secure method of transmitting documents, but it really isn’t — if someone was snooping on the phone line, they could easily intercept all the faxed documents.</p>
+
+<p>There’s no way to connect to a fax machine directly over the Internet, as the fax machine is only connected to telephone lines. To perform a fax online, we’ll need some sort of gateway that accepts documents via the Internet and transmits the document to a fax machine. That’s where the below services come in. Give them a document and they’ll do the annoying work of dialing up the fax machine and sending your document over the telephone line.</p>
+
+<p><img src="https://www.howtogeek.com/wp-content/uploads/2013/07/xjunk-scanner-and-fax-machine.jpg.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.5fEKaNBYh0.jpg" alt="junk-scanner-and-fax-machine" title="junk-scanner-and-fax-machine" /></p>
+
+<h2 id="you-could-fax-with-just-your-computer-but">You Could Fax With Just Your Computer, But…</h2>
+
+<p>You could skip the below services, of course. Microsoft Windows even contains a Fax and Scan application that allows you to send faxes. The catch is that you’d need your computer connected to the phone line — yes, this means that you’d need a dial-up fax modem. You’d also need a landline telephone connection and you’d have to tell people to stay off the phone when you’re sending faxes, just like in the old dial-up Internet days. Of course, if you were faxing a lot, you could pay for a dedicated fax telephone line — this might even be necessary if you were receiving a lot of faxes.</p>
+
+<p>This obviously isn’t ideal. Sure, if you need to send quite a few faxes, go ahead and buy a fax machine or modem and hook it up to your landline. But you probably don’t need to send and receive faxes this often — you hopefully just need to send the occasional fax whenever you bump into an organization that’s stuck in the past.</p>
+
+<h2 id="scan-the-document-or-use-an-existing-digital-file">Scan the Document or Use an Existing Digital File</h2>
+
+<p>The basic process is simple. First, you’ll need to scan the document you want to fax, just as if you were going to send that document over email. if you don’t have a scanner lying around, you may want to try <a href="/">scanning it with your smartphone</a>. If the document is already a file on your computer, congratulations — you don’t have to scan anything.</p>
+
+<p>With the document now in digital form, you can send it along to a service that will do the annoying fax work for you.</p>
+
+<p><img src="https://www.howtogeek.com/wp-content/uploads/2013/07/xscanner.jpg.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.PZ9bsvEbfp.jpg" alt="scanner" title="scanner" /></p>
+
+<h2 id="send-faxes-online-free">Send Faxes Online, Free</h2>
+
+<p>There are so many online fax services out there that it’s hard to make an informed decision about which one to choose. The first thing to consider is what kind of a user you are, how often you’ll be faxing, and what features you need.</p>
+
+<p>If you are going to be sending sensitive faxes all the time, or you work for a company and you’re trying to choose a service, <a href="https://prf.hn/click/camref:1101l3Rga/creativeref:1011l40328/pubref:ct168841">RingCentral Fax</a>, which is partially owned by Cisco and AT&amp;T, is probably the best choice for your needs, especially since they have a lot of great security features and support for multiple users with separate fax lines.</p>
+
+<p>It has all the features you can imagine, including integrations with Outlook, Google Drive, Dropbox, Box, and you can even get a toll-free number. It also has a lot of security features that would be useful for businesses or people that are transmitting secure information.</p>
+
+<p>Of course, if you just want to send a few faxes, you can sign up for one of their cheap plans… and then just cancel after a month or two.</p>
+
+<p><strong>Occasional User</strong></p>
+
+<p>If you do need to send the occasional fax, we recommend signing up for a free trial of <a href="http://www.kqzyfj.com/click-3607085-12001188?sid=ct168841">MyFax</a>, which will let you send up to 100 pages, which is more pages per month than most people have to fax per year. If you do need to fax frequently, you can <a href="http://www.tkqlhce.com/click-3607085-10423449?sid=ct168841">upgrade to a regular plan</a>.</p>
+
+<p><img src="https://www.howtogeek.com/wp-content/uploads/2019/09/ximg_5d702ddff3e50.png.pagespeed.gp+jp+jw+pj+ws+js+rj+rp+rw+ri+cp+md.ic.u-c7GF0Eek.png" alt="" /></p>
+
+<h2 id="receiving-faxes">Receiving Faxes</h2>
+
+<p>If you do need to receive faxes, you’ll have to sign up for a paid service. The service will need to establish a dedicated phone number for your fax line, and that costs money.</p>
+
+<p><a href="https://prf.hn/click/camref:1101l3Rga/creativeref:1011l40328/pubref:ct168841">RingCentral</a>, <a href="http://www.tkqlhce.com/click-3607085-10423449?sid=ct168841">MyFax</a>, and many other services will do this if you pay.</p>
+
+<p>Luckily, you should at least be able to get a free trial —</p>
+
+<p><a href="https://prf.hn/click/camref:1101l3Rga/creativeref:1011l40328/pubref:ct168841">RingCentral</a> offers 30 days of free fax receiving, for example.</p>
+
+<p>There are many fax services to use, and if you just need to send the occasional fax, you can manage to do that for free, but if you want to receive a fax, you’ll end up needing to sign up for a trial account. You can always cancel if you want.</p>
+
+<p>Image Credit: <a href="http://www.flickr.com/photos/mattjiggins/4009310821/">Matt Jiggins on Flickr</a>, <a href="http://www.flickr.com/photos/spiffie/2665155921/">David Voegtle on Flickr</a></p>
+
+
+        ]]>
+        </description>
+        <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+        <link>https://bright-softwares.com/blog/fax/how-to-send-and-receive-faxes-online-without-a-fax-machine-or-phone-line</link>
+        <guid isPermaLink="true">https://bright-softwares.com/blog/fax/how-to-send-and-receive-faxes-online-without-a-fax-machine-or-phone-line</guid>
+        
+        
+        <category>fax</category>
+        
+      </item>
+    
+      <item>
+        <title>Work with Kubernetes with Minikube</title>        
+        
+        <description>
+        <![CDATA[
+            <img src="https://sergio.afanou.com/assets/images/image-midres-38.jpg" alt="Work with Kubernetes with Minikube">
+            <h1 id="installing-kubernetes-with-minikube">Installing Kubernetes with Minikube</h1>
+
+<p>Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster inside a Virtual Machine (VM) on your laptop for users looking to try out Kubernetes or develop with it day-to-day.</p>
+
+<h2 id="minikube-features-">Minikube Features<a href="#minikube-features"> </a></h2>
+
+<p>Minikube supports the following Kubernetes features:</p>
+
+<ul>
+  <li>DNS</li>
+  <li>NodePorts</li>
+  <li>ConfigMaps and Secrets</li>
+  <li>Dashboards</li>
+  <li>Container Runtime: <a href="https://www.docker.com/">Docker</a>, <a href="https://cri-o.io/">CRI-O</a>, and <a href="https://github.com/containerd/containerd">containerd</a></li>
+  <li>Enabling CNI (Container Network Interface)</li>
+  <li>Ingress
+Installation<a href="#installation"> </a>
+——————————</li>
+</ul>
+
+<p>See <a href="/docs/tasks/tools/install-minikube/">Installing Minikube</a>.</p>
+
+<h2 id="quickstart-">Quickstart<a href="#quickstart"> </a></h2>
+
+<p>This brief demo guides you on how to start, use, and delete Minikube locally. Follow the steps given below to start and explore Minikube.</p>
+
+<ol>
+  <li>Start Minikube and create a cluster:</li>
+</ol>
+
+<p>minikube start The output is similar to this:</p>
+
+<p>Starting local Kubernetes cluster… Running pre-create checks… Creating machine… Starting local Kubernetes cluster… For more information on starting your cluster on a specific Kubernetes version, VM, or container runtime, see <a href="#starting-a-cluster">Starting a Cluster</a>.</p>
+
+<ol>
+  <li>Now, you can interact with your cluster using kubectl. For more information, see <a href="#interacting-with-your-cluster">Interacting with Your Cluster</a>.</li>
+</ol>
+
+<p>Let’s create a Kubernetes Deployment using an existing image named echoserver, which is a simple HTTP server and expose it on port 8080 using –port.</p>
+
+<p>kubectl create deployment hello-minikube –image=k8s.gcr.io/echoserver:1.10 The output is similar to this:</p>
+
+<p>deployment.apps/hello-minikube created</p>
+<ol>
+  <li>To access the hello-minikube Deployment, expose it as a Service:</li>
+</ol>
+
+<p>kubectl expose deployment hello-minikube –type=NodePort –port=8080 The option –type=NodePort specifies the type of the Service.</p>
+
+<p>The output is similar to this:</p>
+
+<p>service/hello-minikube exposed</p>
+<ol>
+  <li>The hello-minikube Pod is now launched but you have to wait until the Pod is up before accessing it via the exposed Service.</li>
+</ol>
+
+<p>Check if the Pod is up and running:</p>
+
+<p>kubectl get pod If the output shows the STATUS as ContainerCreating, the Pod is still being created:</p>
+
+<p>NAME READY STATUS RESTARTS AGE hello-minikube-3383150820-vctvh 0/1 ContainerCreating 0 3s If the output shows the STATUS as Running, the Pod is now up and running:</p>
+
+<p>NAME READY STATUS RESTARTS AGE hello-minikube-3383150820-vctvh 1/1 Running 0 13s</p>
+<ol>
+  <li>Get the URL of the exposed Service to view the Service details:</li>
+</ol>
+
+<p>minikube service hello-minikube –url</p>
+<ol>
+  <li>To view the details of your local cluster, copy and paste the URL you got as the output, on your browser.</li>
+</ol>
+
+<p>The output is similar to this:</p>
+
+<p>Hostname: hello-minikube-7c77b68cff-8wdzq Pod Information: -no pod information available- Server values: server_version=nginx: 1.13.3 - lua: 10008 Request Information: client_address=172.17.0.1 method=GET real path=/ query= request_version=1.1 request_scheme=http request_uri=http://192.168.99.100:8080/ Request Headers: accept=<em>/</em> host=192.168.99.100:30674 user-agent=curl/7.47.0 Request Body: -no body in request- If you no longer want the Service and cluster to run, you can delete them.</p>
+
+<ol>
+  <li>Delete the hello-minikube Service:</li>
+</ol>
+
+<p>kubectl delete services hello-minikube The output is similar to this:</p>
+
+<p>service “hello-minikube” deleted</p>
+<ol>
+  <li>Delete the hello-minikube Deployment:</li>
+</ol>
+
+<p>kubectl delete deployment hello-minikube The output is similar to this:</p>
+
+<p>deployment.extensions “hello-minikube” deleted</p>
+<ol>
+  <li>Stop the local Minikube cluster:</li>
+</ol>
+
+<p>minikube stop The output is similar to this:</p>
+
+<p>Stopping “minikube”… “minikube” stopped. For more information, see <a href="#stopping-a-cluster">Stopping a Cluster</a>.</p>
+
+<ol>
+  <li>Delete the local Minikube cluster:</li>
+</ol>
+
+<p>minikube delete The output is similar to this:</p>
+
+<p>Deleting “minikube” … The “minikube” cluster has been deleted. For more information, see <a href="#deleting-a-cluster">Deleting a cluster</a>.</p>
+
+<h2 id="managing-your-cluster-">Managing your Cluster<a href="#managing-your-cluster"> </a></h2>
+
+<h3 id="starting-a-cluster-">Starting a Cluster<a href="#starting-a-cluster"> </a></h3>
+
+<p>The minikube start command can be used to start your cluster. This command creates and configures a Virtual Machine that runs a single-node Kubernetes cluster. This command also configures your <a href="/docs/reference/kubectl/overview/">kubectl</a> installation to communicate with this cluster.</p>
+
+<blockquote>
+  <p><strong>Note:</strong>If you are behind a web proxy, you need to pass this information to the minikube start command:</p>
+
+  <p>https_proxy=<my proxy=""> minikube start --docker-env http\_proxy=<my proxy=""> --docker-env https\_proxy=<my proxy=""> --docker-env no\_proxy=192.168.99.0/24 Unfortunately, setting the environment variables alone does not work.</my></my></my></p>
+
+  <p>Minikube also creates a “minikube” context, and sets it to default in kubectl. To switch back to this context, run this command: kubectl config use-context minikube.</p>
+
+  <h4 id="specifying-the-kubernetes-version-">Specifying the Kubernetes version<a href="#specifying-the-kubernetes-version"> </a></h4>
+</blockquote>
+
+<p>You can specify the version of Kubernetes for Minikube to use by adding the –kubernetes-version string to the minikube start command. For example, to run version v1.18.0, you would run the following:</p>
+
+<p>minikube start –kubernetes-version v1.18.0 #### Specifying the VM driver<a href="#specifying-the-vm-driver"> </a></p>
+
+<p>You can change the VM driver by adding the –driver=&lt;enter_driver_name&gt; flag to minikube start. For example the command would be.</p>
+
+<p>minikube start –driver=&lt;driver_name&gt; Minikube supports the following drivers:</p>
+
+<blockquote>
+  <p><strong>Note:</strong> See <a href="https://minikube.sigs.k8s.io/docs/reference/drivers/">DRIVERS</a> for details on supported drivers and how to install plugins.* docker (<a href="https://minikube.sigs.k8s.io/docs/drivers/docker/">driver installation</a>)</p>
+  <ul>
+    <li>virtualbox (<a href="https://minikube.sigs.k8s.io/docs/drivers/virtualbox/">driver installation</a>)</li>
+    <li>podman (<a href="https://minikube.sigs.k8s.io/docs/drivers/podman/">driver installation</a>) (EXPERIMENTAL)</li>
+    <li>vmwarefusion</li>
+    <li>kvm2 (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/kvm2/">driver installation</a>)</li>
+    <li>hyperkit (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/hyperkit/">driver installation</a>)</li>
+    <li>hyperv (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/hyperv/">driver installation</a>) Note that the IP below is dynamic and can change. It can be retrieved with minikube ip.</li>
+    <li>vmware (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/vmware/">driver installation</a>) (VMware unified driver)</li>
+    <li>parallels (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/parallels/">driver installation</a>)</li>
+    <li>none (Runs the Kubernetes components on the host and not in a virtual machine. You need to be running Linux and to have <a href="https://docs.docker.com/engine/">DockerDocker is a software technology providing operating-system-level virtualization also known as containers.</a> installed.)</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p><strong>Caution:</strong> If you use the none driver, some Kubernetes components run as privileged containers that have side effects outside of the Minikube environment. Those side effects mean that the none driver is not recommended for personal workstations.#### Starting a cluster on alternative container runtimes<a href="#starting-a-cluster-on-alternative-container-runtimes"> </a></p>
+</blockquote>
+
+<p>You can start Minikube on the following container runtimes.</p>
+
+<ul>
+  <li><a href="#container-runtimes-0">containerd</a></li>
+  <li><a href="#container-runtimes-1">CRI-O</a>
+To use <a href="https://github.com/containerd/containerd">containerd</a> as the container runtime, run:</li>
+</ul>
+
+<p>minikube start \  –network-plugin=cni \  –enable-default-cni \  –container-runtime=containerd \  –bootstrapper=kubeadm Or you can use the extended version:</p>
+
+<p>minikube start \  –network-plugin=cni \  –enable-default-cni \  –extra-config=kubelet.container-runtime=remote \  –extra-config=kubelet.container-runtime-endpoint=unix:///run/containerd/containerd.sock \  –extra-config=kubelet.image-service-endpoint=unix:///run/containerd/containerd.sock \  –bootstrapper=kubeadm To use <a href="https://cri-o.io/">CRI-O</a> as the container runtime, run:</p>
+
+<p>minikube start \  –network-plugin=cni \  –enable-default-cni \  –container-runtime=cri-o \  –bootstrapper=kubeadm Or you can use the extended version:</p>
+
+<p>minikube start \  –network-plugin=cni \  –enable-default-cni \  –extra-config=kubelet.container-runtime=remote \  –extra-config=kubelet.container-runtime-endpoint=/var/run/crio.sock \  –extra-config=kubelet.image-service-endpoint=/var/run/crio.sock \  –bootstrapper=kubeadm $(function(){$(“#container-runtimes”).tabs();});#### Use local images by re-using the Docker daemon<a href="#use-local-images-by-re-using-the-docker-daemon"> </a></p>
+
+<p>When using a single VM for Kubernetes, it’s useful to reuse Minikube’s built-in Docker daemon. Reusing the built-in daemon means you don’t have to build a Docker registry on your host machine and push the image into it. Instead, you can build inside the same Docker daemon as Minikube, which speeds up local experiments.</p>
+
+<blockquote>
+  <p><strong>Note:</strong> Be sure to tag your Docker image with something other than latest and use that tag to pull the image. Because :latest is the default value, with a corresponding default image pull policy of Always, an image pull error (ErrImagePull) eventually results if you do not have the Docker image in the default Docker registry (usually DockerHub).To work with the Docker daemon on your Mac/Linux host, run the last line from minikube docker-env.</p>
+</blockquote>
+
+<p>You can now use Docker at the command line of your host Mac/Linux machine to communicate with the Docker daemon inside the Minikube VM:</p>
+
+<p>docker ps</p>
+<blockquote>
+  <p><strong>Note:</strong>On Centos 7, Docker may report the following error:</p>
+
+  <p>Could not read CA certificate “/etc/docker/ca.pem”: open /etc/docker/ca.pem: no such file or directory You can fix this by updating /etc/sysconfig/docker to ensure that Minikube’s environment changes are respected:</p>
+
+  <p>&lt; DOCKER_CERT_PATH=/etc/docker — &gt; if [ -z “${DOCKER_CERT_PATH}” ]; then &gt; DOCKER_CERT_PATH=/etc/docker &gt; fi ### Configuring Kubernetes<a href="#configuring-kubernetes"> </a></p>
+</blockquote>
+
+<p>Minikube has a “configurator” feature that allows users to configure the Kubernetes components with arbitrary values. To use this feature, you can use the –extra-config flag on the minikube start command.</p>
+
+<p>This flag is repeated, so you can pass it several times with several different values to set multiple options.</p>
+
+<p>This flag takes a string of the form component.key=value, where component is one of the strings from the below list, key is a value on the configuration struct and value is the value to set.</p>
+
+<p>Valid keys can be found by examining the documentation for the Kubernetes componentconfigs for each component. Here is the documentation for each supported configuration:</p>
+
+<ul>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/pkg/kubelet/apis/config#KubeletConfiguration">kubelet</a></li>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/cmd/kube-apiserver/app/options#ServerRunOptions">apiserver</a></li>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/pkg/proxy/apis/config#KubeProxyConfiguration">proxy</a></li>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/pkg/controller/apis/config#KubeControllerManagerConfiguration">controller-manager</a></li>
+  <li><a href="https://godoc.org/github.com/coreos/etcd/etcdserver#ServerConfig">etcd</a></li>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/pkg/scheduler/apis/config#KubeSchedulerConfiguration">scheduler</a>
+    <h4 id="examples-">Examples<a href="#examples"> </a></h4>
+  </li>
+</ul>
+
+<p>To change the MaxPods setting to 5 on the Kubelet, pass this flag: –extra-config=kubelet.MaxPods=5.</p>
+
+<p>This feature also supports nested structs. To change the LeaderElection.LeaderElect setting to true on the scheduler, pass this flag: –extra-config=scheduler.LeaderElection.LeaderElect=true.</p>
+
+<p>To set the AuthorizationMode on the apiserver to RBAC, you can use: –extra-config=apiserver.authorization-mode=RBAC.</p>
+
+<h3 id="stopping-a-cluster-">Stopping a Cluster<a href="#stopping-a-cluster"> </a></h3>
+
+<p>The minikube stop command can be used to stop your cluster. This command shuts down the Minikube Virtual Machine, but preserves all cluster state and data. Starting the cluster again will restore it to its previous state.</p>
+
+<h3 id="deleting-a-cluster-">Deleting a Cluster<a href="#deleting-a-cluster"> </a></h3>
+
+<p>The minikube delete command can be used to delete your cluster. This command shuts down and deletes the Minikube Virtual Machine. No data or state is preserved.</p>
+
+<h3 id="upgrading-minikube-">Upgrading Minikube<a href="#upgrading-minikube"> </a></h3>
+
+<p>If you are using macOS and <a href="https://brew.sh/">Brew Package Manager</a> is installed run:</p>
+
+<h2 id="brew-update-brew-upgrade-minikube-interacting-with-your-cluster-">brew update brew upgrade minikube Interacting with Your Cluster<a href="#interacting-with-your-cluster"> </a></h2>
+
+<h3 id="kubectl-">Kubectl<a href="#kubectl"> </a></h3>
+
+<p>The minikube start command creates a <a href="/docs/reference/generated/kubectl/kubectl-commands#-em-set-context-em-">kubectl context</a> called “minikube”. This context contains the configuration to communicate with your Minikube cluster.</p>
+
+<p>Minikube sets this context to default automatically, but if you need to switch back to it in the future, run:</p>
+
+<p>kubectl config use-context minikube</p>
+
+<p>Or pass the context on each command like this:</p>
+
+<p>kubectl get pods –context=minikube</p>
+
+<h3 id="dashboard-">Dashboard<a href="#dashboard"> </a></h3>
+
+<p>To access the <a href="/docs/tasks/access-application-cluster/web-ui-dashboard/">Kubernetes Dashboard</a>, run this command in a shell after starting Minikube to get the address:</p>
+
+<p>minikube dashboard ### Services<a href="#services"> </a></p>
+
+<p>To access a Service exposed via a node port, run this command in a shell after starting Minikube to get the address:</p>
+
+<h2 id="minikube-service--n-namespace-url-name-networking-">minikube service [-n NAMESPACE] [–url] NAME Networking<a href="#networking"> </a></h2>
+
+<p>The Minikube VM is exposed to the host system via a host-only IP address, that can be obtained with the minikube ip command. Any services of type NodePort can be accessed over that IP address, on the NodePort.</p>
+
+<p>To determine the NodePort for your service, you can use a kubectl command like this:</p>
+
+<p>kubectl get service $SERVICE –output=’jsonpath=”{.spec.ports[0].nodePort}”’</p>
+
+<h2 id="persistent-volumes-">Persistent Volumes<a href="#persistent-volumes"> </a></h2>
+
+<p>Minikube supports <a href="/docs/concepts/storage/persistent-volumes/">PersistentVolumes</a> of type hostPath. These PersistentVolumes are mapped to a directory inside the Minikube VM.</p>
+
+<p>The Minikube VM boots into a tmpfs, so most directories will not be persisted across reboots (minikube stop). However, Minikube is configured to persist files stored under the following host directories:</p>
+
+<ul>
+  <li>/data</li>
+  <li>/var/lib/minikube</li>
+  <li>/var/lib/docker
+Here is an example PersistentVolume config to persist data in the /data directory:</li>
+</ul>
+
+<h2 id="apiversion-v1-kind-persistentvolume-metadata--name-pv0001-spec--accessmodes----readwriteonce--capacity--storage-5gi--hostpath--path-datapv0001-mounted-host-folders-">apiVersion: v1 kind: PersistentVolume metadata:  name: pv0001 spec:  accessModes:  - ReadWriteOnce  capacity:  storage: 5Gi  hostPath:  path: /data/pv0001/ Mounted Host Folders<a href="#mounted-host-folders"> </a></h2>
+
+<p>Some drivers will mount a host folder within the VM so that you can easily share files between the VM and host. These are not configurable at the moment and different for the driver and OS you are using.</p>
+
+<blockquote>
+  <h2 id="note-host-folder-sharing-is-not-implemented-in-the-kvm-driver-yetdriveroshostfoldervmvirtualboxlinuxhomehosthomevirtualboxmacosusersusersvirtualboxwindowscuserscusersvmware-fusionmacosusersmnthgfsusersxhyvemacosusersusersprivate-container-registries-"><strong>Note:</strong> Host folder sharing is not implemented in the KVM driver yet.DriverOSHostFolderVMVirtualBoxLinux/home/hosthomeVirtualBoxmacOS/Users/UsersVirtualBoxWindowsC://Users/c/UsersVMware FusionmacOS/Users/mnt/hgfs/UsersXhyvemacOS/Users/UsersPrivate Container Registries<a href="#private-container-registries"> </a></h2>
+</blockquote>
+
+<p>To access a private container registry, follow the steps on <a href="/docs/concepts/containers/images/">this page</a>.</p>
+
+<p>We recommend you use ImagePullSecrets, but if you would like to configure access on the Minikube VM you can place the .dockercfg in the /home/docker directory or the config.json in the /home/docker/.docker directory.</p>
+
+<h2 id="add-ons-">Add-ons<a href="#add-ons"> </a></h2>
+
+<p>In order to have Minikube properly start or restart custom addons, place the addons you wish to be launched with Minikube in the ~/.minikube/addons directory. Addons in this folder will be moved to the Minikube VM and launched each time Minikube is started or restarted.</p>
+
+<h2 id="using-minikube-with-an-http-proxy-">Using Minikube with an HTTP Proxy<a href="#using-minikube-with-an-http-proxy"> </a></h2>
+
+<p>Minikube creates a Virtual Machine that includes Kubernetes and a Docker daemon. When Kubernetes attempts to schedule containers using Docker, the Docker daemon may require external network access to pull containers.</p>
+
+<p>If you are behind an HTTP proxy, you may need to supply Docker with the proxy settings. To do this, pass the required environment variables as flags during minikube start.</p>
+
+<p>For example:</p>
+
+<p>minikube start –docker-env http_proxy=http://$YOURPROXY:PORT \  –docker-env https_proxy=https://$YOURPROXY:PORT If your Virtual Machine address is 192.168.99.100, then chances are your proxy settings will prevent kubectl from directly reaching it. To by-pass proxy configuration for this IP address, you should modify your no_proxy settings. You can do so with:</p>
+
+<h2 id="export-no_proxyno_proxyminikube-ip-known-issues-">export no_proxy=$no_proxy,$(minikube ip) Known Issues<a href="#known-issues"> </a></h2>
+
+<p>Features that require multiple nodes will not work in Minikube.</p>
+
+<h2 id="design-">Design<a href="#design"> </a></h2>
+
+<p>Minikube uses <a href="https://github.com/docker/machine/tree/master/libmachine">libmachine</a> for provisioning VMs, and <a href="https://github.com/kubernetes/kubeadm">kubeadm</a> to provision a Kubernetes cluster.</p>
+
+<p>For more information about Minikube, see the <a href="https://git.k8s.io/community/contributors/design-proposals/cluster-lifecycle/local-cluster-ux.md">proposal</a>.</p>
+
+<h2 id="additional-links-">Additional Links<a href="#additional-links"> </a></h2>
+
+<ul>
+  <li><strong>Goals and Non-Goals</strong>: For the goals and non-goals of the Minikube project, please see our <a href="https://minikube.sigs.k8s.io/docs/contrib/roadmap/">roadmap</a>.</li>
+  <li><strong>Development Guide</strong>: See <a href="https://minikube.sigs.k8s.io/docs/contrib/">Contributing</a> for an overview of how to send pull requests.</li>
+  <li><strong>Building Minikube</strong>: For instructions on how to build/test Minikube from source, see the <a href="https://minikube.sigs.k8s.io/docs/contrib/building/">build guide</a>.</li>
+  <li><strong>Adding a New Dependency</strong>: For instructions on how to add a new dependency to Minikube, see the <a href="https://minikube.sigs.k8s.io/docs/contrib/drivers/">adding dependencies guide</a>.</li>
+  <li><strong>Adding a New Addon</strong>: For instructions on how to add a new addon for Minikube, see the <a href="https://minikube.sigs.k8s.io/docs/contrib/addons/">adding an addon guide</a>.</li>
+  <li><strong>MicroK8s</strong>: Linux users wishing to avoid running a virtual machine may consider <a href="https://microk8s.io/">MicroK8s</a> as an alternative.
+Community<a href="#community"> </a>
+————————</li>
+</ul>
+
+<p>Contributions, questions, and comments are all welcomed and encouraged! Minikube developers hang out on <a href="https://kubernetes.slack.com">Slack</a> in the #minikube channel (get an invitation <a href="https://slack.kubernetes.io/">here</a>). We also have the <a href="https://groups.google.com/forum/#!forum/kubernetes-dev">kubernetes-dev Google Groups mailing list</a>. If you are posting to the list please prefix your subject with “minikube: “.</p>
+
+<h2 id="feedback">Feedback</h2>
+
+<p>Was this page helpful?</p>
+
+<p>Yes NoThanks for the feedback. If you have a specific, answerable question about how to use Kubernetes, ask it on <a href="https://stackoverflow.com/questions/tagged/kubernetes">Stack Overflow</a>. Open an issue in the GitHub repo if you want to <a href="https://github.com/kubernetes/website/issues/new?title=Issue%20with%20k8s.io/docs/setup/learning-environment/minikube/">report a problem</a> or <a href="https://github.com/kubernetes/website/issues/new?title=Improvement%20for%20k8s.io/docs/setup/learning-environment/minikube/">suggest an improvement</a>.</p>
+
+<p>const yes=document.querySelector(‘.feedback–yes’);const no=document.querySelector(‘.feedback–no’);document.querySelectorAll(‘.feedback–link’).forEach(link=&gt;{link.href=link.href+window.location.pathname;});const sendFeedback=(value)=&gt;{if(!gtag){console.log(‘!gtag’);} gtag(‘event’,’click’,{‘event_category’:’Helpful’,’event_label’:window.location.pathname,value});};const disableButtons=()=&gt;{yes.disabled=true;yes.classList.add(‘feedback–button__disabled’);no.disabled=true;no.classList.add(‘feedback–button__disabled’);};yes.addEventListener(‘click’,()=&gt;{sendFeedback(1);disableButtons();document.querySelector(‘.feedback–response’).classList.remove(‘feedback–response__hidden’);});no.addEventListener(‘click’,()=&gt;{sendFeedback(0);disableButtons();document.querySelector(‘.feedback–response’).classList.remove(‘feedback–response__hidden’);});<img src="https://kubernetes-site.appspot.com/UA-36037335-10/GitHub/docs/setup/learning-environment/minikube.md?pixel" alt="Analytics" /></p>
+
+<p>PDRTJS_settings_8345992={“id”:”8345992”,”unique_id”:”\/docs\/setup\/learning-environment\/minikube\/”,”title”:”Installing Kubernetes with Minikube”,”permalink”:”https:\/\/kubernetes.io\/docs\/setup\/learning-environment\/minikube\/”};(function(d,c,j){if(!document.getElementById(j)){var pd=d.createElement(c),s;pd.id=j;pd.src=(“https:”==document.location.protocol)?”https://polldaddy.com/js/rating/rating.js”:”http://i0.poll.fm/js/rating/rating.js”;s=document.getElementsByTagName(c)[0];s.parentNode.insertBefore(pd,s);}}(document,”script”,”pd-rating-js”));Create an Issue <a href="https://github.com/kubernetes/website/edit/master/content/en/docs/setup/learning-environment/minikube.md">Edit This Page</a>Page last modified on July 20, 2020 at 4:17 PM PST by <a href="https://github.com/kubernetes/website/commit/c4add100ffd74508886312f7170c1c2f0cba9845/">Replace redirected links with the real targets</a> (<a href="https://github.com/kubernetes/website/commits/master/content/en/docs/setup/learning-environment/minikube.md">Page History</a>)</p>
+
+        ]]>
+        </description>
+        <pubDate>Thu, 13 Aug 2020 00:00:00 +0000</pubDate>
+        <link>https://bright-softwares.com/blog/kubernetes/work-with-kubernetes-with-minikube</link>
+        <guid isPermaLink="true">https://bright-softwares.com/blog/kubernetes/work-with-kubernetes-with-minikube</guid>
+        
+        
+        <category>kubernetes</category>
+        
+      </item>
+    
+      <item>
+        <title>Play with Kubernetes with Minikube</title>        
+        
+        <description>
+        <![CDATA[
+            <img src="https://sergio.afanou.com/assets/images/image-midres-38.jpg" alt="Play with Kubernetes with Minikube">
+            <h1 id="installing-kubernetes-with-minikube">Installing Kubernetes with Minikube</h1>
+
+<p>Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster inside a Virtual Machine (VM) on your laptop for users looking to try out Kubernetes or develop with it day-to-day.</p>
+
+<h2 id="minikube-features-">Minikube Features<a href="#minikube-features"> </a></h2>
+
+<p>Minikube supports the following Kubernetes features:</p>
+
+<ul>
+  <li>DNS</li>
+  <li>NodePorts</li>
+  <li>ConfigMaps and Secrets</li>
+  <li>Dashboards</li>
+  <li>Container Runtime: <a href="https://www.docker.com/">Docker</a>, <a href="https://cri-o.io/">CRI-O</a>, and <a href="https://github.com/containerd/containerd">containerd</a></li>
+  <li>Enabling CNI (Container Network Interface)</li>
+  <li>Ingress
+Installation<a href="#installation"> </a>
+——————————</li>
+</ul>
+
+<p>See <a href="/docs/tasks/tools/install-minikube/">Installing Minikube</a>.</p>
+
+<h2 id="quickstart-">Quickstart<a href="#quickstart"> </a></h2>
+
+<p>This brief demo guides you on how to start, use, and delete Minikube locally. Follow the steps given below to start and explore Minikube.</p>
+
+<ol>
+  <li>Start Minikube and create a cluster:</li>
+</ol>
+
+<p>minikube start The output is similar to this:</p>
+
+<p>Starting local Kubernetes cluster… Running pre-create checks… Creating machine… Starting local Kubernetes cluster… For more information on starting your cluster on a specific Kubernetes version, VM, or container runtime, see <a href="#starting-a-cluster">Starting a Cluster</a>.</p>
+
+<ol>
+  <li>Now, you can interact with your cluster using kubectl. For more information, see <a href="#interacting-with-your-cluster">Interacting with Your Cluster</a>.</li>
+</ol>
+
+<p>Let’s create a Kubernetes Deployment using an existing image named echoserver, which is a simple HTTP server and expose it on port 8080 using –port.</p>
+
+<p>kubectl create deployment hello-minikube –image=k8s.gcr.io/echoserver:1.10 The output is similar to this:</p>
+
+<p>deployment.apps/hello-minikube created</p>
+<ol>
+  <li>To access the hello-minikube Deployment, expose it as a Service:</li>
+</ol>
+
+<p>kubectl expose deployment hello-minikube –type=NodePort –port=8080 The option –type=NodePort specifies the type of the Service.</p>
+
+<p>The output is similar to this:</p>
+
+<p>service/hello-minikube exposed</p>
+<ol>
+  <li>The hello-minikube Pod is now launched but you have to wait until the Pod is up before accessing it via the exposed Service.</li>
+</ol>
+
+<p>Check if the Pod is up and running:</p>
+
+<p>kubectl get pod If the output shows the STATUS as ContainerCreating, the Pod is still being created:</p>
+
+<p>NAME READY STATUS RESTARTS AGE hello-minikube-3383150820-vctvh 0/1 ContainerCreating 0 3s If the output shows the STATUS as Running, the Pod is now up and running:</p>
+
+<p>NAME READY STATUS RESTARTS AGE hello-minikube-3383150820-vctvh 1/1 Running 0 13s</p>
+<ol>
+  <li>Get the URL of the exposed Service to view the Service details:</li>
+</ol>
+
+<p>minikube service hello-minikube –url</p>
+<ol>
+  <li>To view the details of your local cluster, copy and paste the URL you got as the output, on your browser.</li>
+</ol>
+
+<p>The output is similar to this:</p>
+
+<p>Hostname: hello-minikube-7c77b68cff-8wdzq Pod Information: -no pod information available- Server values: server_version=nginx: 1.13.3 - lua: 10008 Request Information: client_address=172.17.0.1 method=GET real path=/ query= request_version=1.1 request_scheme=http request_uri=http://192.168.99.100:8080/ Request Headers: accept=<em>/</em> host=192.168.99.100:30674 user-agent=curl/7.47.0 Request Body: -no body in request- If you no longer want the Service and cluster to run, you can delete them.</p>
+
+<ol>
+  <li>Delete the hello-minikube Service:</li>
+</ol>
+
+<p>kubectl delete services hello-minikube The output is similar to this:</p>
+
+<p>service “hello-minikube” deleted</p>
+<ol>
+  <li>Delete the hello-minikube Deployment:</li>
+</ol>
+
+<p>kubectl delete deployment hello-minikube The output is similar to this:</p>
+
+<p>deployment.extensions “hello-minikube” deleted</p>
+<ol>
+  <li>Stop the local Minikube cluster:</li>
+</ol>
+
+<p>minikube stop The output is similar to this:</p>
+
+<p>Stopping “minikube”… “minikube” stopped. For more information, see <a href="#stopping-a-cluster">Stopping a Cluster</a>.</p>
+
+<ol>
+  <li>Delete the local Minikube cluster:</li>
+</ol>
+
+<p>minikube delete The output is similar to this:</p>
+
+<p>Deleting “minikube” … The “minikube” cluster has been deleted. For more information, see <a href="#deleting-a-cluster">Deleting a cluster</a>.</p>
+
+<h2 id="managing-your-cluster-">Managing your Cluster<a href="#managing-your-cluster"> </a></h2>
+
+<h3 id="starting-a-cluster-">Starting a Cluster<a href="#starting-a-cluster"> </a></h3>
+
+<p>The minikube start command can be used to start your cluster. This command creates and configures a Virtual Machine that runs a single-node Kubernetes cluster. This command also configures your <a href="/docs/reference/kubectl/overview/">kubectl</a> installation to communicate with this cluster.</p>
+
+<blockquote>
+  <p><strong>Note:</strong>If you are behind a web proxy, you need to pass this information to the minikube start command:</p>
+
+  <p>https_proxy=<my proxy=""> minikube start --docker-env http\_proxy=<my proxy=""> --docker-env https\_proxy=<my proxy=""> --docker-env no\_proxy=192.168.99.0/24 Unfortunately, setting the environment variables alone does not work.</my></my></my></p>
+
+  <p>Minikube also creates a “minikube” context, and sets it to default in kubectl. To switch back to this context, run this command: kubectl config use-context minikube.</p>
+
+  <h4 id="specifying-the-kubernetes-version-">Specifying the Kubernetes version<a href="#specifying-the-kubernetes-version"> </a></h4>
+</blockquote>
+
+<p>You can specify the version of Kubernetes for Minikube to use by adding the –kubernetes-version string to the minikube start command. For example, to run version v1.18.0, you would run the following:</p>
+
+<p>minikube start –kubernetes-version v1.18.0 #### Specifying the VM driver<a href="#specifying-the-vm-driver"> </a></p>
+
+<p>You can change the VM driver by adding the –driver=&lt;enter_driver_name&gt; flag to minikube start. For example the command would be.</p>
+
+<p>minikube start –driver=&lt;driver_name&gt; Minikube supports the following drivers:</p>
+
+<blockquote>
+  <p><strong>Note:</strong> See <a href="https://minikube.sigs.k8s.io/docs/reference/drivers/">DRIVERS</a> for details on supported drivers and how to install plugins.* docker (<a href="https://minikube.sigs.k8s.io/docs/drivers/docker/">driver installation</a>)</p>
+  <ul>
+    <li>virtualbox (<a href="https://minikube.sigs.k8s.io/docs/drivers/virtualbox/">driver installation</a>)</li>
+    <li>podman (<a href="https://minikube.sigs.k8s.io/docs/drivers/podman/">driver installation</a>) (EXPERIMENTAL)</li>
+    <li>vmwarefusion</li>
+    <li>kvm2 (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/kvm2/">driver installation</a>)</li>
+    <li>hyperkit (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/hyperkit/">driver installation</a>)</li>
+    <li>hyperv (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/hyperv/">driver installation</a>) Note that the IP below is dynamic and can change. It can be retrieved with minikube ip.</li>
+    <li>vmware (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/vmware/">driver installation</a>) (VMware unified driver)</li>
+    <li>parallels (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/parallels/">driver installation</a>)</li>
+    <li>none (Runs the Kubernetes components on the host and not in a virtual machine. You need to be running Linux and to have <a href="https://docs.docker.com/engine/">DockerDocker is a software technology providing operating-system-level virtualization also known as containers.</a> installed.)</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p><strong>Caution:</strong> If you use the none driver, some Kubernetes components run as privileged containers that have side effects outside of the Minikube environment. Those side effects mean that the none driver is not recommended for personal workstations.#### Starting a cluster on alternative container runtimes<a href="#starting-a-cluster-on-alternative-container-runtimes"> </a></p>
+</blockquote>
+
+<p>You can start Minikube on the following container runtimes.</p>
+
+<ul>
+  <li><a href="#container-runtimes-0">containerd</a></li>
+  <li><a href="#container-runtimes-1">CRI-O</a>
+To use <a href="https://github.com/containerd/containerd">containerd</a> as the container runtime, run:</li>
+</ul>
+
+<p>minikube start \  –network-plugin=cni \  –enable-default-cni \  –container-runtime=containerd \  –bootstrapper=kubeadm Or you can use the extended version:</p>
+
+<p>minikube start \  –network-plugin=cni \  –enable-default-cni \  –extra-config=kubelet.container-runtime=remote \  –extra-config=kubelet.container-runtime-endpoint=unix:///run/containerd/containerd.sock \  –extra-config=kubelet.image-service-endpoint=unix:///run/containerd/containerd.sock \  –bootstrapper=kubeadm To use <a href="https://cri-o.io/">CRI-O</a> as the container runtime, run:</p>
+
+<p>minikube start \  –network-plugin=cni \  –enable-default-cni \  –container-runtime=cri-o \  –bootstrapper=kubeadm Or you can use the extended version:</p>
+
+<p>minikube start \  –network-plugin=cni \  –enable-default-cni \  –extra-config=kubelet.container-runtime=remote \  –extra-config=kubelet.container-runtime-endpoint=/var/run/crio.sock \  –extra-config=kubelet.image-service-endpoint=/var/run/crio.sock \  –bootstrapper=kubeadm $(function(){$(“#container-runtimes”).tabs();});#### Use local images by re-using the Docker daemon<a href="#use-local-images-by-re-using-the-docker-daemon"> </a></p>
+
+<p>When using a single VM for Kubernetes, it’s useful to reuse Minikube’s built-in Docker daemon. Reusing the built-in daemon means you don’t have to build a Docker registry on your host machine and push the image into it. Instead, you can build inside the same Docker daemon as Minikube, which speeds up local experiments.</p>
+
+<blockquote>
+  <p><strong>Note:</strong> Be sure to tag your Docker image with something other than latest and use that tag to pull the image. Because :latest is the default value, with a corresponding default image pull policy of Always, an image pull error (ErrImagePull) eventually results if you do not have the Docker image in the default Docker registry (usually DockerHub).To work with the Docker daemon on your Mac/Linux host, run the last line from minikube docker-env.</p>
+</blockquote>
+
+<p>You can now use Docker at the command line of your host Mac/Linux machine to communicate with the Docker daemon inside the Minikube VM:</p>
+
+<p>docker ps</p>
+<blockquote>
+  <p><strong>Note:</strong>On Centos 7, Docker may report the following error:</p>
+
+  <p>Could not read CA certificate “/etc/docker/ca.pem”: open /etc/docker/ca.pem: no such file or directory You can fix this by updating /etc/sysconfig/docker to ensure that Minikube’s environment changes are respected:</p>
+
+  <p>&lt; DOCKER_CERT_PATH=/etc/docker — &gt; if [ -z “${DOCKER_CERT_PATH}” ]; then &gt; DOCKER_CERT_PATH=/etc/docker &gt; fi ### Configuring Kubernetes<a href="#configuring-kubernetes"> </a></p>
+</blockquote>
+
+<p>Minikube has a “configurator” feature that allows users to configure the Kubernetes components with arbitrary values. To use this feature, you can use the –extra-config flag on the minikube start command.</p>
+
+<p>This flag is repeated, so you can pass it several times with several different values to set multiple options.</p>
+
+<p>This flag takes a string of the form component.key=value, where component is one of the strings from the below list, key is a value on the configuration struct and value is the value to set.</p>
+
+<p>Valid keys can be found by examining the documentation for the Kubernetes componentconfigs for each component. Here is the documentation for each supported configuration:</p>
+
+<ul>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/pkg/kubelet/apis/config#KubeletConfiguration">kubelet</a></li>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/cmd/kube-apiserver/app/options#ServerRunOptions">apiserver</a></li>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/pkg/proxy/apis/config#KubeProxyConfiguration">proxy</a></li>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/pkg/controller/apis/config#KubeControllerManagerConfiguration">controller-manager</a></li>
+  <li><a href="https://godoc.org/github.com/coreos/etcd/etcdserver#ServerConfig">etcd</a></li>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/pkg/scheduler/apis/config#KubeSchedulerConfiguration">scheduler</a>
+    <h4 id="examples-">Examples<a href="#examples"> </a></h4>
+  </li>
+</ul>
+
+<p>To change the MaxPods setting to 5 on the Kubelet, pass this flag: –extra-config=kubelet.MaxPods=5.</p>
+
+<p>This feature also supports nested structs. To change the LeaderElection.LeaderElect setting to true on the scheduler, pass this flag: –extra-config=scheduler.LeaderElection.LeaderElect=true.</p>
+
+<p>To set the AuthorizationMode on the apiserver to RBAC, you can use: –extra-config=apiserver.authorization-mode=RBAC.</p>
+
+<h3 id="stopping-a-cluster-">Stopping a Cluster<a href="#stopping-a-cluster"> </a></h3>
+
+<p>The minikube stop command can be used to stop your cluster. This command shuts down the Minikube Virtual Machine, but preserves all cluster state and data. Starting the cluster again will restore it to its previous state.</p>
+
+<h3 id="deleting-a-cluster-">Deleting a Cluster<a href="#deleting-a-cluster"> </a></h3>
+
+<p>The minikube delete command can be used to delete your cluster. This command shuts down and deletes the Minikube Virtual Machine. No data or state is preserved.</p>
+
+<h3 id="upgrading-minikube-">Upgrading Minikube<a href="#upgrading-minikube"> </a></h3>
+
+<p>If you are using macOS and <a href="https://brew.sh/">Brew Package Manager</a> is installed run:</p>
+
+<h2 id="brew-update-brew-upgrade-minikube-interacting-with-your-cluster-">brew update brew upgrade minikube Interacting with Your Cluster<a href="#interacting-with-your-cluster"> </a></h2>
+
+<h3 id="kubectl-">Kubectl<a href="#kubectl"> </a></h3>
+
+<p>The minikube start command creates a <a href="/docs/reference/generated/kubectl/kubectl-commands#-em-set-context-em-">kubectl context</a> called “minikube”. This context contains the configuration to communicate with your Minikube cluster.</p>
+
+<p>Minikube sets this context to default automatically, but if you need to switch back to it in the future, run:</p>
+
+<p>kubectl config use-context minikube</p>
+
+<p>Or pass the context on each command like this:</p>
+
+<p>kubectl get pods –context=minikube</p>
+
+<h3 id="dashboard-">Dashboard<a href="#dashboard"> </a></h3>
+
+<p>To access the <a href="/docs/tasks/access-application-cluster/web-ui-dashboard/">Kubernetes Dashboard</a>, run this command in a shell after starting Minikube to get the address:</p>
+
+<p>minikube dashboard ### Services<a href="#services"> </a></p>
+
+<p>To access a Service exposed via a node port, run this command in a shell after starting Minikube to get the address:</p>
+
+<h2 id="minikube-service--n-namespace-url-name-networking-">minikube service [-n NAMESPACE] [–url] NAME Networking<a href="#networking"> </a></h2>
+
+<p>The Minikube VM is exposed to the host system via a host-only IP address, that can be obtained with the minikube ip command. Any services of type NodePort can be accessed over that IP address, on the NodePort.</p>
+
+<p>To determine the NodePort for your service, you can use a kubectl command like this:</p>
+
+<p>kubectl get service $SERVICE –output=’jsonpath=”{.spec.ports[0].nodePort}”’</p>
+
+<h2 id="persistent-volumes-">Persistent Volumes<a href="#persistent-volumes"> </a></h2>
+
+<p>Minikube supports <a href="/docs/concepts/storage/persistent-volumes/">PersistentVolumes</a> of type hostPath. These PersistentVolumes are mapped to a directory inside the Minikube VM.</p>
+
+<p>The Minikube VM boots into a tmpfs, so most directories will not be persisted across reboots (minikube stop). However, Minikube is configured to persist files stored under the following host directories:</p>
+
+<ul>
+  <li>/data</li>
+  <li>/var/lib/minikube</li>
+  <li>/var/lib/docker
+Here is an example PersistentVolume config to persist data in the /data directory:</li>
+</ul>
+
+<h2 id="apiversion-v1-kind-persistentvolume-metadata--name-pv0001-spec--accessmodes----readwriteonce--capacity--storage-5gi--hostpath--path-datapv0001-mounted-host-folders-">apiVersion: v1 kind: PersistentVolume metadata:  name: pv0001 spec:  accessModes:  - ReadWriteOnce  capacity:  storage: 5Gi  hostPath:  path: /data/pv0001/ Mounted Host Folders<a href="#mounted-host-folders"> </a></h2>
+
+<p>Some drivers will mount a host folder within the VM so that you can easily share files between the VM and host. These are not configurable at the moment and different for the driver and OS you are using.</p>
+
+<blockquote>
+  <h2 id="note-host-folder-sharing-is-not-implemented-in-the-kvm-driver-yetdriveroshostfoldervmvirtualboxlinuxhomehosthomevirtualboxmacosusersusersvirtualboxwindowscuserscusersvmware-fusionmacosusersmnthgfsusersxhyvemacosusersusersprivate-container-registries-"><strong>Note:</strong> Host folder sharing is not implemented in the KVM driver yet.DriverOSHostFolderVMVirtualBoxLinux/home/hosthomeVirtualBoxmacOS/Users/UsersVirtualBoxWindowsC://Users/c/UsersVMware FusionmacOS/Users/mnt/hgfs/UsersXhyvemacOS/Users/UsersPrivate Container Registries<a href="#private-container-registries"> </a></h2>
+</blockquote>
+
+<p>To access a private container registry, follow the steps on <a href="/docs/concepts/containers/images/">this page</a>.</p>
+
+<p>We recommend you use ImagePullSecrets, but if you would like to configure access on the Minikube VM you can place the .dockercfg in the /home/docker directory or the config.json in the /home/docker/.docker directory.</p>
+
+<h2 id="add-ons-">Add-ons<a href="#add-ons"> </a></h2>
+
+<p>In order to have Minikube properly start or restart custom addons, place the addons you wish to be launched with Minikube in the ~/.minikube/addons directory. Addons in this folder will be moved to the Minikube VM and launched each time Minikube is started or restarted.</p>
+
+<h2 id="using-minikube-with-an-http-proxy-">Using Minikube with an HTTP Proxy<a href="#using-minikube-with-an-http-proxy"> </a></h2>
+
+<p>Minikube creates a Virtual Machine that includes Kubernetes and a Docker daemon. When Kubernetes attempts to schedule containers using Docker, the Docker daemon may require external network access to pull containers.</p>
+
+<p>If you are behind an HTTP proxy, you may need to supply Docker with the proxy settings. To do this, pass the required environment variables as flags during minikube start.</p>
+
+<p>For example:</p>
+
+<p>minikube start –docker-env http_proxy=http://$YOURPROXY:PORT \  –docker-env https_proxy=https://$YOURPROXY:PORT If your Virtual Machine address is 192.168.99.100, then chances are your proxy settings will prevent kubectl from directly reaching it. To by-pass proxy configuration for this IP address, you should modify your no_proxy settings. You can do so with:</p>
+
+<h2 id="export-no_proxyno_proxyminikube-ip-known-issues-">export no_proxy=$no_proxy,$(minikube ip) Known Issues<a href="#known-issues"> </a></h2>
+
+<p>Features that require multiple nodes will not work in Minikube.</p>
+
+<h2 id="design-">Design<a href="#design"> </a></h2>
+
+<p>Minikube uses <a href="https://github.com/docker/machine/tree/master/libmachine">libmachine</a> for provisioning VMs, and <a href="https://github.com/kubernetes/kubeadm">kubeadm</a> to provision a Kubernetes cluster.</p>
+
+<p>For more information about Minikube, see the <a href="https://git.k8s.io/community/contributors/design-proposals/cluster-lifecycle/local-cluster-ux.md">proposal</a>.</p>
+
+<h2 id="additional-links-">Additional Links<a href="#additional-links"> </a></h2>
+
+<ul>
+  <li><strong>Goals and Non-Goals</strong>: For the goals and non-goals of the Minikube project, please see our <a href="https://minikube.sigs.k8s.io/docs/contrib/roadmap/">roadmap</a>.</li>
+  <li><strong>Development Guide</strong>: See <a href="https://minikube.sigs.k8s.io/docs/contrib/">Contributing</a> for an overview of how to send pull requests.</li>
+  <li><strong>Building Minikube</strong>: For instructions on how to build/test Minikube from source, see the <a href="https://minikube.sigs.k8s.io/docs/contrib/building/">build guide</a>.</li>
+  <li><strong>Adding a New Dependency</strong>: For instructions on how to add a new dependency to Minikube, see the <a href="https://minikube.sigs.k8s.io/docs/contrib/drivers/">adding dependencies guide</a>.</li>
+  <li><strong>Adding a New Addon</strong>: For instructions on how to add a new addon for Minikube, see the <a href="https://minikube.sigs.k8s.io/docs/contrib/addons/">adding an addon guide</a>.</li>
+  <li><strong>MicroK8s</strong>: Linux users wishing to avoid running a virtual machine may consider <a href="https://microk8s.io/">MicroK8s</a> as an alternative.
+Community<a href="#community"> </a>
+————————</li>
+</ul>
+
+<p>Contributions, questions, and comments are all welcomed and encouraged! Minikube developers hang out on <a href="https://kubernetes.slack.com">Slack</a> in the #minikube channel (get an invitation <a href="https://slack.kubernetes.io/">here</a>). We also have the <a href="https://groups.google.com/forum/#!forum/kubernetes-dev">kubernetes-dev Google Groups mailing list</a>. If you are posting to the list please prefix your subject with “minikube: “.</p>
+
+<h2 id="feedback">Feedback</h2>
+
+<p>Was this page helpful?</p>
+
+<p>Yes NoThanks for the feedback. If you have a specific, answerable question about how to use Kubernetes, ask it on <a href="https://stackoverflow.com/questions/tagged/kubernetes">Stack Overflow</a>. Open an issue in the GitHub repo if you want to <a href="https://github.com/kubernetes/website/issues/new?title=Issue%20with%20k8s.io/docs/setup/learning-environment/minikube/">report a problem</a> or <a href="https://github.com/kubernetes/website/issues/new?title=Improvement%20for%20k8s.io/docs/setup/learning-environment/minikube/">suggest an improvement</a>.</p>
+
+<p>const yes=document.querySelector(‘.feedback–yes’);const no=document.querySelector(‘.feedback–no’);document.querySelectorAll(‘.feedback–link’).forEach(link=&gt;{link.href=link.href+window.location.pathname;});const sendFeedback=(value)=&gt;{if(!gtag){console.log(‘!gtag’);} gtag(‘event’,’click’,{‘event_category’:’Helpful’,’event_label’:window.location.pathname,value});};const disableButtons=()=&gt;{yes.disabled=true;yes.classList.add(‘feedback–button__disabled’);no.disabled=true;no.classList.add(‘feedback–button__disabled’);};yes.addEventListener(‘click’,()=&gt;{sendFeedback(1);disableButtons();document.querySelector(‘.feedback–response’).classList.remove(‘feedback–response__hidden’);});no.addEventListener(‘click’,()=&gt;{sendFeedback(0);disableButtons();document.querySelector(‘.feedback–response’).classList.remove(‘feedback–response__hidden’);});<img src="https://kubernetes-site.appspot.com/UA-36037335-10/GitHub/docs/setup/learning-environment/minikube.md?pixel" alt="Analytics" /></p>
+
+<p>PDRTJS_settings_8345992={“id”:”8345992”,”unique_id”:”\/docs\/setup\/learning-environment\/minikube\/”,”title”:”Installing Kubernetes with Minikube”,”permalink”:”https:\/\/kubernetes.io\/docs\/setup\/learning-environment\/minikube\/”};(function(d,c,j){if(!document.getElementById(j)){var pd=d.createElement(c),s;pd.id=j;pd.src=(“https:”==document.location.protocol)?”https://polldaddy.com/js/rating/rating.js”:”http://i0.poll.fm/js/rating/rating.js”;s=document.getElementsByTagName(c)[0];s.parentNode.insertBefore(pd,s);}}(document,”script”,”pd-rating-js”));Create an Issue <a href="https://github.com/kubernetes/website/edit/master/content/en/docs/setup/learning-environment/minikube.md">Edit This Page</a>Page last modified on July 20, 2020 at 4:17 PM PST by <a href="https://github.com/kubernetes/website/commit/c4add100ffd74508886312f7170c1c2f0cba9845/">Replace redirected links with the real targets</a> (<a href="https://github.com/kubernetes/website/commits/master/content/en/docs/setup/learning-environment/minikube.md">Page History</a>)</p>
+
+        ]]>
+        </description>
+        <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+        <link>https://bright-softwares.com/blog/kubernetes/play-with-kubernetes-with-minikube</link>
+        <guid isPermaLink="true">https://bright-softwares.com/blog/kubernetes/play-with-kubernetes-with-minikube</guid>
+        
+        
+        <category>kubernetes</category>
+        
+      </item>
+    
+      <item>
+        <title>Installing Kubernetes with Minikube</title>        
+        
+        <description>
+        <![CDATA[
+            <img src="https://sergio.afanou.com/assets/images/image-midres-38.jpg" alt="Installing Kubernetes with Minikube">
+            <h1 id="installing-kubernetes-with-minikube">Installing Kubernetes with Minikube</h1>
+
+<p>Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster inside a Virtual Machine (VM) on your laptop for users looking to try out Kubernetes or develop with it day-to-day.</p>
+
+<h2 id="minikube-features-">Minikube Features<a href="#minikube-features"> </a></h2>
+
+<p>Minikube supports the following Kubernetes features:</p>
+
+<ul>
+  <li>DNS</li>
+  <li>NodePorts</li>
+  <li>ConfigMaps and Secrets</li>
+  <li>Dashboards</li>
+  <li>Container Runtime: <a href="https://www.docker.com/">Docker</a>, <a href="https://cri-o.io/">CRI-O</a>, and <a href="https://github.com/containerd/containerd">containerd</a></li>
+  <li>Enabling CNI (Container Network Interface)</li>
+  <li>Ingress
+Installation<a href="#installation"> </a>
+——————————</li>
+</ul>
+
+<p>See <a href="/docs/tasks/tools/install-minikube/">Installing Minikube</a>.</p>
+
+<h2 id="quickstart-">Quickstart<a href="#quickstart"> </a></h2>
+
+<p>This brief demo guides you on how to start, use, and delete Minikube locally. Follow the steps given below to start and explore Minikube.</p>
+
+<ol>
+  <li>Start Minikube and create a cluster:</li>
+</ol>
+
+<p>minikube start The output is similar to this:</p>
+
+<p>Starting local Kubernetes cluster… Running pre-create checks… Creating machine… Starting local Kubernetes cluster… For more information on starting your cluster on a specific Kubernetes version, VM, or container runtime, see <a href="#starting-a-cluster">Starting a Cluster</a>.</p>
+
+<ol>
+  <li>Now, you can interact with your cluster using kubectl. For more information, see <a href="#interacting-with-your-cluster">Interacting with Your Cluster</a>.</li>
+</ol>
+
+<p>Let’s create a Kubernetes Deployment using an existing image named echoserver, which is a simple HTTP server and expose it on port 8080 using –port.</p>
+
+<p>kubectl create deployment hello-minikube –image=k8s.gcr.io/echoserver:1.10 The output is similar to this:</p>
+
+<p>deployment.apps/hello-minikube created</p>
+<ol>
+  <li>To access the hello-minikube Deployment, expose it as a Service:</li>
+</ol>
+
+<p>kubectl expose deployment hello-minikube –type=NodePort –port=8080 The option –type=NodePort specifies the type of the Service.</p>
+
+<p>The output is similar to this:</p>
+
+<p>service/hello-minikube exposed</p>
+<ol>
+  <li>The hello-minikube Pod is now launched but you have to wait until the Pod is up before accessing it via the exposed Service.</li>
+</ol>
+
+<p>Check if the Pod is up and running:</p>
+
+<p>kubectl get pod If the output shows the STATUS as ContainerCreating, the Pod is still being created:</p>
+
+<p>NAME READY STATUS RESTARTS AGE hello-minikube-3383150820-vctvh 0/1 ContainerCreating 0 3s If the output shows the STATUS as Running, the Pod is now up and running:</p>
+
+<p>NAME READY STATUS RESTARTS AGE hello-minikube-3383150820-vctvh 1/1 Running 0 13s</p>
+<ol>
+  <li>Get the URL of the exposed Service to view the Service details:</li>
+</ol>
+
+<p>minikube service hello-minikube –url</p>
+<ol>
+  <li>To view the details of your local cluster, copy and paste the URL you got as the output, on your browser.</li>
+</ol>
+
+<p>The output is similar to this:</p>
+
+<p>Hostname: hello-minikube-7c77b68cff-8wdzq Pod Information: -no pod information available- Server values: server_version=nginx: 1.13.3 - lua: 10008 Request Information: client_address=172.17.0.1 method=GET real path=/ query= request_version=1.1 request_scheme=http request_uri=http://192.168.99.100:8080/ Request Headers: accept=<em>/</em> host=192.168.99.100:30674 user-agent=curl/7.47.0 Request Body: -no body in request- If you no longer want the Service and cluster to run, you can delete them.</p>
+
+<ol>
+  <li>Delete the hello-minikube Service:</li>
+</ol>
+
+<p>kubectl delete services hello-minikube The output is similar to this:</p>
+
+<p>service “hello-minikube” deleted</p>
+<ol>
+  <li>Delete the hello-minikube Deployment:</li>
+</ol>
+
+<p>kubectl delete deployment hello-minikube The output is similar to this:</p>
+
+<p>deployment.extensions “hello-minikube” deleted</p>
+<ol>
+  <li>Stop the local Minikube cluster:</li>
+</ol>
+
+<p>minikube stop The output is similar to this:</p>
+
+<p>Stopping “minikube”… “minikube” stopped. For more information, see <a href="#stopping-a-cluster">Stopping a Cluster</a>.</p>
+
+<ol>
+  <li>Delete the local Minikube cluster:</li>
+</ol>
+
+<p>minikube delete The output is similar to this:</p>
+
+<p>Deleting “minikube” … The “minikube” cluster has been deleted. For more information, see <a href="#deleting-a-cluster">Deleting a cluster</a>.</p>
+
+<h2 id="managing-your-cluster-">Managing your Cluster<a href="#managing-your-cluster"> </a></h2>
+
+<h3 id="starting-a-cluster-">Starting a Cluster<a href="#starting-a-cluster"> </a></h3>
+
+<p>The minikube start command can be used to start your cluster. This command creates and configures a Virtual Machine that runs a single-node Kubernetes cluster. This command also configures your <a href="/docs/reference/kubectl/overview/">kubectl</a> installation to communicate with this cluster.</p>
+
+<blockquote>
+  <p><strong>Note:</strong>If you are behind a web proxy, you need to pass this information to the minikube start command:</p>
+
+  <p>https_proxy=<my proxy=""> minikube start --docker-env http\_proxy=<my proxy=""> --docker-env https\_proxy=<my proxy=""> --docker-env no\_proxy=192.168.99.0/24 Unfortunately, setting the environment variables alone does not work.</my></my></my></p>
+
+  <p>Minikube also creates a “minikube” context, and sets it to default in kubectl. To switch back to this context, run this command: kubectl config use-context minikube.</p>
+
+  <h4 id="specifying-the-kubernetes-version-">Specifying the Kubernetes version<a href="#specifying-the-kubernetes-version"> </a></h4>
+</blockquote>
+
+<p>You can specify the version of Kubernetes for Minikube to use by adding the –kubernetes-version string to the minikube start command. For example, to run version v1.18.0, you would run the following:</p>
+
+<p>minikube start –kubernetes-version v1.18.0 #### Specifying the VM driver<a href="#specifying-the-vm-driver"> </a></p>
+
+<p>You can change the VM driver by adding the –driver=&lt;enter_driver_name&gt; flag to minikube start. For example the command would be.</p>
+
+<p>minikube start –driver=&lt;driver_name&gt; Minikube supports the following drivers:</p>
+
+<blockquote>
+  <p><strong>Note:</strong> See <a href="https://minikube.sigs.k8s.io/docs/reference/drivers/">DRIVERS</a> for details on supported drivers and how to install plugins.* docker (<a href="https://minikube.sigs.k8s.io/docs/drivers/docker/">driver installation</a>)</p>
+  <ul>
+    <li>virtualbox (<a href="https://minikube.sigs.k8s.io/docs/drivers/virtualbox/">driver installation</a>)</li>
+    <li>podman (<a href="https://minikube.sigs.k8s.io/docs/drivers/podman/">driver installation</a>) (EXPERIMENTAL)</li>
+    <li>vmwarefusion</li>
+    <li>kvm2 (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/kvm2/">driver installation</a>)</li>
+    <li>hyperkit (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/hyperkit/">driver installation</a>)</li>
+    <li>hyperv (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/hyperv/">driver installation</a>) Note that the IP below is dynamic and can change. It can be retrieved with minikube ip.</li>
+    <li>vmware (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/vmware/">driver installation</a>) (VMware unified driver)</li>
+    <li>parallels (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/parallels/">driver installation</a>)</li>
+    <li>none (Runs the Kubernetes components on the host and not in a virtual machine. You need to be running Linux and to have <a href="https://docs.docker.com/engine/">DockerDocker is a software technology providing operating-system-level virtualization also known as containers.</a> installed.)</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p><strong>Caution:</strong> If you use the none driver, some Kubernetes components run as privileged containers that have side effects outside of the Minikube environment. Those side effects mean that the none driver is not recommended for personal workstations.#### Starting a cluster on alternative container runtimes<a href="#starting-a-cluster-on-alternative-container-runtimes"> </a></p>
+</blockquote>
+
+<p>You can start Minikube on the following container runtimes.</p>
+
+<ul>
+  <li><a href="#container-runtimes-0">containerd</a></li>
+  <li><a href="#container-runtimes-1">CRI-O</a>
+To use <a href="https://github.com/containerd/containerd">containerd</a> as the container runtime, run:</li>
+</ul>
+
+<p>minikube start \  –network-plugin=cni \  –enable-default-cni \  –container-runtime=containerd \  –bootstrapper=kubeadm Or you can use the extended version:</p>
+
+<p>minikube start \  –network-plugin=cni \  –enable-default-cni \  –extra-config=kubelet.container-runtime=remote \  –extra-config=kubelet.container-runtime-endpoint=unix:///run/containerd/containerd.sock \  –extra-config=kubelet.image-service-endpoint=unix:///run/containerd/containerd.sock \  –bootstrapper=kubeadm To use <a href="https://cri-o.io/">CRI-O</a> as the container runtime, run:</p>
+
+<p>minikube start \  –network-plugin=cni \  –enable-default-cni \  –container-runtime=cri-o \  –bootstrapper=kubeadm Or you can use the extended version:</p>
+
+<p>minikube start \  –network-plugin=cni \  –enable-default-cni \  –extra-config=kubelet.container-runtime=remote \  –extra-config=kubelet.container-runtime-endpoint=/var/run/crio.sock \  –extra-config=kubelet.image-service-endpoint=/var/run/crio.sock \  –bootstrapper=kubeadm $(function(){$(“#container-runtimes”).tabs();});#### Use local images by re-using the Docker daemon<a href="#use-local-images-by-re-using-the-docker-daemon"> </a></p>
+
+<p>When using a single VM for Kubernetes, it’s useful to reuse Minikube’s built-in Docker daemon. Reusing the built-in daemon means you don’t have to build a Docker registry on your host machine and push the image into it. Instead, you can build inside the same Docker daemon as Minikube, which speeds up local experiments.</p>
+
+<blockquote>
+  <p><strong>Note:</strong> Be sure to tag your Docker image with something other than latest and use that tag to pull the image. Because :latest is the default value, with a corresponding default image pull policy of Always, an image pull error (ErrImagePull) eventually results if you do not have the Docker image in the default Docker registry (usually DockerHub).To work with the Docker daemon on your Mac/Linux host, run the last line from minikube docker-env.</p>
+</blockquote>
+
+<p>You can now use Docker at the command line of your host Mac/Linux machine to communicate with the Docker daemon inside the Minikube VM:</p>
+
+<p>docker ps</p>
+<blockquote>
+  <p><strong>Note:</strong>On Centos 7, Docker may report the following error:</p>
+
+  <p>Could not read CA certificate “/etc/docker/ca.pem”: open /etc/docker/ca.pem: no such file or directory You can fix this by updating /etc/sysconfig/docker to ensure that Minikube’s environment changes are respected:</p>
+
+  <p>&lt; DOCKER_CERT_PATH=/etc/docker — &gt; if [ -z “${DOCKER_CERT_PATH}” ]; then &gt; DOCKER_CERT_PATH=/etc/docker &gt; fi ### Configuring Kubernetes<a href="#configuring-kubernetes"> </a></p>
+</blockquote>
+
+<p>Minikube has a “configurator” feature that allows users to configure the Kubernetes components with arbitrary values. To use this feature, you can use the –extra-config flag on the minikube start command.</p>
+
+<p>This flag is repeated, so you can pass it several times with several different values to set multiple options.</p>
+
+<p>This flag takes a string of the form component.key=value, where component is one of the strings from the below list, key is a value on the configuration struct and value is the value to set.</p>
+
+<p>Valid keys can be found by examining the documentation for the Kubernetes componentconfigs for each component. Here is the documentation for each supported configuration:</p>
+
+<ul>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/pkg/kubelet/apis/config#KubeletConfiguration">kubelet</a></li>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/cmd/kube-apiserver/app/options#ServerRunOptions">apiserver</a></li>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/pkg/proxy/apis/config#KubeProxyConfiguration">proxy</a></li>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/pkg/controller/apis/config#KubeControllerManagerConfiguration">controller-manager</a></li>
+  <li><a href="https://godoc.org/github.com/coreos/etcd/etcdserver#ServerConfig">etcd</a></li>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/pkg/scheduler/apis/config#KubeSchedulerConfiguration">scheduler</a>
+    <h4 id="examples-">Examples<a href="#examples"> </a></h4>
+  </li>
+</ul>
+
+<p>To change the MaxPods setting to 5 on the Kubelet, pass this flag: –extra-config=kubelet.MaxPods=5.</p>
+
+<p>This feature also supports nested structs. To change the LeaderElection.LeaderElect setting to true on the scheduler, pass this flag: –extra-config=scheduler.LeaderElection.LeaderElect=true.</p>
+
+<p>To set the AuthorizationMode on the apiserver to RBAC, you can use: –extra-config=apiserver.authorization-mode=RBAC.</p>
+
+<h3 id="stopping-a-cluster-">Stopping a Cluster<a href="#stopping-a-cluster"> </a></h3>
+
+<p>The minikube stop command can be used to stop your cluster. This command shuts down the Minikube Virtual Machine, but preserves all cluster state and data. Starting the cluster again will restore it to its previous state.</p>
+
+<h3 id="deleting-a-cluster-">Deleting a Cluster<a href="#deleting-a-cluster"> </a></h3>
+
+<p>The minikube delete command can be used to delete your cluster. This command shuts down and deletes the Minikube Virtual Machine. No data or state is preserved.</p>
+
+<h3 id="upgrading-minikube-">Upgrading Minikube<a href="#upgrading-minikube"> </a></h3>
+
+<p>If you are using macOS and <a href="https://brew.sh/">Brew Package Manager</a> is installed run:</p>
+
+<h2 id="brew-update-brew-upgrade-minikube-interacting-with-your-cluster-">brew update brew upgrade minikube Interacting with Your Cluster<a href="#interacting-with-your-cluster"> </a></h2>
+
+<h3 id="kubectl-">Kubectl<a href="#kubectl"> </a></h3>
+
+<p>The minikube start command creates a <a href="/docs/reference/generated/kubectl/kubectl-commands#-em-set-context-em-">kubectl context</a> called “minikube”. This context contains the configuration to communicate with your Minikube cluster.</p>
+
+<p>Minikube sets this context to default automatically, but if you need to switch back to it in the future, run:</p>
+
+<p>kubectl config use-context minikube</p>
+
+<p>Or pass the context on each command like this:</p>
+
+<p>kubectl get pods –context=minikube</p>
+
+<h3 id="dashboard-">Dashboard<a href="#dashboard"> </a></h3>
+
+<p>To access the <a href="/docs/tasks/access-application-cluster/web-ui-dashboard/">Kubernetes Dashboard</a>, run this command in a shell after starting Minikube to get the address:</p>
+
+<p>minikube dashboard ### Services<a href="#services"> </a></p>
+
+<p>To access a Service exposed via a node port, run this command in a shell after starting Minikube to get the address:</p>
+
+<h2 id="minikube-service--n-namespace-url-name-networking-">minikube service [-n NAMESPACE] [–url] NAME Networking<a href="#networking"> </a></h2>
+
+<p>The Minikube VM is exposed to the host system via a host-only IP address, that can be obtained with the minikube ip command. Any services of type NodePort can be accessed over that IP address, on the NodePort.</p>
+
+<p>To determine the NodePort for your service, you can use a kubectl command like this:</p>
+
+<p>kubectl get service $SERVICE –output=’jsonpath=”{.spec.ports[0].nodePort}”’</p>
+
+<h2 id="persistent-volumes-">Persistent Volumes<a href="#persistent-volumes"> </a></h2>
+
+<p>Minikube supports <a href="/docs/concepts/storage/persistent-volumes/">PersistentVolumes</a> of type hostPath. These PersistentVolumes are mapped to a directory inside the Minikube VM.</p>
+
+<p>The Minikube VM boots into a tmpfs, so most directories will not be persisted across reboots (minikube stop). However, Minikube is configured to persist files stored under the following host directories:</p>
+
+<ul>
+  <li>/data</li>
+  <li>/var/lib/minikube</li>
+  <li>/var/lib/docker
+Here is an example PersistentVolume config to persist data in the /data directory:</li>
+</ul>
+
+<h2 id="apiversion-v1-kind-persistentvolume-metadata--name-pv0001-spec--accessmodes----readwriteonce--capacity--storage-5gi--hostpath--path-datapv0001-mounted-host-folders-">apiVersion: v1 kind: PersistentVolume metadata:  name: pv0001 spec:  accessModes:  - ReadWriteOnce  capacity:  storage: 5Gi  hostPath:  path: /data/pv0001/ Mounted Host Folders<a href="#mounted-host-folders"> </a></h2>
+
+<p>Some drivers will mount a host folder within the VM so that you can easily share files between the VM and host. These are not configurable at the moment and different for the driver and OS you are using.</p>
+
+<blockquote>
+  <h2 id="note-host-folder-sharing-is-not-implemented-in-the-kvm-driver-yetdriveroshostfoldervmvirtualboxlinuxhomehosthomevirtualboxmacosusersusersvirtualboxwindowscuserscusersvmware-fusionmacosusersmnthgfsusersxhyvemacosusersusersprivate-container-registries-"><strong>Note:</strong> Host folder sharing is not implemented in the KVM driver yet.DriverOSHostFolderVMVirtualBoxLinux/home/hosthomeVirtualBoxmacOS/Users/UsersVirtualBoxWindowsC://Users/c/UsersVMware FusionmacOS/Users/mnt/hgfs/UsersXhyvemacOS/Users/UsersPrivate Container Registries<a href="#private-container-registries"> </a></h2>
+</blockquote>
+
+<p>To access a private container registry, follow the steps on <a href="/docs/concepts/containers/images/">this page</a>.</p>
+
+<p>We recommend you use ImagePullSecrets, but if you would like to configure access on the Minikube VM you can place the .dockercfg in the /home/docker directory or the config.json in the /home/docker/.docker directory.</p>
+
+<h2 id="add-ons-">Add-ons<a href="#add-ons"> </a></h2>
+
+<p>In order to have Minikube properly start or restart custom addons, place the addons you wish to be launched with Minikube in the ~/.minikube/addons directory. Addons in this folder will be moved to the Minikube VM and launched each time Minikube is started or restarted.</p>
+
+<h2 id="using-minikube-with-an-http-proxy-">Using Minikube with an HTTP Proxy<a href="#using-minikube-with-an-http-proxy"> </a></h2>
+
+<p>Minikube creates a Virtual Machine that includes Kubernetes and a Docker daemon. When Kubernetes attempts to schedule containers using Docker, the Docker daemon may require external network access to pull containers.</p>
+
+<p>If you are behind an HTTP proxy, you may need to supply Docker with the proxy settings. To do this, pass the required environment variables as flags during minikube start.</p>
+
+<p>For example:</p>
+
+<p>minikube start –docker-env http_proxy=http://$YOURPROXY:PORT \  –docker-env https_proxy=https://$YOURPROXY:PORT If your Virtual Machine address is 192.168.99.100, then chances are your proxy settings will prevent kubectl from directly reaching it. To by-pass proxy configuration for this IP address, you should modify your no_proxy settings. You can do so with:</p>
+
+<h2 id="export-no_proxyno_proxyminikube-ip-known-issues-">export no_proxy=$no_proxy,$(minikube ip) Known Issues<a href="#known-issues"> </a></h2>
+
+<p>Features that require multiple nodes will not work in Minikube.</p>
+
+<h2 id="design-">Design<a href="#design"> </a></h2>
+
+<p>Minikube uses <a href="https://github.com/docker/machine/tree/master/libmachine">libmachine</a> for provisioning VMs, and <a href="https://github.com/kubernetes/kubeadm">kubeadm</a> to provision a Kubernetes cluster.</p>
+
+<p>For more information about Minikube, see the <a href="https://git.k8s.io/community/contributors/design-proposals/cluster-lifecycle/local-cluster-ux.md">proposal</a>.</p>
+
+<h2 id="additional-links-">Additional Links<a href="#additional-links"> </a></h2>
+
+<ul>
+  <li><strong>Goals and Non-Goals</strong>: For the goals and non-goals of the Minikube project, please see our <a href="https://minikube.sigs.k8s.io/docs/contrib/roadmap/">roadmap</a>.</li>
+  <li><strong>Development Guide</strong>: See <a href="https://minikube.sigs.k8s.io/docs/contrib/">Contributing</a> for an overview of how to send pull requests.</li>
+  <li><strong>Building Minikube</strong>: For instructions on how to build/test Minikube from source, see the <a href="https://minikube.sigs.k8s.io/docs/contrib/building/">build guide</a>.</li>
+  <li><strong>Adding a New Dependency</strong>: For instructions on how to add a new dependency to Minikube, see the <a href="https://minikube.sigs.k8s.io/docs/contrib/drivers/">adding dependencies guide</a>.</li>
+  <li><strong>Adding a New Addon</strong>: For instructions on how to add a new addon for Minikube, see the <a href="https://minikube.sigs.k8s.io/docs/contrib/addons/">adding an addon guide</a>.</li>
+  <li><strong>MicroK8s</strong>: Linux users wishing to avoid running a virtual machine may consider <a href="https://microk8s.io/">MicroK8s</a> as an alternative.
+Community<a href="#community"> </a>
+————————</li>
+</ul>
+
+<p>Contributions, questions, and comments are all welcomed and encouraged! Minikube developers hang out on <a href="https://kubernetes.slack.com">Slack</a> in the #minikube channel (get an invitation <a href="https://slack.kubernetes.io/">here</a>). We also have the <a href="https://groups.google.com/forum/#!forum/kubernetes-dev">kubernetes-dev Google Groups mailing list</a>. If you are posting to the list please prefix your subject with “minikube: “.</p>
+
+<h2 id="feedback">Feedback</h2>
+
+<p>Was this page helpful?</p>
+
+<p>Yes NoThanks for the feedback. If you have a specific, answerable question about how to use Kubernetes, ask it on <a href="https://stackoverflow.com/questions/tagged/kubernetes">Stack Overflow</a>. Open an issue in the GitHub repo if you want to <a href="https://github.com/kubernetes/website/issues/new?title=Issue%20with%20k8s.io/docs/setup/learning-environment/minikube/">report a problem</a> or <a href="https://github.com/kubernetes/website/issues/new?title=Improvement%20for%20k8s.io/docs/setup/learning-environment/minikube/">suggest an improvement</a>.</p>
+
+<p>const yes=document.querySelector(‘.feedback–yes’);const no=document.querySelector(‘.feedback–no’);document.querySelectorAll(‘.feedback–link’).forEach(link=&gt;{link.href=link.href+window.location.pathname;});const sendFeedback=(value)=&gt;{if(!gtag){console.log(‘!gtag’);} gtag(‘event’,’click’,{‘event_category’:’Helpful’,’event_label’:window.location.pathname,value});};const disableButtons=()=&gt;{yes.disabled=true;yes.classList.add(‘feedback–button__disabled’);no.disabled=true;no.classList.add(‘feedback–button__disabled’);};yes.addEventListener(‘click’,()=&gt;{sendFeedback(1);disableButtons();document.querySelector(‘.feedback–response’).classList.remove(‘feedback–response__hidden’);});no.addEventListener(‘click’,()=&gt;{sendFeedback(0);disableButtons();document.querySelector(‘.feedback–response’).classList.remove(‘feedback–response__hidden’);});<img src="https://kubernetes-site.appspot.com/UA-36037335-10/GitHub/docs/setup/learning-environment/minikube.md?pixel" alt="Analytics" /></p>
+
+<p>PDRTJS_settings_8345992={“id”:”8345992”,”unique_id”:”\/docs\/setup\/learning-environment\/minikube\/”,”title”:”Installing Kubernetes with Minikube”,”permalink”:”https:\/\/kubernetes.io\/docs\/setup\/learning-environment\/minikube\/”};(function(d,c,j){if(!document.getElementById(j)){var pd=d.createElement(c),s;pd.id=j;pd.src=(“https:”==document.location.protocol)?”https://polldaddy.com/js/rating/rating.js”:”http://i0.poll.fm/js/rating/rating.js”;s=document.getElementsByTagName(c)[0];s.parentNode.insertBefore(pd,s);}}(document,”script”,”pd-rating-js”));Create an Issue <a href="https://github.com/kubernetes/website/edit/master/content/en/docs/setup/learning-environment/minikube.md">Edit This Page</a>Page last modified on July 20, 2020 at 4:17 PM PST by <a href="https://github.com/kubernetes/website/commit/c4add100ffd74508886312f7170c1c2f0cba9845/">Replace redirected links with the real targets</a> (<a href="https://github.com/kubernetes/website/commits/master/content/en/docs/setup/learning-environment/minikube.md">Page History</a>)</p>
+
+        ]]>
+        </description>
+        <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+        <link>https://bright-softwares.com/blog/kubernetes/installing-kubernetes-with-minikube</link>
+        <guid isPermaLink="true">https://bright-softwares.com/blog/kubernetes/installing-kubernetes-with-minikube</guid>
+        
+        
+        <category>kubernetes</category>
+        
+      </item>
+    
+      <item>
+        <title>How Do I Get My Data Off an Old Computer?</title>        
+        
+        <description>
+        <![CDATA[
+            <img src="https://sergio.afanou.com/assets/images/image-midres-54.jpg" alt="How Do I Get My Data Off an Old Computer?">
+            <h3 id="i-want-to-delete-everything-on-my-old-computer-but">I want to delete everything on my old computer, but…</h3>
+
+<blockquote>
+  <p><em>“Hello,</em></p>
+
+  <p><em>I have and older gateway tower but sold the monitor that came with it.</em></p>
+
+  <p>*I have a laptop and a TV and tried using an HDMI to VGA adapter thinking it would show on my TV or laptop but its not working. I would like to go through my old computer and wipe it clean before just recycling it. *</p>
+
+  <p><em>Any suggestions on how I can view the content on my old computer?”</em></p>
+
+</blockquote>
+
+<h3 id="why-you-cant-get-a-signal-from-your-old-computer">Why you can’t get a signal from your old computer</h3>
+
+<p>Good news: You have a few solutions to address this. To start, let’s talk about what isn’t going to work. Connecting your desktop to a laptop isn’t going to do anything, as your laptop’s connections are outputs. No matter what connection you use, hooking up your desktop PC to your laptop’s anything isn’t going to display your desktop’s picture on your laptop’s display. It’s a great idea in theory, but one that isn’t going to work, technologically.</p>
+
+<p>I’ve never tried using a VGA-to-HDMI adapter—in fact this is the first I’ve ever heard of someone actually using one, given how old that connection type is. My suspicion is that this technique won’t work, or has a high likelihood of failure, because VGA is an analog signal and HDMI is digital. It’s possible to go between the two, but whatever adapter you’re using is going to have to take that VGA signal and convert it. If you just have a simple cable that has a VGA connection on one end and an HDMI connection on the other, that’s probably not going to work.</p>
+
+<p>It’s also possible that whatever adapter you’ve picked up sucks, for lack of a better way to phrase it. If you went bargain-bin on your adapter, or bought one that hasn’t already been tested out by plenty of other people, it might not be able to do what you want it to do because that’s how these things sometimes go.</p>
+
+<h3 id="an-adapter-can-help-but-theres-a-better-solution">An adapter can help, but there’s a better solution</h3>
+
+<p>This is a tricky situation, as what I’d typically recommend—a USB-to-DVI adapter, which you’d then connect to a DVI-to-HDMI cable, or a simpler USB-to-HDMI adapter—is probably going to cost more than what you’re willing to spend on a solution. At least, I’d probably ask around and see if any of my friends have an older monitor with a VGA input before I plunked down $30-50 on an adapter.</p>
+
+<p>One thing worth checking is whether your old desktop has an S-Video port. It’s unlikely, but if it does, and your TV has one, you can connect them together that way. It’s a longshot, but it’s worth exploring.</p>
+
+<p>Otherwise, I think your best option is to hit up Craigslist for your area and buy someone’s cheap older display. Make sure they can confirm it works with a VGA signal before you pay for it, but this will be the best and surest way to get an image from your system. And, in doing so, you can then start poring over your data and wiping your system.</p>
+
+<p>Looking at Craigslist right now for my area, people are selling their old, crappy, VGA monitors for <a href="https://sfbay.craigslist.org/search/sss?sort=priceasc&amp;query=vga%20monitor">around $15-30</a>. You can probably find something as cheap as that where you live; remember, all that matters is that it works, not that it looks pretty, has a giant screen, or anything like that. Hook it up to your computer, save or delete whatever you want, and recycle that along with your old PC.</p>
+
+<h3 id="to-get-at-your-old-data-try-removing-your-hard-drive">To get at your old data, try removing your hard drive</h3>
+
+<p>Messing with displays and monitors is one approach. Since all you care about is the data on your drive, you could also open up your desktop PC, disconnect and remove its hard drive, and slap that hard drive in an external enclosure. I’d recommend one, but I’m not sure if your drive uses an ancient IDE connection or SATA. (You can find <a href="https://smile.amazon.com/Hard-Drive-Enclosures-IDE-SATA-Accessories/s?ascsubtag=a89e1e536a491c5460cdb2be1a334d3a64329204&amp;rh=n%3A160354011%2Cp_n_feature_keywords_browse-bin%3A5871549011&amp;sa-no-redirect=1&amp;tag=lifehackeramzn-20">enclosures and docking stations</a> that handle both, so it’s almost a moot point.)</p>
+
+<p>Install your old desktop’s hard drive into one of those, connect the enclosure to a new desktop or laptop via USB, and you should be able to access all of your files. Save whatever you want, wipe the drive, and send it—and your old system—off for recycling when you’re done.</p>
+
+<p>While this sounds like a process, removing a hard drive from your desktop PC is as easy as disconnecting a few cables and unscrewing four screws. Take care not to jostle the drive too much as you’re taking it out. Don’t turn it upside-down or anything crazy like that, and make sure you’ve touched the site of your (metal) case to discharge of any static electricity before you go fiddling with your system’s insides.</p>
+
+<p>Were I you, I’d go that route because it’s easy and it saves you money. Instead of spending $20-30 on a display you’ll never use again, you can pick up a docking station that you* *could definitely use at some future point, whether you’re pulling files off another drive, copying files over to a bare backup drive, et cetera. It’s infinitely more practical than a crappy old display, but it requires slightly more legwork for your situation. You can do it. I have faith.</p>
+
+
+        ]]>
+        </description>
+        <pubDate>Tue, 11 Aug 2020 00:00:00 +0000</pubDate>
+        <link>https://bright-softwares.com/blog/backup-restore/how-do-i-get-my-data-off-an-old-computer</link>
+        <guid isPermaLink="true">https://bright-softwares.com/blog/backup-restore/how-do-i-get-my-data-off-an-old-computer</guid>
+        
+        
+        <category>backup-restore</category>
+        
+      </item>
+    
+      <item>
+        <title>How Do I Fix My Cracked iPhone Screen During the Shutdown?</title>        
+        
+        <description>
+        <![CDATA[
+            <img src="https://sergio.afanou.com/assets/images/image-midres-53.jpg" alt="How Do I Fix My Cracked iPhone Screen During the Shutdown?">
+            <p>There’s a lot you can’t do in a pandemic—at least, if you’re smart. You shouldn’t be going to the mall (even if it’s open), nor should you even consider just lollygagging around the Apple store and taking stupid pictures on their demo devices.</p>
+
+<p>However, the quarantine—self-imposed or otherwise—also comes with some frustrations. If your iPhone breaks, for example, you can’t just waltz into an Apple store to get it repaired at the ol’ bar of smart people. You’re kind of stuck. Or are you?</p>
+
+<h3 id="if-im-quarantined-how-can-i-get-my-phone-repaired">If I’m quarantined, how can I get my phone repaired?</h3>
+
+<p>In this week’s, we’re taking a question from Lifehacker reader <strong>Stephanie</strong>. She writes:</p>
+
+<blockquote>
+  <p>*My iPhone screen was already very, very cracked before The Pandemic hit the U.S., and it’s only gotten worse since. (As in there’s no way I would pull it out of my pocket when it’s even beginning to drizzle.) *</p>
+
+  <p>*I know it’s absurd on the scale of problems right now, but how can I get my screen fixed before it’s too late? FYI I live in NYC, and the few services I’ve heard of are not currently accepting appointments. Also, I am currently on reduced pay, and resigned to the possibility that I could very well have no income any day now, so spending hundreds of dollars for a new phone etc. is absolutely out of the question. *</p>
+
+  <p><em>Thanks and please stay safe!</em></p>
+
+</blockquote>
+
+<h3 id="you-have-options-but-you-might-need-extra-patience">You have options, but you might need extra patience</h3>
+
+<p>It’s not absurd to want to fix your device. It’s never absurd. Just because we’re in a quarantine, and you’re stuck in one of the biggest hotspots for COVID-19, doesn’t mean that you shouldn’t be able to have working technology. That’s especially true now, since your phone is even more of a lifeline to the world than before. Aside from the obvious calling, texting, and Slacking you’re probably doing, it’s what you’ll use to tether your other devices if, or when, your internet goes out. It’s how you’ll record all the silly videos that are keeping you sane during these trying times—or the images of the barren New York City streets that you’ll look back on years from now with fondness, once the sweaty hustle and bustle resumes in a (probably) post-vaccinated world. You’ll think, “The coronavirus is terrible, but it sure was nice not to have tourists standing in front of me wherever I go.”</p>
+
+<p>I kid, but I do want to stress that wanting to lead a normal life—including normal and functional use of the gadgets you rely on—is a perfectly fine, unselfish thought right now. Unfortunately, you’re correct; the “new normal” we’re living in, <em>especially</em> in New York City, means that you aren’t going to have super-easy options for getting your phone fixed. That includes those shady-but-sometimes-reliable “fix your phone!” kiosks littered around the city, as well as the mighty Apple store itself.</p>
+
+<h3 id="try-looking-for-an-apple-authorized-repair-provider-thats-still-open">Try looking for an Apple-authorized repair provider that’s still open</h3>
+
+<p>I did a quick search for authorized service providers on <a href="https://getsupport.apple.com/">Apple’s support site</a>, and the results aren’t pretty for New York City. In fact, here’s all I could find:</p>
+
+<p>For those reading this <em>not</em> in NYC, your odds might be a lot better—since you likely don’t live in a coronavirus epicenter, and you might even live in one of those places where everyone’s partying on the beach and celebrating and such. So, who knows, maybe you’ll have 20 repair centers to pick from. Either way, I’d start here: Search Apple’s support site for authorized repair centers near you and see if any are available to repair your device.</p>
+
+<p>Otherwise, you’re probably going to have to send in your iPhone to have it repaired. That’ll cost you time, but at least it’ll get it fixed.</p>
+
+<p>I don’t know your specific warranty situation—and Apple will tell you, don’t worry—but you’re looking at potentially blowing up to $329 for an out-of-warranty repair. The number goes down the older and smaller your device is, so you might luck out with a mere $129 out the door if you’re repairing an ancient iPhone SE. You can check Apple’s prices <a href="https://support.apple.com/iphone/repair/service">here</a>.</p>
+
+<h3 id="you-could-go-for-a-third-party-repair-but">You could go for a third-party repair, but…</h3>
+
+<p>Places like <a href="https://www.ubreakifix.com/">UBreakIFix</a> will be more than happy to work out a repair arrangement for your device, which could even include curbside pickup. You’ll probably even be able to pay slightly less for your repair than you would at Apple, but you might also have <a href="https://www.reddit.com/r/mobilerepair/comments/8tksf4/review_of_ubreakifix_for_iphone_screen_repair/">a less-than-stellar experience</a>, depending on *how *a third-party service fixes the device. Ah, the joys of <a href="https://support.apple.com/en-us/HT210321">Apple’s fight against right-to-repair</a>.</p>
+
+<p>You didn’t mention which iPhone you have, but you <em>might</em> want to reconsider your “buy a new one” approach. I’d modify that sentence, actually, to simply read, “buy one.” You don’t have to plunk down $1,000+ for a brand-new iPhone. If you’re still rocking, say, an iPhone 8, you can pick up a functional (but possibly not pretty) one for around $200 from <a href="https://swappa.com/buy/apple-iphone-8">a third-party seller</a>. Heck, you could even get an I-just-need-something-to-survive <a href="https://swappa.com/buy/apple-iphone-se">iPhone SE</a> for $50—the older iPhone, that is, not the newer one.</p>
+
+<h3 id="you-dont-have-to-buy-an-expensive-iphone-replacement">You don’t have to buy an *expensive *iPhone replacement</h3>
+
+<p>Given the times we’re living in, and the fact that repairing your iPhone might be a pain in the ass (and expensive, as you noted), paying one-fourth the price of a repair for just something you can use to get by is an option. It’ll tide you over until your work hours go back to normal and you can repair your original device (or <a href="https://lifehacker.com/is-the-new-iphone-se-worth-the-upgrade-1842902293">buy something better</a>, potentially).</p>
+
+<h3 id="lets-recap">Let’s recap</h3>
+
+<p>I don’t love any of these options, but there they are.</p>
+
+<ul>
+  <li><strong>Send it in to Apple.</strong> Expensive, but authentic parts. You’ll have to wait, but you’ll get your iPhone fixed up the best possible way.</li>
+  <li><strong>Find an authorized service provider:</strong> This will be tough in NYC during a quarantine, but if you can find an Apple provider that’s available, you might save a little time on your repair. Money? No. Time? Maybe.</li>
+  <li><strong>Find a third-party repair shop.</strong> Depending on <a href="https://www.rossmanngroup.com/iphone-screen-repair/">what’s open</a>, you might save cash and time, but this can be a gamble. Replacing the screen at an unauthorized repair shop will void your Apple warranty, if applicable, and possibly lead to a worse-looking display depending on what parts the repair shop is using. You also might be fine. It’s a gamble—less so for older iPhones, and more so for newer ones.</li>
+  <li>
+    <p><strong>Buying a used but functional replacement.</strong> Whether you’re replacing your broken phone with the exact same model or** **going back a generation (or two) to simply get something that’s cheap and functional, delaying the repair is certainly an option worth considering.</p>
+  </li>
+  <li><strong>Phone a friend.</strong> Try asking around. The odds are decent that someone has a spare iPhone (likely an older one) sitting around in a drawer somewhere that they aren’t using. See if you can borrow it until you’re in a better spot, job-wise, then consider your repair options from there. <a href="https://lifehacker.com/how-to-switch-out-and-store-your-sim-card-when-you-tr-1833493687">Swapping out your SIM</a> to another iPhone is easy.</li>
+</ul>
+
+
+        ]]>
+        </description>
+        <pubDate>Tue, 11 Aug 2020 00:00:00 +0000</pubDate>
+        <link>https://bright-softwares.com/blog/productivity/how-do-i-fix-my-cracked-iphone-screen-during-the-shutdown</link>
+        <guid isPermaLink="true">https://bright-softwares.com/blog/productivity/how-do-i-fix-my-cracked-iphone-screen-during-the-shutdown</guid>
+        
+        
+        <category>productivity</category>
+        
+      </item>
+    
+      <item>
+        <title>Help! Windows Won't Boot Correctly After a Recent OS Update</title>        
+        
+        <description>
+        <![CDATA[
+            <img src="https://sergio.afanou.com/assets/images/image-midres-55.jpg" alt="Help! Windows Won't Boot Correctly After a Recent OS Update">
+            <p>What happens when Windows starts tossing up annoying error messages each and every time you try to launch the operating system? If you’re trying to log in for the day and actually do work for the critical deadlines you have, and you don’t really have an IT department to help out, this is probably the worst spot to be in.</p>
+
+<p>Since we’re all stuck—or will soon be stuck—in our homes and apartments for the foreseeable future,</p>
+
+<h3 id="the-question">The question:</h3>
+
+<blockquote>
+  <p><em>I have a Windows 10 desktop. Several weeks ago windows did an update and several days later when I powered on, I got the message “windows didn’t load properly” blue screen with several options. The ones I tried didn’t work well, until I found the “Revert to a previous date” option. That worked well. Computer went back on and functioned normally. Unfortunately I still receive the windows did not load properly screen every several days. Im running Windows 10 on a Mac. I was thinking of completely wiping out windows and then reloading it. Maybe I have a virus or bug ? Thanks !!</em></p>
+</blockquote>
+
+<h3 id="the-humble-answer">The humble answer:</h3>
+
+<p>For what it’s worth, you’re not alone on this one. Microsoft has been having issues with Windows 10 updates lately, which can sometimes introduce more problems for users than they can fix. It’s possible that you’re in this camp, but the good news is that it’s very, <em>very</em> unlikely that you’ve been hit with a virus or some piece of sketchy malware. It’s just a Windows issue—not very soothing to hear when you’re experiencing it, I’m sure, but at least slight more comforting than, “Your system is infected” (I hope).</p>
+
+<p>Generally speaking, I like to abandon ship at the first sign of trouble that would likely take me longer to troubleshoot—with mixed results—than it would take me to reinstall Windows and all of my applications. I suspect that might be the case here. And since you’re Boot Camping into Windows on your Mac, I’m less bothered by putting you out of commission for a bit, since you’ll always have macOS to use if you absolutely need to do something on your computer.</p>
+
+<p>Before we go nuclear, though, let’s try a few things. First off, if you can boot <em>into</em> Windows—and it sounds like you can—I’m not sure there’s anything you can uninstall that will help you. The last major Windows 10 update that would have probably affected you was the big 1909 update from <a href="https://support.microsoft.com/en-us/help/4529964/windows-10-update-history">November</a>. There have been a number of piecemeal updates since then, but I can’t think of one that’s been especially problematic. Oh, except for KB4535996, which even Microsoft suggested users uninstall.</p>
+
+<p>So, let’s start there. Pull up <strong>Windows Update</strong>, click on <strong>View Update History</strong>, click on <strong>Uninstall Updates</strong>, and look to see if you can uninstall KB4535996. If you can, great! If not, there goes that troubleshooting technique.</p>
+
+<p>While you’re here, maybe check to see if there are any additional Windows updates you can install. It’s a long  shot, but perhaps something has arrived that could fix whatever issues your Windows installation is struggling to deal with. And since you’re using Boot Camp to run Windows on your Mac, pull up Apple Software Update and make sure there aren’t any new drivers or updates to install.</p>
+
+<h6 id="how-can-i-keep-an-old-all-in-one-pc-running-quickly-and-efficiently">How Can I Keep an Old All-In-One PC Running Quickly and Efficiently?</h6>
+
+<p>I’m always thrilled to get “help me out with a tech problem” letters in my inbox, and I’ve had…</p>
+
+<p>Finally, try reinstalling Boot Camp’s <a href="https://support.apple.com/en-us/HT204923">Windows Support Drivers</a>, which might magically cure whatever is causing your system to blue screen upon launch. There’s no guarantee this will fix things, but it’s worth exploring before you take more drastic measures.</p>
+
+<p>While you’re in Windows, you can also open up an elevated command prompt (search for “Command Prompt” in the Start Menu, right click on it, and select “Run as administrator”). From there, try running a simple “chkdsk /f” to conform there aren’t any issues with your file system. You can also try “chkdsk /r /f” for a much more thorough analysis and fixing process, but it’ll take a lot longer. If your hard drive is failing and that’s the reason behind your Windows issues, it’s also possible you might not get any additional information from chkdsk. You’ll want to use <a href="https://lifehacker.com/how-to-check-if-your-hard-drive-is-failing-1835065626">some other techniques</a> to confirm you’re ok (or headed toward disaster).</p>
+
+<p>You can also run “sfc /verifyonly” followed by “sfc /scannow” in the same elevated command prompt. If the first command found any corruption in your Windows system files, the second command should fix them.</p>
+
+<p>Once you’ve finished this, consider pulling up the Windows Troubleshooter. Pull up the old-school Control Panel (via the Start Menu) and select Troubleshooting. Then, click on “Fix problems with Windows Update,” and see what the utility finds (if anything!)</p>
+
+<p>Finally, click on your Start Menu, click on the Power icon, hold down the Shift key on your keyboard, and click on Restart. This should boot you into Windows 10’s <a href="https://www.dell.com/support/article/en-us/sln317102/booting-to-the-advanced-startup-options-menu-in-windows-10?lang=en">Advanced Startup</a> options menu. Click on Troubleshoot, click on Advanced options, and try using the Startup Repair option to see if that can solve your Windows problem.</p>
+
+<h6 id="how-can-you-keep-your-old-desktop-pc-running-well">How Can You Keep Your Old Desktop PC Running Well?</h6>
+
+<p>When your desktop PC is aging, but you don’t have the heart (or the budget) to replace it, there’s…</p>
+
+<p>If all else fails, then a wipe and restore might be your best option. Save all your critical Windows 10 files to a flash drive or <a href="https://lifehacker.com/google-one-is-now-open-for-everyone-but-is-it-a-good-d-1826049257">cloud storage</a>, then launch macOS and use Boot Camp Assistant to <a href="https://support.apple.com/guide/bootcamp-assistant/remove-windows-from-your-mac-using-boot-camp-bcmp59c41c31/mac">remove your Windows OS</a>. Use Microsoft’s <a href="https://www.microsoft.com/en-us/software-download/windows10">Media Creation Tool</a> to download a new, fresh .ISO of Windows 10, and then use <a href="https://support.apple.com/guide/bootcamp-assistant/get-started-with-boot-camp-on-mac-bcmp712cfeb8/6.1/mac/10.15">Boot Camp</a> to reinstall that on your Mac. Once Windows is up and running, make sure you’ve installed any updates from Apple (the aforementioned Windows Support Drivers and Apple Software Update) first, then install all the WIndows Updates Microsoft offers, <em>then</em> start putting your files and apps <a href="https://lifehacker.com/the-best-way-to-quickly-install-apps-on-a-new-windows-p-1836244140">back on your system</a> once you’ve verified that everything feels right.</p>
+
+<p>Don’t worry; it takes a lot less time than it sounds like.</p>
+
+        ]]>
+        </description>
+        <pubDate>Tue, 11 Aug 2020 00:00:00 +0000</pubDate>
+        <link>https://bright-softwares.com/blog/productivity/help-windows-wont-boot-correctly-after-a-recent-os-update</link>
+        <guid isPermaLink="true">https://bright-softwares.com/blog/productivity/help-windows-wont-boot-correctly-after-a-recent-os-update</guid>
+        
+        
+        <category>productivity</category>
+        
+      </item>
+    
+      <item>
+        <title>Installing Kubernetes with Minikube</title>        
+        
+        <description>
+        <![CDATA[
+            <img src="https://sergio.afanou.com/assets/images/image-midres-38.jpg" alt="Installing Kubernetes with Minikube">
+            <h1 id="installing-kubernetes-with-minikube">Installing Kubernetes with Minikube</h1>
+
+<p>Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster inside a Virtual Machine (VM) on your laptop for users looking to try out Kubernetes or develop with it day-to-day.</p>
+
+<h2 id="minikube-features-">Minikube Features<a href="#minikube-features"> </a></h2>
+
+<p>Minikube supports the following Kubernetes features:</p>
+
+<ul>
+  <li>DNS</li>
+  <li>NodePorts</li>
+  <li>ConfigMaps and Secrets</li>
+  <li>Dashboards</li>
+  <li>Container Runtime: <a href="https://www.docker.com/">Docker</a>, <a href="https://cri-o.io/">CRI-O</a>, and <a href="https://github.com/containerd/containerd">containerd</a></li>
+  <li>Enabling CNI (Container Network Interface)</li>
+  <li>Ingress
+Installation<a href="#installation"> </a>
+——————————</li>
+</ul>
+
+<p>See <a href="/docs/tasks/tools/install-minikube/">Installing Minikube</a>.</p>
+
+<h2 id="quickstart-">Quickstart<a href="#quickstart"> </a></h2>
+
+<p>This brief demo guides you on how to start, use, and delete Minikube locally. Follow the steps given below to start and explore Minikube.</p>
+
+<ol>
+  <li>Start Minikube and create a cluster:</li>
+</ol>
+
+<p>minikube start The output is similar to this:</p>
+
+<p>Starting local Kubernetes cluster… Running pre-create checks… Creating machine… Starting local Kubernetes cluster… For more information on starting your cluster on a specific Kubernetes version, VM, or container runtime, see <a href="#starting-a-cluster">Starting a Cluster</a>.</p>
+
+<ol>
+  <li>Now, you can interact with your cluster using kubectl. For more information, see <a href="#interacting-with-your-cluster">Interacting with Your Cluster</a>.</li>
+</ol>
+
+<p>Let’s create a Kubernetes Deployment using an existing image named echoserver, which is a simple HTTP server and expose it on port 8080 using –port.</p>
+
+<p>kubectl create deployment hello-minikube –image=k8s.gcr.io/echoserver:1.10 The output is similar to this:</p>
+
+<p>deployment.apps/hello-minikube created</p>
+<ol>
+  <li>To access the hello-minikube Deployment, expose it as a Service:</li>
+</ol>
+
+<p>kubectl expose deployment hello-minikube –type=NodePort –port=8080 The option –type=NodePort specifies the type of the Service.</p>
+
+<p>The output is similar to this:</p>
+
+<p>service/hello-minikube exposed</p>
+<ol>
+  <li>The hello-minikube Pod is now launched but you have to wait until the Pod is up before accessing it via the exposed Service.</li>
+</ol>
+
+<p>Check if the Pod is up and running:</p>
+
+<p>kubectl get pod If the output shows the STATUS as ContainerCreating, the Pod is still being created:</p>
+
+<p>NAME READY STATUS RESTARTS AGE hello-minikube-3383150820-vctvh 0/1 ContainerCreating 0 3s If the output shows the STATUS as Running, the Pod is now up and running:</p>
+
+<p>NAME READY STATUS RESTARTS AGE hello-minikube-3383150820-vctvh 1/1 Running 0 13s</p>
+<ol>
+  <li>Get the URL of the exposed Service to view the Service details:</li>
+</ol>
+
+<p>minikube service hello-minikube –url</p>
+<ol>
+  <li>To view the details of your local cluster, copy and paste the URL you got as the output, on your browser.</li>
+</ol>
+
+<p>The output is similar to this:</p>
+
+<p>Hostname: hello-minikube-7c77b68cff-8wdzq Pod Information: -no pod information available- Server values: server_version=nginx: 1.13.3 - lua: 10008 Request Information: client_address=172.17.0.1 method=GET real path=/ query= request_version=1.1 request_scheme=http request_uri=http://192.168.99.100:8080/ Request Headers: accept=<em>/</em> host=192.168.99.100:30674 user-agent=curl/7.47.0 Request Body: -no body in request- If you no longer want the Service and cluster to run, you can delete them.</p>
+
+<ol>
+  <li>Delete the hello-minikube Service:</li>
+</ol>
+
+<p>kubectl delete services hello-minikube The output is similar to this:</p>
+
+<p>service “hello-minikube” deleted</p>
+<ol>
+  <li>Delete the hello-minikube Deployment:</li>
+</ol>
+
+<p>kubectl delete deployment hello-minikube The output is similar to this:</p>
+
+<p>deployment.extensions “hello-minikube” deleted</p>
+<ol>
+  <li>Stop the local Minikube cluster:</li>
+</ol>
+
+<p>minikube stop The output is similar to this:</p>
+
+<p>Stopping “minikube”… “minikube” stopped. For more information, see <a href="#stopping-a-cluster">Stopping a Cluster</a>.</p>
+
+<ol>
+  <li>Delete the local Minikube cluster:</li>
+</ol>
+
+<p>minikube delete The output is similar to this:</p>
+
+<p>Deleting “minikube” … The “minikube” cluster has been deleted. For more information, see <a href="#deleting-a-cluster">Deleting a cluster</a>.</p>
+
+<h2 id="managing-your-cluster-">Managing your Cluster<a href="#managing-your-cluster"> </a></h2>
+
+<h3 id="starting-a-cluster-">Starting a Cluster<a href="#starting-a-cluster"> </a></h3>
+
+<p>The minikube start command can be used to start your cluster. This command creates and configures a Virtual Machine that runs a single-node Kubernetes cluster. This command also configures your <a href="/docs/reference/kubectl/overview/">kubectl</a> installation to communicate with this cluster.</p>
+
+<blockquote>
+  <p><strong>Note:</strong>If you are behind a web proxy, you need to pass this information to the minikube start command:</p>
+
+  <p>https_proxy=<my proxy=""> minikube start --docker-env http\_proxy=<my proxy=""> --docker-env https\_proxy=<my proxy=""> --docker-env no\_proxy=192.168.99.0/24 Unfortunately, setting the environment variables alone does not work.</my></my></my></p>
+
+  <p>Minikube also creates a “minikube” context, and sets it to default in kubectl. To switch back to this context, run this command: kubectl config use-context minikube.</p>
+
+  <h4 id="specifying-the-kubernetes-version-">Specifying the Kubernetes version<a href="#specifying-the-kubernetes-version"> </a></h4>
+</blockquote>
+
+<p>You can specify the version of Kubernetes for Minikube to use by adding the –kubernetes-version string to the minikube start command. For example, to run version v1.18.0, you would run the following:</p>
+
+<p>minikube start –kubernetes-version v1.18.0 #### Specifying the VM driver<a href="#specifying-the-vm-driver"> </a></p>
+
+<p>You can change the VM driver by adding the –driver=&lt;enter_driver_name&gt; flag to minikube start. For example the command would be.</p>
+
+<p>minikube start –driver=&lt;driver_name&gt; Minikube supports the following drivers:</p>
+
+<blockquote>
+  <p><strong>Note:</strong> See <a href="https://minikube.sigs.k8s.io/docs/reference/drivers/">DRIVERS</a> for details on supported drivers and how to install plugins.* docker (<a href="https://minikube.sigs.k8s.io/docs/drivers/docker/">driver installation</a>)</p>
+  <ul>
+    <li>virtualbox (<a href="https://minikube.sigs.k8s.io/docs/drivers/virtualbox/">driver installation</a>)</li>
+    <li>podman (<a href="https://minikube.sigs.k8s.io/docs/drivers/podman/">driver installation</a>) (EXPERIMENTAL)</li>
+    <li>vmwarefusion</li>
+    <li>kvm2 (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/kvm2/">driver installation</a>)</li>
+    <li>hyperkit (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/hyperkit/">driver installation</a>)</li>
+    <li>hyperv (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/hyperv/">driver installation</a>) Note that the IP below is dynamic and can change. It can be retrieved with minikube ip.</li>
+    <li>vmware (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/vmware/">driver installation</a>) (VMware unified driver)</li>
+    <li>parallels (<a href="https://minikube.sigs.k8s.io/docs/reference/drivers/parallels/">driver installation</a>)</li>
+    <li>none (Runs the Kubernetes components on the host and not in a virtual machine. You need to be running Linux and to have <a href="https://docs.docker.com/engine/">DockerDocker is a software technology providing operating-system-level virtualization also known as containers.</a> installed.)</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p><strong>Caution:</strong> If you use the none driver, some Kubernetes components run as privileged containers that have side effects outside of the Minikube environment. Those side effects mean that the none driver is not recommended for personal workstations.#### Starting a cluster on alternative container runtimes<a href="#starting-a-cluster-on-alternative-container-runtimes"> </a></p>
+</blockquote>
+
+<p>You can start Minikube on the following container runtimes.</p>
+
+<ul>
+  <li><a href="#container-runtimes-0">containerd</a></li>
+  <li><a href="#container-runtimes-1">CRI-O</a>
+To use <a href="https://github.com/containerd/containerd">containerd</a> as the container runtime, run:</li>
+</ul>
+
+<p>minikube start \  –network-plugin=cni \  –enable-default-cni \  –container-runtime=containerd \  –bootstrapper=kubeadm Or you can use the extended version:</p>
+
+<p>minikube start \  –network-plugin=cni \  –enable-default-cni \  –extra-config=kubelet.container-runtime=remote \  –extra-config=kubelet.container-runtime-endpoint=unix:///run/containerd/containerd.sock \  –extra-config=kubelet.image-service-endpoint=unix:///run/containerd/containerd.sock \  –bootstrapper=kubeadm To use <a href="https://cri-o.io/">CRI-O</a> as the container runtime, run:</p>
+
+<p>minikube start \  –network-plugin=cni \  –enable-default-cni \  –container-runtime=cri-o \  –bootstrapper=kubeadm Or you can use the extended version:</p>
+
+<p>minikube start \  –network-plugin=cni \  –enable-default-cni \  –extra-config=kubelet.container-runtime=remote \  –extra-config=kubelet.container-runtime-endpoint=/var/run/crio.sock \  –extra-config=kubelet.image-service-endpoint=/var/run/crio.sock \  –bootstrapper=kubeadm $(function(){$(“#container-runtimes”).tabs();});#### Use local images by re-using the Docker daemon<a href="#use-local-images-by-re-using-the-docker-daemon"> </a></p>
+
+<p>When using a single VM for Kubernetes, it’s useful to reuse Minikube’s built-in Docker daemon. Reusing the built-in daemon means you don’t have to build a Docker registry on your host machine and push the image into it. Instead, you can build inside the same Docker daemon as Minikube, which speeds up local experiments.</p>
+
+<blockquote>
+  <p><strong>Note:</strong> Be sure to tag your Docker image with something other than latest and use that tag to pull the image. Because :latest is the default value, with a corresponding default image pull policy of Always, an image pull error (ErrImagePull) eventually results if you do not have the Docker image in the default Docker registry (usually DockerHub).To work with the Docker daemon on your Mac/Linux host, run the last line from minikube docker-env.</p>
+</blockquote>
+
+<p>You can now use Docker at the command line of your host Mac/Linux machine to communicate with the Docker daemon inside the Minikube VM:</p>
+
+<p>docker ps</p>
+<blockquote>
+  <p><strong>Note:</strong>On Centos 7, Docker may report the following error:</p>
+
+  <p>Could not read CA certificate “/etc/docker/ca.pem”: open /etc/docker/ca.pem: no such file or directory You can fix this by updating /etc/sysconfig/docker to ensure that Minikube’s environment changes are respected:</p>
+
+  <p>&lt; DOCKER_CERT_PATH=/etc/docker — &gt; if [ -z “${DOCKER_CERT_PATH}” ]; then &gt; DOCKER_CERT_PATH=/etc/docker &gt; fi ### Configuring Kubernetes<a href="#configuring-kubernetes"> </a></p>
+</blockquote>
+
+<p>Minikube has a “configurator” feature that allows users to configure the Kubernetes components with arbitrary values. To use this feature, you can use the –extra-config flag on the minikube start command.</p>
+
+<p>This flag is repeated, so you can pass it several times with several different values to set multiple options.</p>
+
+<p>This flag takes a string of the form component.key=value, where component is one of the strings from the below list, key is a value on the configuration struct and value is the value to set.</p>
+
+<p>Valid keys can be found by examining the documentation for the Kubernetes componentconfigs for each component. Here is the documentation for each supported configuration:</p>
+
+<ul>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/pkg/kubelet/apis/config#KubeletConfiguration">kubelet</a></li>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/cmd/kube-apiserver/app/options#ServerRunOptions">apiserver</a></li>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/pkg/proxy/apis/config#KubeProxyConfiguration">proxy</a></li>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/pkg/controller/apis/config#KubeControllerManagerConfiguration">controller-manager</a></li>
+  <li><a href="https://godoc.org/github.com/coreos/etcd/etcdserver#ServerConfig">etcd</a></li>
+  <li><a href="https://godoc.org/k8s.io/kubernetes/pkg/scheduler/apis/config#KubeSchedulerConfiguration">scheduler</a>
+    <h4 id="examples-">Examples<a href="#examples"> </a></h4>
+  </li>
+</ul>
+
+<p>To change the MaxPods setting to 5 on the Kubelet, pass this flag: –extra-config=kubelet.MaxPods=5.</p>
+
+<p>This feature also supports nested structs. To change the LeaderElection.LeaderElect setting to true on the scheduler, pass this flag: –extra-config=scheduler.LeaderElection.LeaderElect=true.</p>
+
+<p>To set the AuthorizationMode on the apiserver to RBAC, you can use: –extra-config=apiserver.authorization-mode=RBAC.</p>
+
+<h3 id="stopping-a-cluster-">Stopping a Cluster<a href="#stopping-a-cluster"> </a></h3>
+
+<p>The minikube stop command can be used to stop your cluster. This command shuts down the Minikube Virtual Machine, but preserves all cluster state and data. Starting the cluster again will restore it to its previous state.</p>
+
+<h3 id="deleting-a-cluster-">Deleting a Cluster<a href="#deleting-a-cluster"> </a></h3>
+
+<p>The minikube delete command can be used to delete your cluster. This command shuts down and deletes the Minikube Virtual Machine. No data or state is preserved.</p>
+
+<h3 id="upgrading-minikube-">Upgrading Minikube<a href="#upgrading-minikube"> </a></h3>
+
+<p>If you are using macOS and <a href="https://brew.sh/">Brew Package Manager</a> is installed run:</p>
+
+<h2 id="brew-update-brew-upgrade-minikube-interacting-with-your-cluster-">brew update brew upgrade minikube Interacting with Your Cluster<a href="#interacting-with-your-cluster"> </a></h2>
+
+<h3 id="kubectl-">Kubectl<a href="#kubectl"> </a></h3>
+
+<p>The minikube start command creates a <a href="/docs/reference/generated/kubectl/kubectl-commands#-em-set-context-em-">kubectl context</a> called “minikube”. This context contains the configuration to communicate with your Minikube cluster.</p>
+
+<p>Minikube sets this context to default automatically, but if you need to switch back to it in the future, run:</p>
+
+<p>kubectl config use-context minikube</p>
+
+<p>Or pass the context on each command like this:</p>
+
+<p>kubectl get pods –context=minikube</p>
+
+<h3 id="dashboard-">Dashboard<a href="#dashboard"> </a></h3>
+
+<p>To access the <a href="/docs/tasks/access-application-cluster/web-ui-dashboard/">Kubernetes Dashboard</a>, run this command in a shell after starting Minikube to get the address:</p>
+
+<p>minikube dashboard ### Services<a href="#services"> </a></p>
+
+<p>To access a Service exposed via a node port, run this command in a shell after starting Minikube to get the address:</p>
+
+<h2 id="minikube-service--n-namespace-url-name-networking-">minikube service [-n NAMESPACE] [–url] NAME Networking<a href="#networking"> </a></h2>
+
+<p>The Minikube VM is exposed to the host system via a host-only IP address, that can be obtained with the minikube ip command. Any services of type NodePort can be accessed over that IP address, on the NodePort.</p>
+
+<p>To determine the NodePort for your service, you can use a kubectl command like this:</p>
+
+<p>kubectl get service $SERVICE –output=’jsonpath=”{.spec.ports[0].nodePort}”’</p>
+
+<h2 id="persistent-volumes-">Persistent Volumes<a href="#persistent-volumes"> </a></h2>
+
+<p>Minikube supports <a href="/docs/concepts/storage/persistent-volumes/">PersistentVolumes</a> of type hostPath. These PersistentVolumes are mapped to a directory inside the Minikube VM.</p>
+
+<p>The Minikube VM boots into a tmpfs, so most directories will not be persisted across reboots (minikube stop). However, Minikube is configured to persist files stored under the following host directories:</p>
+
+<ul>
+  <li>/data</li>
+  <li>/var/lib/minikube</li>
+  <li>/var/lib/docker
+Here is an example PersistentVolume config to persist data in the /data directory:</li>
+</ul>
+
+<h2 id="apiversion-v1-kind-persistentvolume-metadata--name-pv0001-spec--accessmodes----readwriteonce--capacity--storage-5gi--hostpath--path-datapv0001-mounted-host-folders-">apiVersion: v1 kind: PersistentVolume metadata:  name: pv0001 spec:  accessModes:  - ReadWriteOnce  capacity:  storage: 5Gi  hostPath:  path: /data/pv0001/ Mounted Host Folders<a href="#mounted-host-folders"> </a></h2>
+
+<p>Some drivers will mount a host folder within the VM so that you can easily share files between the VM and host. These are not configurable at the moment and different for the driver and OS you are using.</p>
+
+<blockquote>
+  <h2 id="note-host-folder-sharing-is-not-implemented-in-the-kvm-driver-yetdriveroshostfoldervmvirtualboxlinuxhomehosthomevirtualboxmacosusersusersvirtualboxwindowscuserscusersvmware-fusionmacosusersmnthgfsusersxhyvemacosusersusersprivate-container-registries-"><strong>Note:</strong> Host folder sharing is not implemented in the KVM driver yet.DriverOSHostFolderVMVirtualBoxLinux/home/hosthomeVirtualBoxmacOS/Users/UsersVirtualBoxWindowsC://Users/c/UsersVMware FusionmacOS/Users/mnt/hgfs/UsersXhyvemacOS/Users/UsersPrivate Container Registries<a href="#private-container-registries"> </a></h2>
+</blockquote>
+
+<p>To access a private container registry, follow the steps on <a href="/docs/concepts/containers/images/">this page</a>.</p>
+
+<p>We recommend you use ImagePullSecrets, but if you would like to configure access on the Minikube VM you can place the .dockercfg in the /home/docker directory or the config.json in the /home/docker/.docker directory.</p>
+
+<h2 id="add-ons-">Add-ons<a href="#add-ons"> </a></h2>
+
+<p>In order to have Minikube properly start or restart custom addons, place the addons you wish to be launched with Minikube in the ~/.minikube/addons directory. Addons in this folder will be moved to the Minikube VM and launched each time Minikube is started or restarted.</p>
+
+<h2 id="using-minikube-with-an-http-proxy-">Using Minikube with an HTTP Proxy<a href="#using-minikube-with-an-http-proxy"> </a></h2>
+
+<p>Minikube creates a Virtual Machine that includes Kubernetes and a Docker daemon. When Kubernetes attempts to schedule containers using Docker, the Docker daemon may require external network access to pull containers.</p>
+
+<p>If you are behind an HTTP proxy, you may need to supply Docker with the proxy settings. To do this, pass the required environment variables as flags during minikube start.</p>
+
+<p>For example:</p>
+
+<p>minikube start –docker-env http_proxy=http://$YOURPROXY:PORT \  –docker-env https_proxy=https://$YOURPROXY:PORT If your Virtual Machine address is 192.168.99.100, then chances are your proxy settings will prevent kubectl from directly reaching it. To by-pass proxy configuration for this IP address, you should modify your no_proxy settings. You can do so with:</p>
+
+<h2 id="export-no_proxyno_proxyminikube-ip-known-issues-">export no_proxy=$no_proxy,$(minikube ip) Known Issues<a href="#known-issues"> </a></h2>
+
+<p>Features that require multiple nodes will not work in Minikube.</p>
+
+<h2 id="design-">Design<a href="#design"> </a></h2>
+
+<p>Minikube uses <a href="https://github.com/docker/machine/tree/master/libmachine">libmachine</a> for provisioning VMs, and <a href="https://github.com/kubernetes/kubeadm">kubeadm</a> to provision a Kubernetes cluster.</p>
+
+<p>For more information about Minikube, see the <a href="https://git.k8s.io/community/contributors/design-proposals/cluster-lifecycle/local-cluster-ux.md">proposal</a>.</p>
+
+<h2 id="additional-links-">Additional Links<a href="#additional-links"> </a></h2>
+
+<ul>
+  <li><strong>Goals and Non-Goals</strong>: For the goals and non-goals of the Minikube project, please see our <a href="https://minikube.sigs.k8s.io/docs/contrib/roadmap/">roadmap</a>.</li>
+  <li><strong>Development Guide</strong>: See <a href="https://minikube.sigs.k8s.io/docs/contrib/">Contributing</a> for an overview of how to send pull requests.</li>
+  <li><strong>Building Minikube</strong>: For instructions on how to build/test Minikube from source, see the <a href="https://minikube.sigs.k8s.io/docs/contrib/building/">build guide</a>.</li>
+  <li><strong>Adding a New Dependency</strong>: For instructions on how to add a new dependency to Minikube, see the <a href="https://minikube.sigs.k8s.io/docs/contrib/drivers/">adding dependencies guide</a>.</li>
+  <li><strong>Adding a New Addon</strong>: For instructions on how to add a new addon for Minikube, see the <a href="https://minikube.sigs.k8s.io/docs/contrib/addons/">adding an addon guide</a>.</li>
+  <li><strong>MicroK8s</strong>: Linux users wishing to avoid running a virtual machine may consider <a href="https://microk8s.io/">MicroK8s</a> as an alternative.
+Community<a href="#community"> </a>
+————————</li>
+</ul>
+
+<p>Contributions, questions, and comments are all welcomed and encouraged! Minikube developers hang out on <a href="https://kubernetes.slack.com">Slack</a> in the #minikube channel (get an invitation <a href="https://slack.kubernetes.io/">here</a>). We also have the <a href="https://groups.google.com/forum/#!forum/kubernetes-dev">kubernetes-dev Google Groups mailing list</a>. If you are posting to the list please prefix your subject with “minikube: “.</p>
+
+<h2 id="feedback">Feedback</h2>
+
+<p>Was this page helpful?</p>
+
+<p>Yes NoThanks for the feedback. If you have a specific, answerable question about how to use Kubernetes, ask it on <a href="https://stackoverflow.com/questions/tagged/kubernetes">Stack Overflow</a>. Open an issue in the GitHub repo if you want to <a href="https://github.com/kubernetes/website/issues/new?title=Issue%20with%20k8s.io/docs/setup/learning-environment/minikube/">report a problem</a> or <a href="https://github.com/kubernetes/website/issues/new?title=Improvement%20for%20k8s.io/docs/setup/learning-environment/minikube/">suggest an improvement</a>.</p>
+
+<p>const yes=document.querySelector(‘.feedback–yes’);const no=document.querySelector(‘.feedback–no’);document.querySelectorAll(‘.feedback–link’).forEach(link=&gt;{link.href=link.href+window.location.pathname;});const sendFeedback=(value)=&gt;{if(!gtag){console.log(‘!gtag’);} gtag(‘event’,’click’,{‘event_category’:’Helpful’,’event_label’:window.location.pathname,value});};const disableButtons=()=&gt;{yes.disabled=true;yes.classList.add(‘feedback–button__disabled’);no.disabled=true;no.classList.add(‘feedback–button__disabled’);};yes.addEventListener(‘click’,()=&gt;{sendFeedback(1);disableButtons();document.querySelector(‘.feedback–response’).classList.remove(‘feedback–response__hidden’);});no.addEventListener(‘click’,()=&gt;{sendFeedback(0);disableButtons();document.querySelector(‘.feedback–response’).classList.remove(‘feedback–response__hidden’);});<img src="https://kubernetes-site.appspot.com/UA-36037335-10/GitHub/docs/setup/learning-environment/minikube.md?pixel" alt="Analytics" /></p>
+
+<p>PDRTJS_settings_8345992={“id”:”8345992”,”unique_id”:”\/docs\/setup\/learning-environment\/minikube\/”,”title”:”Installing Kubernetes with Minikube”,”permalink”:”https:\/\/kubernetes.io\/docs\/setup\/learning-environment\/minikube\/”};(function(d,c,j){if(!document.getElementById(j)){var pd=d.createElement(c),s;pd.id=j;pd.src=(“https:”==document.location.protocol)?”https://polldaddy.com/js/rating/rating.js”:”http://i0.poll.fm/js/rating/rating.js”;s=document.getElementsByTagName(c)[0];s.parentNode.insertBefore(pd,s);}}(document,”script”,”pd-rating-js”));Create an Issue <a href="https://github.com/kubernetes/website/edit/master/content/en/docs/setup/learning-environment/minikube.md">Edit This Page</a>Page last modified on July 20, 2020 at 4:17 PM PST by <a href="https://github.com/kubernetes/website/commit/c4add100ffd74508886312f7170c1c2f0cba9845/">Replace redirected links with the real targets</a> (<a href="https://github.com/kubernetes/website/commits/master/content/en/docs/setup/learning-environment/minikube.md">Page History</a>)</p>
+
+        ]]>
+        </description>
+        <pubDate>Tue, 04 Aug 2020 00:00:00 +0000</pubDate>
+        <link>https://bright-softwares.com/blog/kubernetes/installing-kubernetes-with-minikube</link>
+        <guid isPermaLink="true">https://bright-softwares.com/blog/kubernetes/installing-kubernetes-with-minikube</guid>
+        
+        
+        <category>kubernetes</category>
+        
+      </item>
+    
+      <item>
+        <title>Docker tip : inspect and less</title>        
+        
+        <description>
+        <![CDATA[
+            <img src="https://sergio.afanou.com/assets/images/image-midres-15.jpg" alt="Docker tip : inspect and less">
+            <h3>Docker inspect and less</h3>
+
+<p>This isn’t so much a docker tip, as it is a jq tip. If you haven’t heard of jq, it is a great tool for parsing JSON from the command line. This also makes it a great tool to see what is happening in a container instead of having to use the –format specifier which I can never remember how to use exactly:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Get network information:
+$ docker inspect 4c45aea49180 | jq '.[].NetworkSettings.Networks'
+{
+  "bridge": {
+    "EndpointID": "ba1b6efba16de99f260e0fa8892fd4685dbe2f79cba37ac0114195e9fad66075",
+    "Gateway": "172.17.0.1",
+    "IPAddress": "172.17.0.2",
+    "IPPrefixLen": 16,
+    "IPv6Gateway": "",
+    "GlobalIPv6Address": "",
+    "GlobalIPv6PrefixLen": 0,
+    "MacAddress": "02:42:ac:11:00:02"
+  }
+}
+
+# Get the arguments with which the container was started
+$ docker inspect 4c45aea49180 | jq '.[].Args'
+[
+  "-server",
+  "-advertise",
+  "192.168.99.100",
+  "-bootstrap-expect",
+  "1"
+]
+
+# Get all the mounted volumes
+11:22 $ docker inspect 4c45aea49180 | jq '.[].Mounts'
+[
+  {
+    "Name": "a8125ffdf6c4be1db4464345ba36b0417a18aaa3a025267596e292249ca4391f",
+    "Source": "/mnt/sda1/var/lib/docker/volumes/a8125ffdf6c4be1db4464345ba36b0417a18aaa3a025267596e292249ca4391f/_data",
+    "Destination": "/data",
+    "Driver": "local",
+    "Mode": "",
+    "RW": true
+  }
+]
+</code></pre></div></div>
+
+<p>And of course also works great for querying other kinds of (docker-esque) APIs that produce JSON (e.g Marathon, Mesos, Consul etc.). JQ provides a very extensive API for accessing and processing JSON. More information can be found here: https://stedolan.github.io/jq/</p>
+
+        ]]>
+        </description>
+        <pubDate>Tue, 04 Aug 2020 00:00:00 +0000</pubDate>
+        <link>https://bright-softwares.com/blog/docker/docker-tip-inspect-and-less</link>
+        <guid isPermaLink="true">https://bright-softwares.com/blog/docker/docker-tip-inspect-and-less</guid>
+        
+        
+        <category>docker</category>
+        
+      </item>
+    
+  </channel>
+</rss>

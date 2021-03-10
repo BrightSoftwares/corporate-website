@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/img/logos/large/brightsoftwares-dark.png">
+
+<!-- The favicon items -->
+<link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon.ico/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon.ico/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon.ico/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon.ico/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon.ico/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon.ico/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon.ico/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon.ico/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon.ico/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicon.ico/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon.ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon.ico/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon.ico/favicon-16x16.png">
+<link rel="manifest" href="../assets/favicon.ico/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="../assets/favicon.ico/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>How To Set Up the code-server Cloud IDE Platform on DigitalOcean Kubernetes | Bright Softwares</title>
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>How To Set Up the code-server Cloud IDE Platform on DigitalOcean Kubernetes | Bright Softwares</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="How To Set Up the code-server Cloud IDE Platform on DigitalOcean Kubernetes" />
+<meta name="author" content="Full" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="With developer tools moving to the cloud, creation and adoption of cloud IDE (Integrated Development Environment) platforms is growing. Cloud IDEs allow for real-time collaboration between developer teams to work in a unified development environment that minimizes incompatibilities and enhances productivity. Accessible through web browsers, cloud IDEs are available from every type of modern device. Another advantage of a cloud IDE is the possibility to leverage the power of a cluster, which can greatly exceed the processing power of a single development computer." />
+<meta property="og:description" content="With developer tools moving to the cloud, creation and adoption of cloud IDE (Integrated Development Environment) platforms is growing. Cloud IDEs allow for real-time collaboration between developer teams to work in a unified development environment that minimizes incompatibilities and enhances productivity. Accessible through web browsers, cloud IDEs are available from every type of modern device. Another advantage of a cloud IDE is the possibility to leverage the power of a cluster, which can greatly exceed the processing power of a single development computer." />
+<link rel="canonical" href="https://bright-softwares.com/blog/kubernetes/how-to-set-up-the-codeserver-cloud-ide-platform-on-digitalocean-kubernetes" />
+<meta property="og:url" content="https://bright-softwares.com/blog/kubernetes/how-to-set-up-the-codeserver-cloud-ide-platform-on-digitalocean-kubernetes" />
+<meta property="og:site_name" content="Bright Softwares" />
+<meta property="og:image" content="https://sergio.afanou.com/assets/images/image-midres-23.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://sergio.afanou.com/assets/images/image-midres-23.jpg" />
+<meta property="twitter:title" content="How To Set Up the code-server Cloud IDE Platform on DigitalOcean Kubernetes" />
+<script type="application/ld+json">
+{"description":"With developer tools moving to the cloud, creation and adoption of cloud IDE (Integrated Development Environment) platforms is growing. Cloud IDEs allow for real-time collaboration between developer teams to work in a unified development environment that minimizes incompatibilities and enhances productivity. Accessible through web browsers, cloud IDEs are available from every type of modern device. Another advantage of a cloud IDE is the possibility to leverage the power of a cluster, which can greatly exceed the processing power of a single development computer.","url":"https://bright-softwares.com/blog/kubernetes/how-to-set-up-the-codeserver-cloud-ide-platform-on-digitalocean-kubernetes","@type":"BlogPosting","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://bright-softwares.com/img/logos/large/brightsoftwares-light.png"},"name":"Full"},"headline":"How To Set Up the code-server Cloud IDE Platform on DigitalOcean Kubernetes","dateModified":"2020-04-03T00:00:00+00:00","datePublished":"2020-04-03T00:00:00+00:00","image":"https://sergio.afanou.com/assets/images/image-midres-23.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://bright-softwares.com/blog/kubernetes/how-to-set-up-the-codeserver-cloud-ide-platform-on-digitalocean-kubernetes"},"author":{"@type":"Person","name":"Full"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+<!-- change your GA id in _config.yml -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-134921119-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/img/logos/large/brightsoftwares-dark.png" alt="Bright Softwares">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/#services">Services</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#portfolio">Portfolio</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/blog/index.html">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#team">Team</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#contact">Contact</a>
+                </li>
+
+                <!--
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/"> Docs</a>
+                </li>
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-wordpress/"><i class="fab fa-wordpress-simple"></i> WP Version</a>
+                </li>
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-ghost/"><i class="fab fa-snapchat-ghost"></i> Ghost Version</a>
+                </li>
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://github.com/wowthemesnet/mediumish-theme-jekyll"><i class="fab fa-github"></i> Fork on Github</a>
+                </li>
+                -->
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<!-- <div class="mainheading">
+    <h1 class="sitetitle">Bright Softwares</h1>
+    <p class="lead">
+        We provide solutions to our customers challenges. Our teams based in Paris and Lomé provide high value expertise to engineer the best solutions.
+    </p>
+</div>
+-->
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=How To Set Up the code-server Cloud IDE Platform on DigitalOcean Kubernetes&url=https://bright-softwares.com/blog/kubernetes/how-to-set-up-the-codeserver-cloud-ide-platform-on-digitalocean-kubernetes" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=https://bright-softwares.com/blog/kubernetes/how-to-set-up-the-codeserver-cloud-ide-platform-on-digitalocean-kubernetes" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://bright-softwares.com/blog/kubernetes/how-to-set-up-the-codeserver-cloud-ide-platform-on-digitalocean-kubernetes" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+
+    </ul>
+    
+    <div class="sep">
+    </div>
+    <ul>
+        <li>
+        <a class="small smoothscroll" href="#disqus_thread"></a>
+        </li>
+    </ul>
+    
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/?s=250&d=mm&r=x" alt="">
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark" href=""></a><a target="_blank" href="" class="btn follow">Follow</a>
+                        <span class="author-description"></span>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">How To Set Up the code-server Cloud IDE Platform on DigitalOcean Kubernetes</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid" src="https://sergio.afanou.com/assets/images/image-midres-23.jpg" alt="How To Set Up the code-server Cloud IDE Platform on DigitalOcean Kubernetes">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <h1 id="introduction">Introduction</h1>
+
+<p>With developer tools moving to the cloud, creation and adoption of cloud IDE (Integrated Development Environment) platforms is growing. Cloud IDEs allow for real-time collaboration between developer teams to work in a unified development environment that minimizes incompatibilities and enhances productivity. Accessible through web browsers, cloud IDEs are available from every type of modern device. Another advantage of a cloud IDE is the possibility to leverage the power of a cluster, which can greatly exceed the processing power of a single development computer.</p>
+
+<p>code-server is Microsoft Visual Studio Code running on a remote server and accessible directly from your browser. Visual Studio Code is a modern code editor with integrated Git support, a code debugger, smart autocompletion, and customizable and extensible features. This means that you can use various devices, running different operating systems, and always have a consistent development environment on hand.</p>
+
+<p>In this tutorial, you will set up the code-server cloud IDE platform on your DigitalOcean Kubernetes cluster and expose it at your domain, secured with Let’s Encrypt certificates. In the end, you’ll have Microsoft Visual Studio Code running on your Kubernetes cluster, available via HTTPS and protected by a password.</p>
+
+<h1 id="prerequisites">Prerequisites</h1>
+
+<p>A DigitalOcean Kubernetes cluster with your connection configured as the kubectl default. Instructions on how to configure kubectl are shown under the Connect to your Cluster step when you create your cluster. To create a Kubernetes cluster on DigitalOcean, see Kubernetes Quickstart.</p>
+
+<p>The Helm package manager installed on your local machine, and Tiller installed on your cluster. To do this, complete Steps 1 and 2 of the How To Install Software on Kubernetes Clusters with the Helm Package Manager tutorial.</p>
+
+<p>The Nginx Ingress Controller and Cert-Manager installed on your cluster using Helm in order to expose code-server using Ingress Resources. To do this, follow How to Set Up an Nginx Ingress on DigitalOcean Kubernetes Using Helm.</p>
+
+<p>A fully registered domain name to host code-server, pointed at the Load Balancer used by the Nginx Ingress. This tutorial will use code-server.your_domain throughout. You can purchase a domain name on Namecheap, get one for free on Freenom, or use the domain registrar of your choice. This domain name must differ from the one used in the How To Set Up an Nginx Ingress on DigitalOcean Kubernetes prerequisite tutorial.</p>
+
+<h2 id="step-1--installing-and-exposing-code-server">Step 1 — Installing And Exposing code-server</h2>
+
+<p>In this section, you’ll install code-server to your DigitalOcean Kubernetes cluster and expose it at your domain, using the Nginx Ingress controller. You will also set up a password for admittance.
+You’ll store the deployment configuration on your local machine, in a file named code-server.yaml. Create it using the following command:
+nano code-server.yaml</p>
+
+<p>Add the following lines to the file:</p>
+
+<p>code-server.yaml</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apiVersion: v1
+kind: Namespace
+metadata:
+  name: code-server
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: code-server
+  namespace: code-server
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: code-server.your_domain
+    http:
+      paths:
+      - backend:
+          serviceName: code-server
+          servicePort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+ name: code-server
+ namespace: code-server
+spec:
+ ports:
+ - port: 80
+   targetPort: 8443
+ selector:
+   app: code-server
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: code-server
+  name: code-server
+  namespace: code-server
+spec:
+  selector:
+    matchLabels:
+      app: code-server
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: code-server
+    spec:
+      containers:
+      - image: codercom/code-server
+        imagePullPolicy: Always
+        name: code-server
+        args: ["--allow-http"]
+        ports:
+        - containerPort: 8443
+        env:
+        - name: PASSWORD
+          value: "your_password"
+</code></pre></div></div>
+
+<p>This configuration defines a Namespace, a Deployment, a Service, and an Ingress. The Namespace is called code-server and separates the code-server installation from the rest of your cluster. The Deployment consists of one replica of the codercom/code-server Docker image, and an environment variable named PASSWORD that specifies the password for access.</p>
+
+<p>The code-server Service internally exposes the pod (created as a part of the Deployment) at port 80. The Ingress defined in the file specifies that the Ingress Controller is nginx, and that the code-server.your_domain domain will be served from the Service.</p>
+
+<p>Remember to replace your_password with your desired password, and code-server.your_domain with your desired domain, pointed to the Load Balancer of the Nginx Ingress Controller.
+Then, create the configuration in Kubernetes by running the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl create -f code-server.yaml
+</code></pre></div></div>
+
+<p>You’ll see the following output:
+Output</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>namespace/code-server created
+ingress.extensions/code-server created
+service/code-server created
+deployment.extensions/code-server created
+</code></pre></div></div>
+
+<p>You can watch the code-server pod become available by running:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl get pods -w -n code-server
+</code></pre></div></div>
+
+<p>The output will look like:
+Output</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NAME                          READY   STATUS              RESTARTS   AGE
+code-server-f85d9bfc9-j7hq6   0/1     ContainerCreating   0          1m
+</code></pre></div></div>
+
+<p>As soon as the status becomes Running, code-server has finished installing to your cluster.
+Navigate to your domain in your browser. You’ll see the login prompt for code-server.</p>
+
+<p>Enter the password you set in code-server.yaml and press Enter IDE. You’ll enter code-server and immediately see its editor GUI.</p>
+
+<p>You’ve installed code-server to your Kubernetes cluster and made it available at your domain. You have also verified that it requires you to log in with a password. Now, you’ll move on to secure it with free Let’s Encrypt certificates using Cert-Manager.</p>
+
+<h2 id="step-2--securing-the-code-server-deployment">Step 2 — Securing the code-server Deployment</h2>
+
+<p>In this section, you will secure your code-server installation by applying Let’s Encrypt certificates to your Ingress, which Cert-Manager will automatically create. After completing this step, your code-server installation will be accessible via HTTPS.
+Open code-server.yaml for editing:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano code-server.yaml
+</code></pre></div></div>
+
+<p>Add the highlighted lines to your file, making sure to replace the example domain with your own:
+code-server.yaml</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apiVersion: v1
+kind: Namespace
+metadata:
+  name: code-server
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: code-server
+  namespace: code-server
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+spec:
+  tls:
+  - hosts:
+    - code-server.your_domain
+    secretName: codeserver-prod
+  rules:
+  - host: code-server.your_domain
+    http:
+      paths:
+      - backend:
+          serviceName: code-server
+          servicePort: 80
+...
+</code></pre></div></div>
+
+<p>First, you specify that the cluster-issuer that this Ingress will use to provision certificates will be letsencrypt-prod, created as a part of the prerequisites. Then, you specify the domains that will be secured under the tls section, as well as your name for the Secret holding them.</p>
+
+<p>Apply the changes to your Kubernetes cluster by running the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl apply -f code-server.yaml
+</code></pre></div></div>
+
+<p>You’ll need to wait a few minutes for Let’s Encrypt to provision your certificate. In the meantime, you can track its progress by looking at the output of the following command:
+kubectl describe certificate codeserver-prod -n code-server</p>
+
+<p>When it finishes, the end of the output will look similar to this:
+Output</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Events:
+  Type    Reason              Age    From          Message
+  ----    ------              ----   ----          -------
+  Normal  Generated           2m49s  cert-manager  Generated new private key
+  Normal  GenerateSelfSigned  2m49s  cert-manager  Generated temporary self signed certificate
+  Normal  OrderCreated        2m49s  cert-manager  Created Order resource "codeserver-prod-4279678953"
+  Normal  OrderComplete       2m14s  cert-manager  Order "codeserver-prod-4279678953" completed successfully
+  Normal  CertIssued          2m14s  cert-manager  Certificate issued successfully
+</code></pre></div></div>
+
+<p>You can now refresh your domain in your browser. You’ll see the padlock to the left of the address bar in your browser signifying that the connection is secure.
+In this step, you have configured the Ingress to secure your code-server deployment. Now, you can review the code-server user interface.</p>
+
+<h2 id="step-3--exploring-the-code-server-interface">Step 3 — Exploring the code-server Interface</h2>
+
+<p>In this section, you’ll explore some of the features of the code-server interface. Since code-server is Visual Studio Code running in the cloud, it has the same interface as the standalone desktop edition.</p>
+
+<p>On the left-hand side of the IDE, there is a vertical row of six buttons opening the most commonly used features in a side panel known as the Activity Bar.</p>
+
+<p>This bar is customizable so you can move these views to a different order or remove them from the bar. By default, the first view opens the Explorer panel that provides tree-like navigation of the project’s structure. You can manage your folders and files here—creating, deleting, moving, and renaming them as necessary. The next view provides access to a search and replace functionality.</p>
+
+<p>Following this, in the default order, is your view of the source control systems, like Git. Visual Studio code also supports other source control providers and you can find further instructions for source control workflows with the editor in this documentation.</p>
+
+<p>The debugger option on the Activity Bar provides all the common actions for debugging in the panel. Visual Studio Code comes with built-in support for the Node.js runtime debugger and any language that transpiles to Javascript. For other languages you can install extensions for the required debugger. You can save debugging configurations in the launch.json file.</p>
+
+<p>The final view in the Activity Bar provides a menu to access available extensions on the Marketplace.</p>
+
+<p>The central part of the GUI is your editor, which you can separate by tabs for your code editing. You can change your editing view to a grid system or to side-by-side files.</p>
+
+<p>After creating a new file through the File menu, an empty file will open in a new tab, and once saved, the file’s name will be viewable in the Explorer side panel. Creating folders can be done by right clicking on the Explorer sidebar and pressing on New Folder. You can expand a folder by clicking on its name as well as dragging and dropping files and folders to upper parts of the hierarchy to move them to a new location.</p>
+
+<p>You can gain access to a terminal by pressing CTRL+SHIFT+\, or by pressing on Terminal in the upper menu, and selecting New Terminal. The terminal will open in a lower panel and its working directory will be set to the project’s workspace, which contains the files and folders shown in the Explorer side panel.
+You’ve explored a high-level overview of the code-server interface and reviewed some of the most commonly used features.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>You now have code-server, a versatile cloud IDE, installed on your DigitalOcean Kubernetes cluster. You can work on your source code and documents with it individually or collaborate with your team. Running a cloud IDE on your cluster provides more power for testing, downloading, and more thorough or rigorous computing. For further information see the Visual Studio Code documentation on additional features and detailed instructions on other components of code-server.</p>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2020-04-03">03 Apr 2020 (11 months and 1 week ago)</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#kubernetes">kubernetes</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="/blog/aws/migrate-your-current-vps-linode-rackspace-aws-ec2-to-digitalocean"> &laquo; Migrate Your Current VPS (Linode, Rackspace, AWS EC2) to DigitalOcean</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="/blog/docker/how-to-setup-your-local-nodejs-development-environment-using-docker">How To Setup Your Local Node.js Development Environment Using Docker &raquo; </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+    <div class="container">
+        <div id="comments" class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = ''; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            </div>
+        </div>
+    </div>
+
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+
+</div>
+
+
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#aws">aws (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#data-analysis">data-analysis (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#kubernetes">kubernetes (5)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#docker">docker (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#web-development">web development (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#wordpress">wordpress (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#slack">slack (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ubuntu">ubuntu (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#javascript">javascript (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#database">database (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#productivity">productivity (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#backup-restore">backup-restore (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#fax">fax (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#screenshot">screenshot (1)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © 2021 Bright Softwares 
+            </div>
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+                <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//.disqus.com/count.js"></script>
+
+
+</body>
+</html>

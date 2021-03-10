@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/img/logos/large/brightsoftwares-dark.png">
+
+<!-- The favicon items -->
+<link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon.ico/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon.ico/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon.ico/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon.ico/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon.ico/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon.ico/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon.ico/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon.ico/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon.ico/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicon.ico/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon.ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon.ico/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon.ico/favicon-16x16.png">
+<link rel="manifest" href="../assets/favicon.ico/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="../assets/favicon.ico/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>How To Setup Your Local Node.js Development Environment Using Docker | Bright Softwares</title>
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>How To Setup Your Local Node.js Development Environment Using Docker | Bright Softwares</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="How To Setup Your Local Node.js Development Environment Using Docker" />
+<meta name="author" content="Full" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Docker is the defacto toolset for building modern applications and setting up a CI/CD pipeline – helping you build, ship and run your applications in containers on-prem and in the cloud. Whether you’re running on simple compute instances such as AWS EC2 or Azure VMs or something a little more fancy like a hosted Kubernetes service like AWS EKS or Azure AKS, Docker’s toolset is your new BFF." />
+<meta property="og:description" content="Docker is the defacto toolset for building modern applications and setting up a CI/CD pipeline – helping you build, ship and run your applications in containers on-prem and in the cloud. Whether you’re running on simple compute instances such as AWS EC2 or Azure VMs or something a little more fancy like a hosted Kubernetes service like AWS EKS or Azure AKS, Docker’s toolset is your new BFF." />
+<link rel="canonical" href="https://bright-softwares.com/blog/docker/how-to-setup-your-local-nodejs-development-environment-using-docker" />
+<meta property="og:url" content="https://bright-softwares.com/blog/docker/how-to-setup-your-local-nodejs-development-environment-using-docker" />
+<meta property="og:site_name" content="Bright Softwares" />
+<meta property="og:image" content="https://sergio.afanou.com/assets/images/image-midres-11.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-03T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://sergio.afanou.com/assets/images/image-midres-11.jpg" />
+<meta property="twitter:title" content="How To Setup Your Local Node.js Development Environment Using Docker" />
+<script type="application/ld+json">
+{"description":"Docker is the defacto toolset for building modern applications and setting up a CI/CD pipeline – helping you build, ship and run your applications in containers on-prem and in the cloud. Whether you’re running on simple compute instances such as AWS EC2 or Azure VMs or something a little more fancy like a hosted Kubernetes service like AWS EKS or Azure AKS, Docker’s toolset is your new BFF.","url":"https://bright-softwares.com/blog/docker/how-to-setup-your-local-nodejs-development-environment-using-docker","@type":"BlogPosting","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://bright-softwares.com/img/logos/large/brightsoftwares-light.png"},"name":"Full"},"headline":"How To Setup Your Local Node.js Development Environment Using Docker","dateModified":"2020-04-03T00:00:00+00:00","datePublished":"2020-04-03T00:00:00+00:00","image":"https://sergio.afanou.com/assets/images/image-midres-11.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://bright-softwares.com/blog/docker/how-to-setup-your-local-nodejs-development-environment-using-docker"},"author":{"@type":"Person","name":"Full"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+<!-- change your GA id in _config.yml -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-134921119-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/img/logos/large/brightsoftwares-dark.png" alt="Bright Softwares">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/#services">Services</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#portfolio">Portfolio</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/blog/index.html">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#team">Team</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#contact">Contact</a>
+                </li>
+
+                <!--
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/"> Docs</a>
+                </li>
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-wordpress/"><i class="fab fa-wordpress-simple"></i> WP Version</a>
+                </li>
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-ghost/"><i class="fab fa-snapchat-ghost"></i> Ghost Version</a>
+                </li>
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://github.com/wowthemesnet/mediumish-theme-jekyll"><i class="fab fa-github"></i> Fork on Github</a>
+                </li>
+                -->
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<!-- <div class="mainheading">
+    <h1 class="sitetitle">Bright Softwares</h1>
+    <p class="lead">
+        We provide solutions to our customers challenges. Our teams based in Paris and Lomé provide high value expertise to engineer the best solutions.
+    </p>
+</div>
+-->
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=How To Setup Your Local Node.js Development Environment Using Docker&url=https://bright-softwares.com/blog/docker/how-to-setup-your-local-nodejs-development-environment-using-docker" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=https://bright-softwares.com/blog/docker/how-to-setup-your-local-nodejs-development-environment-using-docker" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://bright-softwares.com/blog/docker/how-to-setup-your-local-nodejs-development-environment-using-docker" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+
+    </ul>
+    
+    <div class="sep">
+    </div>
+    <ul>
+        <li>
+        <a class="small smoothscroll" href="#disqus_thread"></a>
+        </li>
+    </ul>
+    
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/?s=250&d=mm&r=x" alt="">
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark" href=""></a><a target="_blank" href="" class="btn follow">Follow</a>
+                        <span class="author-description"></span>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">How To Setup Your Local Node.js Development Environment Using Docker</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid" src="https://sergio.afanou.com/assets/images/image-midres-11.jpg" alt="How To Setup Your Local Node.js Development Environment Using Docker">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>Docker is the defacto toolset for building modern applications and setting up a CI/CD pipeline &#8211; helping you build, ship and run your applications in containers on-prem and in the cloud.&nbsp;</p>
+
+<p>Whether you&#8217;re running on simple compute instances such as AWS EC2 or Azure VMs or something a little more fancy like a hosted Kubernetes service like AWS EKS or Azure AKS, Docker’s toolset is your new BFF.&nbsp;</p>
+
+<p>But what about your local development environment? Setting up local dev environments can be frustrating to say the least.</p>
+
+<p>Remember the last time you joined a new development team?</p>
+
+<p>You needed to configure your local machine, install development tools, pull repositories, fight through out-of-date onboarding docs and READMEs, get everything running and working locally without knowing a thing about the code and it’s architecture. Oh and don’t forget about databases, caching layers and message queues. These are notoriously hard to set up and develop on locally.</p>
+
+<p>I’ve never worked at a place where we didn’t expect at least a week or more of on-boarding for new developers.&nbsp;</p>
+
+<p>So what are we to do? Well, there is no silver bullet and these things are hard to do (that’s why you get paid the big bucks) but with the help of Docker and it’s toolset, we can make things a whole lot easier.</p>
+
+<p>In Part I of this tutorial we’ll walk through setting up a local development environment for a relatively complex application that uses React for it’s front end, Node and Express for a couple of micro-services and MongoDb for our datastore. We’ll use Docker to build our images and Docker Compose to make everything a whole lot easier.</p>
+
+<p>If you have any questions, comments or just want to connect. You can reach me in our <a href="http://dockr.ly/slack">Community Slack</a> or on twitter at <a href="https://twitter.com/pmckee">@pmckee</a>.</p>
+
+<p>Let’s get started.</p>
+
+<h2>Prerequisites</h2>
+
+<p>To complete this tutorial, you will need:</p>
+
+<ul><li>Docker installed on your development machine. You can download and install Docker Desktop from the links below:<ul><li><a href="https://download.docker.com/mac/stable/Docker.dmg">Docker Desktop for Mac</a></li><li><a href="https://download.docker.com/win/stable/Docker%20Desktop%20Installer.exe">Docker Desktop for Windows</a></li></ul></li><li><a href="https://git-scm.com/downloads">Git</a> installed on your development machine.</li><li>An IDE or text editor to use for editing files. I would recommend <a href="https://code.visualstudio.com/Download">VSCode</a></li></ul>
+
+<h2>Fork the Code Repository</h2>
+
+<p>The first thing we want to do is download the code to our local development machine. Let’s do this using the following git command:</p>
+
+<p><em>git clone git@github.com:pmckeetx/memphis.git</em></p>
+
+<p>Now that we have the code local, let’s take a look at the project structure. Open the code in your favorite IDE and expand the root level directories. You’ll see the following file structure.</p>
+
+<p>├── docker-compose.yml<br />├── notes-service<br />│ &nbsp; ├── config<br />│ &nbsp; ├── node_modules<br />│ &nbsp; ├── nodemon.json<br />│ &nbsp; ├── package-lock.json<br />│ &nbsp; ├── package.json<br />│ &nbsp; └── server.js<br />├── reading-list-service<br />│ &nbsp; ├── config<br />│ &nbsp; ├── node_modules<br />│ &nbsp; ├── nodemon.json<br />│ &nbsp; ├── package-lock.json<br />│ &nbsp; ├── package.json<br />│ &nbsp; └── server.js<br />├── users-service<br />│ &nbsp; ├── Dockerfile<br />│ &nbsp; ├── config<br />│ &nbsp; ├── node_modules<br />│ &nbsp; ├── nodemon.json<br />│ &nbsp; ├── package-lock.json<br />│ &nbsp; ├── package.json<br />│ &nbsp; └── server.js<br />└── yoda-ui<br />&nbsp; &nbsp; ├── README.md<br />&nbsp; &nbsp; ├── node_modules<br />&nbsp; &nbsp; ├── package.json<br />&nbsp; &nbsp; ├── public<br />&nbsp; &nbsp; ├── src<br /> &nbsp; └── yarn.lock</p>
+
+<p>The application is made up of a couple simple microservices and a front-end written in React.js. It uses MongoDB as it’s datastore.</p>
+
+<p>Typically at this point, we would start a local version of MongoDB or start looking through the project to find out where our applications will be looking for MongoDB.</p>
+
+<p>Then we would start each of our microservices independently and then finally start the UI and hope that the default configuration just works.</p>
+
+<p>This can be very complicated and frustrating. Especially if our micro-services are using different versions of node.js and are configured differently.</p>
+
+<p>So let&#8217;s walk through making this process easier by dockerizing our application and putting our database into a container.&nbsp;</p>
+
+<h2>Dockerizing Applications</h2>
+
+<p>Docker is a great way to provide consistent development environments. It will allow us to run each of our services and UI in a container. We’ll also set up things so that we can develop locally and start our dependencies with one docker command.</p>
+
+<p>The first thing we want to do is dockerize each of our applications. Let’s start with the microservices because they are all written in node.js and we’ll be able to use the same Dockerfile.</p>
+
+<h2>Create Dockerfiles</h2>
+
+<p>Create a Dockerfile in the notes-services directory and add the following commands.</p>
+
+<figure class="wp-block-image size-large is-resized"><img data-attachment-id="26571" data-permalink="https://www.docker.com/blog/how-to-setup-your-local-node-js-development-environment-using-docker/screen-shot-2020-07-01-at-5-12-36-pm/" data-orig-file="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.12.36-PM.jpeg?fit=713%2C321&amp;ssl=1" data-orig-size="713,321" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Screen-Shot-2020-07-01-at-5.12.36-PM" data-image-description="" data-medium-file="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.12.36-PM.jpeg?fit=666%2C300&amp;ssl=1" data-large-file="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.12.36-PM.jpeg?fit=713%2C321&amp;ssl=1" src="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.12.36-PM.jpeg?resize=576%2C260&#038;ssl=1" alt="" class="wp-image-26571" width="576" height="260" srcset="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.12.36-PM.jpeg?w=713&amp;ssl=1 713w, https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.12.36-PM.jpeg?resize=666%2C300&amp;ssl=1 666w" sizes="(max-width: 576px) 100vw, 576px" data-recalc-dims="1" /></figure>
+
+<p>This is a very basic Dockerfile to use with node.js. If you are not familiar with the commands, you can start with our <a href="https://docs.docker.com/get-started/">getting started guide</a>. Also take a look at our reference <a href="https://docs.docker.com/engine/reference/builder/">documentation</a>.</p>
+
+<h2>Building Docker Images</h2>
+
+<p>Now that we’ve created our Dockerfile, let’s build our image. Make sure you’re still located in the notes-services directory and run the following command:</p>
+
+<p><em>docker build -t notes-service.</em></p>
+
+<figure class="wp-block-image size-large"><img data-attachment-id="26576" data-permalink="https://www.docker.com/blog/how-to-setup-your-local-node-js-development-environment-using-docker/screen-shot-2020-07-01-at-5-38-21-pm/" data-orig-file="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.38.21-PM.jpeg?fit=720%2C202&amp;ssl=1" data-orig-size="720,202" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Screen Shot 2020-07-01 at 5.38.21 PM" data-image-description="" data-medium-file="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.38.21-PM.jpeg?fit=720%2C202&amp;ssl=1" data-large-file="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.38.21-PM.jpeg?fit=720%2C202&amp;ssl=1" src="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.38.21-PM.jpeg?ssl=1" alt="" class="wp-image-26576" data-recalc-dims="1" /></figure>
+
+<p>Now that we have our image built,&nbsp; let’s run it as a container and test that it’s working.</p>
+
+<p><em>docker run &#8211;rm -p 8081:8081 &#8211;name notes notes-service</em></p>
+
+<figure class="wp-block-image size-large is-resized"><img data-attachment-id="26572" data-permalink="https://www.docker.com/blog/how-to-setup-your-local-node-js-development-environment-using-docker/screen-shot-2020-07-01-at-5-11-54-pm/" data-orig-file="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.11.54-PM.jpeg?fit=710%2C299&amp;ssl=1" data-orig-size="710,299" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="Screen-Shot-2020-07-01-at-5.11.54-PM" data-image-description="" data-medium-file="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.11.54-PM.jpeg?fit=710%2C299&amp;ssl=1" data-large-file="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.11.54-PM.jpeg?fit=710%2C299&amp;ssl=1" src="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/07/Screen-Shot-2020-07-01-at-5.11.54-PM.jpeg?resize=568%2C239&#038;ssl=1" alt="" class="wp-image-26572" width="568" height="239" data-recalc-dims="1" /></figure>
+
+<p>Looks like we have an issue connecting to the mongodb. Two things are broken at this point. We didn’t provide a connection string to the application. The second is that we do not have MongoDB running locally.</p>
+
+<p>At this point we could provide a connection string to a shared instance of our database but we want to be able to manage our database locally and not have to worry about messing up our colleagues&#8217; data they might be using to develop.&nbsp;</p>
+
+<h2>Local Database and Containers</h2>
+
+<p>Instead of downloading MongoDB, installing, configuring and then running the Mongo database service. We can use the <a href="https://hub.docker.com/_/mongo/">Docker Official Image</a> for MongoDB and run it in a container.</p>
+
+<p>Before we run MongoDB in a container, we want to create a couple of volumes that Docker can manage to store our persistent data and configuration. I like to use the managed volumes that docker provides instead of using bind mounts. You can read all about <a href="https://docs.docker.com/storage/">volumes in our documentation</a>.</p>
+
+<p>Let’s create our volumes now. We’ll create one for the data and one for configuration of MongoDB.</p>
+
+<p><em>docker volume create mongodb<br />docker volume create mongodb_config</em></p>
+
+<p>Now we’ll create a network that our application and database will use to talk with each other. The network is called a user defined bridge network and gives us a nice DNS lookup service which we can use when creating our connection string.</p>
+
+<p><em>docker network create mongodb</em></p>
+
+<p>Now we can run MongoDB in a container and attach to the volumes and network we created above. Docker will pull the image from Hub and run it for you locally.</p>
+
+<p><em>docker run -it &#8211;rm -d -v mongodb:/data/db -v mongodb_config:/data/configdb -p 27017:27017 &#8211;network mongodb &#8211;name mongodb mongo</em></p>
+
+<p>Okay, now that we have a&nbsp; running mongodb, we also need to set a couple of environment variables so our application knows what port to listen on and what connection string to use to access the database. We’ll do this right in the docker run command.</p>
+
+<p><em>docker run \</em><br /><em>-it &#8211;rm -d \<br />&#8211;network mongodb \<br />&#8211;name notes \<br />-p 8081:8081 \<br />-e SERVER_PORT=8081 \<br />-e SERVER_PORT=8081 \<br />-e DATABASE_CONNECTIONSTRING=mongodb://mongodb:27017/yoda_notes  \ notes-service</em></p>
+
+<p>Let’s test that our application is connected to the database and is able to add a note.</p>
+
+<p><em>curl &#8211;request POST \<br />&#8211;url http://localhost:8081/services/m/notes \<br />&nbsp;&nbsp;&#8211;header &#8216;content-type: application/json&#8217; \<br />&nbsp;&nbsp;&#8211;data &#8216;{<br />           &#8220;name&#8221;: &#8220;this is a note&#8221;,<br />            &#8220;text&#8221;: &#8220;this is a note that I wanted to take while I was working on writing a blog post.&#8221;,<br /> &#8220;owner&#8221;: &#8220;peter&#8221;<br />}</em></p>
+
+<p>You should receive the following json back from our service.</p>
+
+<p><em>{&#8220;code&#8221;:&#8221;success&#8221;,&#8221;payload&#8221;:{&#8220;_id&#8221;:&#8221;5efd0a1552cd422b59d4f994&#8243;,&#8221;name&#8221;:&#8221;this is a note&#8221;,&#8221;text&#8221;:&#8221;this is a note that I wanted to take while I was working on writing a blog post.&#8221;,&#8221;owner&#8221;:&#8221;peter&#8221;,&#8221;createDate&#8221;:&#8221;2020-07-01T22:11:33.256Z&#8221;}}</em></p>
+
+<h2>Conclusion</h2>
+
+<p>Awesome! We’ve completed the first steps in Dockerizing our local development environment for Node.js.</p>
+
+<p>In Part II of the series, we’ll take a look at how we can use Docker Compose to simplify the process we just went through.</p>
+
+<p>In the meantime, you can read more about networking, volumes and Dockerfile best practices with the below links:</p>
+
+<ul><li><a href="https://docs.docker.com/network/">Docker Networking</a></li><li><a href="https://docs.docker.com/storage/">Volumes</a></li><li><a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/">Best practices for writing Dockerfiles</a></li></ul>
+<p>The post <a rel="nofollow" href="https://www.docker.com/blog/how-to-setup-your-local-node-js-development-environment-using-docker/">How To Setup Your Local Node.js Development Environment Using Docker</a> appeared first on <a rel="nofollow" href="https://www.docker.com/blog">Docker Blog</a>.</p>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2020-04-03">03 Apr 2020 (11 months and 1 week ago)</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#docker">docker</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="/blog/kubernetes/how-to-set-up-the-codeserver-cloud-ide-platform-on-digitalocean-kubernetes"> &laquo; How To Set Up the code-server Cloud IDE Platform on DigitalOcean Kubernetes</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="/blog/docker/top-5-questions-from-how-to-become-a-docker-power-user-session-at-dockercon-2020">Top 5 Questions from “How to become a Docker Power User” session at DockerCon 2020 &raquo; </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+    <div class="container">
+        <div id="comments" class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = ''; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            </div>
+        </div>
+    </div>
+
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+
+</div>
+
+
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#aws">aws (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#data-analysis">data-analysis (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#kubernetes">kubernetes (5)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#docker">docker (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#web-development">web development (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#wordpress">wordpress (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#slack">slack (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ubuntu">ubuntu (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#javascript">javascript (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#database">database (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#productivity">productivity (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#backup-restore">backup-restore (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#fax">fax (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#screenshot">screenshot (1)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © 2021 Bright Softwares 
+            </div>
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+                <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//.disqus.com/count.js"></script>
+
+
+</body>
+</html>

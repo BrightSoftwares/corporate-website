@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/img/logos/large/brightsoftwares-dark.png">
+
+<!-- The favicon items -->
+<link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon.ico/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon.ico/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon.ico/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon.ico/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon.ico/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon.ico/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon.ico/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon.ico/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon.ico/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicon.ico/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon.ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon.ico/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon.ico/favicon-16x16.png">
+<link rel="manifest" href="../assets/favicon.ico/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="../assets/favicon.ico/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>Migrate Your Current VPS (Linode, Rackspace, AWS EC2) to DigitalOcean | Bright Softwares</title>
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Migrate Your Current VPS (Linode, Rackspace, AWS EC2) to DigitalOcean | Bright Softwares</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Migrate Your Current VPS (Linode, Rackspace, AWS EC2) to DigitalOcean" />
+<meta name="author" content="Full" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Migrating between VPS providers can seem like a daunting task. Like DigitalOcean, other VPS providers, such as Linode and Rackspace, provide root access. This allows you to transfer all of the necessary files to your new DigitalOcean VPS. For this guide, we will demonstrate how to transfer a simple WordPress blog from Linode to a DigitalOcean cloud server." />
+<meta property="og:description" content="Migrating between VPS providers can seem like a daunting task. Like DigitalOcean, other VPS providers, such as Linode and Rackspace, provide root access. This allows you to transfer all of the necessary files to your new DigitalOcean VPS. For this guide, we will demonstrate how to transfer a simple WordPress blog from Linode to a DigitalOcean cloud server." />
+<link rel="canonical" href="https://bright-softwares.com/blog/aws/migrate-your-current-vps-linode-rackspace-aws-ec2-to-digitalocean" />
+<meta property="og:url" content="https://bright-softwares.com/blog/aws/migrate-your-current-vps-linode-rackspace-aws-ec2-to-digitalocean" />
+<meta property="og:site_name" content="Bright Softwares" />
+<meta property="og:image" content="https://sergio.afanou.com/assets/images/image-midres-22.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-02T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://sergio.afanou.com/assets/images/image-midres-22.jpg" />
+<meta property="twitter:title" content="Migrate Your Current VPS (Linode, Rackspace, AWS EC2) to DigitalOcean" />
+<script type="application/ld+json">
+{"description":"Migrating between VPS providers can seem like a daunting task. Like DigitalOcean, other VPS providers, such as Linode and Rackspace, provide root access. This allows you to transfer all of the necessary files to your new DigitalOcean VPS. For this guide, we will demonstrate how to transfer a simple WordPress blog from Linode to a DigitalOcean cloud server.","url":"https://bright-softwares.com/blog/aws/migrate-your-current-vps-linode-rackspace-aws-ec2-to-digitalocean","@type":"BlogPosting","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://bright-softwares.com/img/logos/large/brightsoftwares-light.png"},"name":"Full"},"headline":"Migrate Your Current VPS (Linode, Rackspace, AWS EC2) to DigitalOcean","dateModified":"2020-04-02T00:00:00+00:00","datePublished":"2020-04-02T00:00:00+00:00","image":"https://sergio.afanou.com/assets/images/image-midres-22.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://bright-softwares.com/blog/aws/migrate-your-current-vps-linode-rackspace-aws-ec2-to-digitalocean"},"author":{"@type":"Person","name":"Full"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+<!-- change your GA id in _config.yml -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-134921119-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/img/logos/large/brightsoftwares-dark.png" alt="Bright Softwares">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/#services">Services</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#portfolio">Portfolio</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/blog/index.html">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#team">Team</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#contact">Contact</a>
+                </li>
+
+                <!--
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/"> Docs</a>
+                </li>
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-wordpress/"><i class="fab fa-wordpress-simple"></i> WP Version</a>
+                </li>
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-ghost/"><i class="fab fa-snapchat-ghost"></i> Ghost Version</a>
+                </li>
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://github.com/wowthemesnet/mediumish-theme-jekyll"><i class="fab fa-github"></i> Fork on Github</a>
+                </li>
+                -->
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<!-- <div class="mainheading">
+    <h1 class="sitetitle">Bright Softwares</h1>
+    <p class="lead">
+        We provide solutions to our customers challenges. Our teams based in Paris and Lomé provide high value expertise to engineer the best solutions.
+    </p>
+</div>
+-->
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=Migrate Your Current VPS (Linode, Rackspace, AWS EC2) to DigitalOcean&url=https://bright-softwares.com/blog/aws/migrate-your-current-vps-linode-rackspace-aws-ec2-to-digitalocean" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=https://bright-softwares.com/blog/aws/migrate-your-current-vps-linode-rackspace-aws-ec2-to-digitalocean" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://bright-softwares.com/blog/aws/migrate-your-current-vps-linode-rackspace-aws-ec2-to-digitalocean" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+
+    </ul>
+    
+    <div class="sep">
+    </div>
+    <ul>
+        <li>
+        <a class="small smoothscroll" href="#disqus_thread"></a>
+        </li>
+    </ul>
+    
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/?s=250&d=mm&r=x" alt="">
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark" href=""></a><a target="_blank" href="" class="btn follow">Follow</a>
+                        <span class="author-description"></span>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">Migrate Your Current VPS (Linode, Rackspace, AWS EC2) to DigitalOcean</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid" src="https://sergio.afanou.com/assets/images/image-midres-22.jpg" alt="Migrate Your Current VPS (Linode, Rackspace, AWS EC2) to DigitalOcean">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>Introduction
+Migrating between VPS providers can seem like a daunting task. Like DigitalOcean, other VPS providers, such as Linode and Rackspace, provide root access. This allows you to transfer all of the necessary files to your new DigitalOcean VPS.
+For this guide, we will demonstrate how to transfer a simple WordPress blog from Linode to a DigitalOcean cloud server.</p>
+
+<p>Both instances will be running Ubuntu. These instructions can be adapted to migrate other services from other providers.
+We will be working as root in both VPS instances.
+What the Red Means
+The lines that the user needs to enter or customize will be in red in this tutorial! The rest should mostly be copy-and-pastable.
+Preliminary DigitalOcean Cloud Server Configuration
+LAMP Installation
+To begin, you will want to install a LAMP (Linux, Apache, MySQL, PHP) stack on your DigitalOcean cloud server. This can be accomplished in a few different ways.
+The easiest way to get LAMP up and running on Ubuntu is to choose the pre-configured “LAMP on Ubuntu” image when you are initially creating your droplet. In the “Select Image” portion of the Droplet creation page, choose the “Applications” tab. Select “LAMP on Ubuntu 14.04”.</p>
+
+<p>If you already have a droplet that you would like to use, you can install a LAMP stack on Ubuntu by following this link.
+Rsync Installation
+We will be doing our file transfers using ssh and rsync. Make sure rsync is installed on your DigitalOcean VPS using the following command:
+rsync –version
+If this command returns a “command not found” message, then you need to install rsync with apt-get:
+apt-get install rsync
+Communicating Between VPS Servers
+The following steps will take place on your old VPS. If you aren’t already, log in as root.
+Your old VPS also needs to have rsync installed. Re-run the check for rsync on this system:
+rsync –version
+If necessary, install rsync:
+apt-get install rsync
+In order to transfer the relevant information from our previous VPS to our DigitalOcean cloud server, rsync needs to be able to log into our new server from our old server. We will be using SSH to do this.
+If you do not have SSH keys generated on your old VPS, create them now with the following command:
+ssh-keygen -t rsa -b 4096 -v
+Answer the prompts as required. Feel free to press “Enter” through all of the prompts to accept the default values.
+Next, transfer the SSH key to our new VPS using the following command. Change the portion in red to reflect your DigitalOcean VPS IP address:
+ssh-copy-id 111.222.333.444
+Transferring Site Files
+First, we will be transferring the files in our old server’s web root to our new cloud server. We will find where our WordPress web root is by examining the configuration file. We will look at the sites-enabled directory to find the correct VirtualHost file:
+cd /etc/apache2/sites-enabled
+ls
+li606-185.members.linode.com
+Here, our file is called “li606-185.members.linode.com”, but yours may be something different. Open the file in nano:
+nano li606-185.members.linode.com
+We are looking for the “DocumentRoot” line to tell us which directory our web content is being served from. In our example, the line reads:
+DocumentRoot /srv/www/li606-185.members.linode.com/public_html/
+Close the file and cd into that directory:
+cd /srv/www/li606-185.members.linode.com/public_html/
+ls -F
+Output
+latest.tar.gz  wordpress/
+As you can see, we have a directory for our WordPress site. This contains all of the web content for our site.
+We will transfer this entire directory, along with its permissions and sub-directories, from this location into the web root of our DigitalOcean cloud server. By default, apache2 on Ubuntu 14.04 serves its content out of “/var/www/html”, so that is where we will place this content.
+We will add some options to rsync in order for it to transfer properly. The “-a” option stands for archive, which allows us to transfer recursively while preserving many of the underlying file properties like permissions and ownership.
+We also use the “-v” flag for verbose output, and the “-P” flag, which shows us transfer progress and allows rsync to resume in the event of a transfer problem.
+rsync -avP wordpress 111.222.333.444:/var/www/html/
+Note how there is no trailing slash after “wordpress”, but that there is in “/var/www/html/”. This will transfer the “wordpress” directory itself to the destination instead of only transferring the directory contents.
+Our entire WordPress directory structure has now been transferred to the web root of the new cloud server.
+At this point, if we direct our web browser to our new cloud server’s IP address and try to access our WordPress site, we will get a MySQL error:
+111.222.333.444/wordpress
+Error establishing a database connection</p>
+
+<p>This is because WordPress stores its data in a MySQL database that has not been transferred yet. We will handle the MySQL transfer next.
+MySQL Database Transfer
+The best way to transfer MySQL databases is to use MySQL’s internal database dumping utility. First, we will see what databases we need to dump. Log into MySQL:
+cd
+mysql -u root -p
+Enter the database administrator’s password to continue. List the MySQL databases with the following command:
+show databases;
++——————–+
+| Database           |
++——————–+
+| information_schema |
+| mysql              |
+| wordpress          |
++——————–+
+3 rows in set (0.00 sec)
+We would like to transfer our “wordpress” database, which contains our site information, and also our “mysql” database, which will transfer all of our user info, etc. The “information_schema” is just data structure information, and we don’t need to hold onto that.
+Get an idea of which databases you want to transfer for the next step. Exit out of MySql:
+exit
+We will be dumping the database information with “mysqldump” and then compressing it with “bzip2”. We will use a number of parameters to make our databases import cleanly. Replace the red with your database names:
+mysqldump -u root -p -QqeR –add-drop-table –databases mysql wordpress | bzip2 -v9 - &gt; siteData.sql.bz2
+Again, enter your database administrator’s password to continue.
+We now have a zipped database file that we can transfer to our new cloud server. We will use rsync again. Change the IP address to reflect your DigitalOcean server’s IP address:
+rsync -avP siteData.sql.bz2 111.222.333.444:/root
+Importing the Databases
+Our database file is compressed and transferred to our new DigitalOcean cloud server. We must import it into MySQL on our new server so that WordPress can utilize it.
+Log into your DigitalOcean cloud server as root for the following steps.
+Our database file was transferred to the root user’s home directory, so move to that directory now. We will uncompress the file using “bunzip2”:
+cd /root
+bunzip2 siteData.sql.bz2
+Now we can import the file into our new MySQL database:
+mysql -u root -p &lt; siteData.sql
+Let’s check to see that MySQL has imported correctly:
+mysql -u root -p
+show databases;
++——————–+
+| Database           |
++——————–+
+| information_schema |
+| mysql              |
+| performance_schema |
+| test               |
+| wordpress          |
++——————–+
+5 rows in set (0.00 sec)
+As you can see, our “wordpress” database is present. The previous “mysql” database has been replaced with the one from our old VPS.
+Exit out of MySQL:
+exit
+Now we will restart our database and our server for good measure:
+service mysql restart
+service apache2 restart
+Now, if we navigate to our DigitalOcean VPS IP address followed by “/wordpress”, we will see the WordPress site that was previously hosted on our old VPS:
+111.222.333.444/wordpress</p>
+
+<p>Final Considerations
+Before changing over your domain name to point to your new site location, it is important to test your setup extensively.
+It is a good idea to reference the services that were running on your old VPS, and then check their configuration files. You can see the services that were running on your old VPS by logging in and typing:
+netstat -plunt
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      13791/mysqld  <br />
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      10538/sshd    <br />
+tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      13963/master  <br />
+tcp6       0      0 :::80                   :::*                    LISTEN      13771/apache2 <br />
+tcp6       0      0 :::22                   :::*                    LISTEN      10538/sshd    <br />
+udp        0      0 0.0.0.0:68              0.0.0.0:*                           2287/dhclient3 
+Here, we can see the services in the last column that we will want to configure on our new server. Your list will probably be different.
+Each service has its own configuration syntax and configuration location, so you will need to check the documentation on a case-by-case basis.
+As an example, if we wanted to replicate the configuration of our SSH daemon on our new VPS we could transfer the configuration file to the home directory of our new VPS using rsync:
+rsync -avP /etc/ssh/sshd_config 111.222.333.444:/root
+After we’ve transferred the file, we do not want to simply replace the default file with the one from our old VPS.
+Different versions of programs can introduce changes to the syntax. Issues can also arise from configuration options that were specific to your old VPS. Options referencing hostnames, IP addresses, or file paths will need to be changed to reflect your new setup.
+It is safer to produce a diff of the files so that you can adjust your new cloud server’s native configuration file as necessary.
+There are a number of different programs that can give you the differences between two files. One is simply diff:
+diff /root/sshd_conf /etc/ssh/sshd_config
+This will produce a list of all of the differences between the two files. You can examine the differences and take them into consideration. Some configuration options you might want to incorporate from your old setup, while others you might want to modify or discard.
+By Justin Ellingwood</p>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2020-04-02">02 Apr 2020 (11 months and 1 week ago)</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#aws">aws</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="/blog/data-analysis/how-to-copy-a-formula-down-an-entire-column-in-google-sheets"> &laquo; How to Copy a Formula Down an Entire Column in Google Sheets</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="/blog/kubernetes/how-to-set-up-the-codeserver-cloud-ide-platform-on-digitalocean-kubernetes">How To Set Up the code-server Cloud IDE Platform on DigitalOcean Kubernetes &raquo; </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+    <div class="container">
+        <div id="comments" class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = ''; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            </div>
+        </div>
+    </div>
+
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+
+</div>
+
+
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#aws">aws (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#data-analysis">data-analysis (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#kubernetes">kubernetes (5)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#docker">docker (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#web-development">web development (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#wordpress">wordpress (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#slack">slack (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ubuntu">ubuntu (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#javascript">javascript (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#database">database (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#productivity">productivity (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#backup-restore">backup-restore (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#fax">fax (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#screenshot">screenshot (1)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © 2021 Bright Softwares 
+            </div>
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+                <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//.disqus.com/count.js"></script>
+
+
+</body>
+</html>

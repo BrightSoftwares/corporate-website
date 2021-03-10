@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/img/logos/large/brightsoftwares-dark.png">
+
+<!-- The favicon items -->
+<link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon.ico/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon.ico/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon.ico/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon.ico/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon.ico/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon.ico/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon.ico/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon.ico/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon.ico/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicon.ico/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon.ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon.ico/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon.ico/favicon-16x16.png">
+<link rel="manifest" href="../assets/favicon.ico/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="../assets/favicon.ico/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>How To Configure Jenkins with SSL Using an Nginx Reverse Proxy on Ubuntu 20.04 | Bright Softwares</title>
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>How To Configure Jenkins with SSL Using an Nginx Reverse Proxy on Ubuntu 20.04 | Bright Softwares</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="How To Configure Jenkins with SSL Using an Nginx Reverse Proxy on Ubuntu 20.04" />
+<meta name="author" content="Full" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="By default, Jenkins comes with its own built-in Winstone web server listening on port 8080, which is convenient for getting started. It’s also a good idea, however, to secure Jenkins with SSL to protect passwords and sensitive data transmitted through the web interface. In this tutorial, you will configure Nginx as a reverse proxy to direct client requests to Jenkins." />
+<meta property="og:description" content="By default, Jenkins comes with its own built-in Winstone web server listening on port 8080, which is convenient for getting started. It’s also a good idea, however, to secure Jenkins with SSL to protect passwords and sensitive data transmitted through the web interface. In this tutorial, you will configure Nginx as a reverse proxy to direct client requests to Jenkins." />
+<link rel="canonical" href="https://bright-softwares.com/blog/docker/how-to-configure-jenkins-with-ssl-using-an-nginx-reverse-proxy-on-ubuntu-2004" />
+<meta property="og:url" content="https://bright-softwares.com/blog/docker/how-to-configure-jenkins-with-ssl-using-an-nginx-reverse-proxy-on-ubuntu-2004" />
+<meta property="og:site_name" content="Bright Softwares" />
+<meta property="og:image" content="https://sergio.afanou.com/assets/images/image-midres-32.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://sergio.afanou.com/assets/images/image-midres-32.jpg" />
+<meta property="twitter:title" content="How To Configure Jenkins with SSL Using an Nginx Reverse Proxy on Ubuntu 20.04" />
+<script type="application/ld+json">
+{"description":"By default, Jenkins comes with its own built-in Winstone web server listening on port 8080, which is convenient for getting started. It’s also a good idea, however, to secure Jenkins with SSL to protect passwords and sensitive data transmitted through the web interface. In this tutorial, you will configure Nginx as a reverse proxy to direct client requests to Jenkins.","url":"https://bright-softwares.com/blog/docker/how-to-configure-jenkins-with-ssl-using-an-nginx-reverse-proxy-on-ubuntu-2004","@type":"BlogPosting","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://bright-softwares.com/img/logos/large/brightsoftwares-light.png"},"name":"Full"},"headline":"How To Configure Jenkins with SSL Using an Nginx Reverse Proxy on Ubuntu 20.04","dateModified":"2020-07-05T00:00:00+00:00","datePublished":"2020-07-05T00:00:00+00:00","image":"https://sergio.afanou.com/assets/images/image-midres-32.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://bright-softwares.com/blog/docker/how-to-configure-jenkins-with-ssl-using-an-nginx-reverse-proxy-on-ubuntu-2004"},"author":{"@type":"Person","name":"Full"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+<!-- change your GA id in _config.yml -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-134921119-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/img/logos/large/brightsoftwares-dark.png" alt="Bright Softwares">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/#services">Services</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#portfolio">Portfolio</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/blog/index.html">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#team">Team</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#contact">Contact</a>
+                </li>
+
+                <!--
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/"> Docs</a>
+                </li>
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-wordpress/"><i class="fab fa-wordpress-simple"></i> WP Version</a>
+                </li>
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-ghost/"><i class="fab fa-snapchat-ghost"></i> Ghost Version</a>
+                </li>
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://github.com/wowthemesnet/mediumish-theme-jekyll"><i class="fab fa-github"></i> Fork on Github</a>
+                </li>
+                -->
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<!-- <div class="mainheading">
+    <h1 class="sitetitle">Bright Softwares</h1>
+    <p class="lead">
+        We provide solutions to our customers challenges. Our teams based in Paris and Lomé provide high value expertise to engineer the best solutions.
+    </p>
+</div>
+-->
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=How To Configure Jenkins with SSL Using an Nginx Reverse Proxy on Ubuntu 20.04&url=https://bright-softwares.com/blog/docker/how-to-configure-jenkins-with-ssl-using-an-nginx-reverse-proxy-on-ubuntu-2004" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=https://bright-softwares.com/blog/docker/how-to-configure-jenkins-with-ssl-using-an-nginx-reverse-proxy-on-ubuntu-2004" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://bright-softwares.com/blog/docker/how-to-configure-jenkins-with-ssl-using-an-nginx-reverse-proxy-on-ubuntu-2004" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+
+    </ul>
+    
+    <div class="sep">
+    </div>
+    <ul>
+        <li>
+        <a class="small smoothscroll" href="#disqus_thread"></a>
+        </li>
+    </ul>
+    
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/?s=250&d=mm&r=x" alt="">
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark" href=""></a><a target="_blank" href="" class="btn follow">Follow</a>
+                        <span class="author-description"></span>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">How To Configure Jenkins with SSL Using an Nginx Reverse Proxy on Ubuntu 20.04</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid" src="https://sergio.afanou.com/assets/images/image-midres-32.jpg" alt="How To Configure Jenkins with SSL Using an Nginx Reverse Proxy on Ubuntu 20.04">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <h3 id="introduction">Introduction</h3>
+
+<p>By default, <a href="https://jenkins.io/">Jenkins</a> comes with its own built-in Winstone web server listening on port <code>8080</code>, which is convenient for getting started. It&rsquo;s also a good idea, however, to secure Jenkins with SSL to protect passwords and sensitive data transmitted through the web interface. </p>
+
+<p>In this tutorial, you will configure Nginx as a reverse proxy to direct client requests to Jenkins. </p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>To begin, you&rsquo;ll need the following:</p>
+
+<ul>
+<li>One Ubuntu 20.04 server configured with a non-root sudo-enabled user and firewall, following the <a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04">Ubuntu 20.04 initial server setup guide</a>.</li>
+<li>Jenkins installed, following the steps in <a href="https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-20-04">How to Install Jenkins on Ubuntu 20.04</a></li>
+<li>Nginx installed, following the steps in <a href="https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04">How to Install Nginx on Ubuntu 20.04</a></li>
+<li>An SSL certificate for a domain provided by <a href="https://letsencrypt.org/">Let&rsquo;s Encrypt</a>. Follow <a href="https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04">How to Secure Nginx with Let&rsquo;s Encrypt on Ubuntu 20.04</a> to obtain this certificate. Note that you will need a <a href="https://www.digitalocean.com/docs/networking/dns/">registered domain name</a> that you own or control. This tutorial will use the domain name <strong>example.com</strong> throughout.</li>
+</ul>
+
+<h2 id="step-1-—-configuring-nginx">Step 1 — Configuring Nginx</h2>
+
+<p>In the prerequisite tutorial <a href="https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04">How to Secure Nginx with Let&rsquo;s Encrypt on Ubuntu 20.04</a>, you configured Nginx to use SSL in the <code>/etc/nginx/sites-available/<span class="highlight">example.com</span></code> file. Open this file to add your reverse proxy settings:</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo nano /etc/nginx/sites-available/<span class="highlight">example.com</span>
+</li></ul></code></pre>
+<p>In the <code>server</code> block with the SSL configuration settings, add Jenkins-specific access and error logs: </p>
+<div class="code-label " title="/etc/nginx/sites-available/example.com">/etc/nginx/sites-available/example.com</div>
+<pre class="code-pre "><code>. . . 
+server {
+        . . .
+        # SSL Configuration
+        #
+        listen [::]:443 ssl ipv6only=on; # managed by Certbot
+        listen 443 ssl; # managed by Certbot
+        <span class="highlight">access_log            /var/log/nginx/jenkins.access.log;</span>
+        <span class="highlight">error_log             /var/log/nginx/jenkins.error.log;</span>
+        . . .
+        }
+</code></pre>
+<p>Next let&rsquo;s configure the proxy settings. Since we&rsquo;re sending all requests to Jenkins, we&rsquo;ll comment out the default <code>try_files</code> line, which would otherwise return a 404 error before the request reaches Jenkins:</p>
+<div class="code-label " title="/etc/nginx/sites-available/example.com">/etc/nginx/sites-available/example.com</div>
+<pre class="code-pre "><code>. . .
+           location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                <span class="highlight">#</span> try_files $uri $uri/ =404;        }
+. . . 
+</code></pre>
+<p>Let&rsquo;s now add the proxy settings, which include:</p>
+
+<ul>
+<li><code>proxy_params</code>: The <code>/etc/nginx/proxy_params</code> file is supplied by Nginx and ensures that important information, including the hostname, the protocol of the client request, and the client IP address, is retained and available in the log files.</li>
+<li><code>proxy_pass</code>: This sets the protocol and address of the proxied server, which in this case will be the Jenkins server accessed via <code>localhost</code> on port <code>8080</code>. </li>
+<li><code>proxy_read_timeout</code>: This enables an increase from Nginx&rsquo;s 60 second default to the Jenkins-recommended 90 second value. </li>
+<li><code>proxy_redirect</code>: This ensures that <a href="https://wiki.jenkins-ci.org/display/JENKINS/Jenkins+says+my+reverse+proxy+setup+is+broken">responses are correctly rewritten</a> to include the proper host name.</li>
+</ul>
+
+<p>Be sure to substitute your SSL-secured domain name for <code><span class="highlight">example.com</span></code> in the <code>proxy_redirect</code> line below:</p>
+<div class="code-label " title="/etc/nginx/sites-available/example.com">/etc/nginx/sites-available/example.com</div>
+<pre class="code-pre "><code>Location /  
+. . .
+           location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                <span class="highlight">#</span> try_files $uri $uri/ =404;
+                <span class="highlight">include /etc/nginx/proxy_params;</span>
+                <span class="highlight">proxy_pass          http://localhost:8080;</span>
+                <span class="highlight">proxy_read_timeout  90s;</span>
+                <span class="highlight"># Fix potential "It appears that your reverse proxy setup is broken" error.</span>
+                <span class="highlight">proxy_redirect      http://localhost:8080 https://example.com;</span>
+</code></pre>
+<p>Once you&rsquo;ve made these changes, save the file and exit the editor. We&rsquo;ll hold off on restarting Nginx until after we’ve configured Jenkins, but we can test our configuration now:</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo nginx -t
+</li></ul></code></pre>
+<p>If all is well, the command will return:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+</code></pre>
+<p>If not, fix any reported errors until the test passes.</p>
+
+<p><span class="note">&lt;p&gt;
+<strong>Note:</strong> <br />
+If you misconfigure the <code>proxy_pass</code> (by adding a trailing slash, for example), you will get something similar to the following in your Jenkins <strong>Configuration</strong> page.&lt;/p&gt;</span></p>
+
+<p><img src="https://assets.digitalocean.com/articles/nginx_jenkins/1.jpg" alt="Jenkins error: Reverse proxy set up is broken" /></p>
+
+<p>If you see this error, double-check your <code>proxy_pass</code> and <code>proxy_redirect</code> settings in the Nginx configuration.<br /></p>
+<p>&lt;/span&gt;</p>
+
+<h2 id="step-2-—-configuring-jenkins">Step 2 — Configuring Jenkins</h2>
+
+<p>For Jenkins to work with Nginx, you will need to update the Jenkins configuration so that the Jenkins server listens only on the <code>localhost</code> interface rather than on all interfaces (<code>0.0.0.0</code>). If Jenkins listens on all interfaces, it&rsquo;s potentially accessible on its original, unencrypted port (<code>8080</code>).  </p>
+
+<p>Let&rsquo;s modify the <code>/etc/default/jenkins</code> configuration file to make these adjustments:</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo nano /etc/default/jenkins
+</li></ul></code></pre>
+<p>Locate the <code>JENKINS_ARGS</code> line and add <code>--httpListenAddress=127.0.0.1</code> to the existing arguments:</p>
+<div class="code-label " title="/etc/default/jenkins">/etc/default/jenkins</div>
+<pre class="code-pre "><code>. . .
+JENKINS_ARGS="--webroot=/var/cache/$NAME/war --httpPort=$HTTP_PORT <span class="highlight">--httpListenAddress=127.0.0.1</span>"
+</code></pre>
+<p>Save and exit the file.</p>
+
+<p>To use the new configuration settings, restart Jenkins:</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo systemctl restart jenkins
+</li></ul></code></pre>
+<p>Since <code>systemctl</code> doesn&rsquo;t display output, check the status:</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo systemctl status jenkins
+</li></ul></code></pre>
+<p>You should see the <code>active (exited)</code> status in the <code>Active</code> line:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>● jenkins.service - LSB: Start Jenkins at boot time
+   Loaded: loaded (/etc/init.d/jenkins; generated)
+   Active: <span class="highlight">active (exited)</span> since Mon 2018-07-09 20:26:25 UTC; 11s ago
+     Docs: man:systemd-sysv-generator(8)
+  Process: 29766 ExecStop=/etc/init.d/jenkins stop (code=exited, status=0/SUCCESS)
+  Process: 29812 ExecStart=/etc/init.d/jenkins start (code=exited, status=0/SUCCESS)
+</code></pre>
+<p>Restart Nginx:</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo systemctl restart nginx
+</li></ul></code></pre>
+<p>Check the status:</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo systemctl status nginx
+</li></ul></code></pre>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>● nginx.service - A high performance web server and a reverse proxy server
+   Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+   Active: <span class="highlight">active (running)</span> since Mon 2018-07-09 20:27:23 UTC; 31s ago
+     Docs: man:nginx(8)
+  Process: 29951 ExecStop=/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /run/nginx.pid (code=exited, status=0/SUCCESS)
+  Process: 29963 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+  Process: 29952 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+ Main PID: 29967 (nginx)
+</code></pre>
+<p>With both servers restarted, you should be able to visit the domain using either HTTP or HTTPS. HTTP requests will be redirected automatically to HTTPS, and the Jenkins site will be served securely.</p>
+
+<h2 id="step-3-—-testing-the-configuration">Step 3 — Testing the Configuration</h2>
+
+<p>Now that you have enabled encryption, you can test the configuration by resetting the administrative password. Let&rsquo;s start by visiting the site via HTTP to verify that you can reach Jenkins and are redirected to HTTPS.</p>
+
+<p>In your web browser, enter <code>http://<span class="highlight">example.com</span></code>, substituting your domain for <code><span class="highlight">example.com</span></code>. After you press <code>ENTER</code>, the URL should start with <code>https</code> and the location bar should indicate that the connection is secure. </p>
+
+<p>You can enter the administrative username you created in <a href="https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-20-04">How To Install Jenkins on Ubuntu 20.04</a> in the <strong>User</strong> field, and the password that you selected in the <strong>Password</strong> field.</p>
+
+<p>Once logged in, you can change the password to be sure it&rsquo;s secure. </p>
+
+<p>Click on your username in the upper-right-hand corner of the screen. On the main profile page, select <strong>Configure</strong> from the list on the left side of the page:</p>
+
+<p><img src="https://assets.digitalocean.com/articles/jenkins-nginx-ubuntu-1804/configure_password.png" alt="Navigate to Jenkins password page" /></p>
+
+<p>This will take you to a new page, where you can enter and confirm a new password:</p>
+
+<p><img src="https://assets.digitalocean.com/articles/jenkins-nginx-ubuntu-1804/password_page.png" alt="Jenkins create password page" /></p>
+
+<p>Confirm the new password by clicking <strong>Save</strong>. You can now use the Jenkins web interface securely.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>In this tutorial, you configured Nginx as a reverse proxy to Jenkins&rsquo; built-in web server to secure your credentials and other information transmitted via the web interface. Now that Jenkins is secure, you can learn <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-continuous-integration-pipelines-in-jenkins-on-ubuntu-16-04">how to set up a continuous integration pipeline</a> to automatically test code changes.  Other resources to consider if you are new to Jenkins are <a href="https://jenkins.io/doc/pipeline/tour/hello-world/">the Jenkins project&rsquo;s &ldquo;Creating your first Pipeline&rdquo;</a> tutorial or <a href="https://plugins.jenkins.io/">the library of community-contributed plugins</a>.</p>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2020-07-05">05 Jul 2020 (8 months and 1 week ago)</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#docker">docker</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="/blog/slack/how-to-build-a-slackbot-in-python-on-ubuntu-2004"> &laquo; How To Build a Slackbot in Python on Ubuntu 20.04</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="/blog/ubuntu/how-to-create-a-new-sudoenabled-user-on-ubuntu-2004-quickstart">How To Create a New Sudo-enabled User on Ubuntu 20.04 [Quickstart] &raquo; </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+    <div class="container">
+        <div id="comments" class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = ''; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            </div>
+        </div>
+    </div>
+
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+
+</div>
+
+
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#aws">aws (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#data-analysis">data-analysis (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#kubernetes">kubernetes (5)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#docker">docker (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#web-development">web development (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#wordpress">wordpress (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#slack">slack (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ubuntu">ubuntu (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#javascript">javascript (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#database">database (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#productivity">productivity (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#backup-restore">backup-restore (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#fax">fax (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#screenshot">screenshot (1)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © 2021 Bright Softwares 
+            </div>
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+                <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//.disqus.com/count.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/img/logos/large/brightsoftwares-dark.png">
+
+<!-- The favicon items -->
+<link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon.ico/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon.ico/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon.ico/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon.ico/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon.ico/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon.ico/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon.ico/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon.ico/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon.ico/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicon.ico/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon.ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon.ico/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon.ico/favicon-16x16.png">
+<link rel="manifest" href="../assets/favicon.ico/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="../assets/favicon.ico/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<title>How To Create a New Sudo-enabled User on Ubuntu 20.04 [Quickstart] | Bright Softwares</title>
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>How To Create a New Sudo-enabled User on Ubuntu 20.04 [Quickstart] | Bright Softwares</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="How To Create a New Sudo-enabled User on Ubuntu 20.04 [Quickstart]" />
+<meta name="author" content="Full" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When managing a server, you’ll sometimes want to allow users to execute commands as “root,” the administrator-level user. The sudo command provides system administrators with a way to grant administrator privileges — ordinarily only available to the root user — to normal users. In this tutorial, you’ll learn how to create a new user with sudo access on Ubuntu 20.04 without having to modify your server’s /etc/sudoers file." />
+<meta property="og:description" content="When managing a server, you’ll sometimes want to allow users to execute commands as “root,” the administrator-level user. The sudo command provides system administrators with a way to grant administrator privileges — ordinarily only available to the root user — to normal users. In this tutorial, you’ll learn how to create a new user with sudo access on Ubuntu 20.04 without having to modify your server’s /etc/sudoers file." />
+<link rel="canonical" href="https://bright-softwares.com/blog/ubuntu/how-to-create-a-new-sudoenabled-user-on-ubuntu-2004-quickstart" />
+<meta property="og:url" content="https://bright-softwares.com/blog/ubuntu/how-to-create-a-new-sudoenabled-user-on-ubuntu-2004-quickstart" />
+<meta property="og:site_name" content="Bright Softwares" />
+<meta property="og:image" content="https://sergio.afanou.com/assets/images/image-midres-47.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-05T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://sergio.afanou.com/assets/images/image-midres-47.jpg" />
+<meta property="twitter:title" content="How To Create a New Sudo-enabled User on Ubuntu 20.04 [Quickstart]" />
+<script type="application/ld+json">
+{"description":"When managing a server, you’ll sometimes want to allow users to execute commands as “root,” the administrator-level user. The sudo command provides system administrators with a way to grant administrator privileges — ordinarily only available to the root user — to normal users. In this tutorial, you’ll learn how to create a new user with sudo access on Ubuntu 20.04 without having to modify your server’s /etc/sudoers file.","url":"https://bright-softwares.com/blog/ubuntu/how-to-create-a-new-sudoenabled-user-on-ubuntu-2004-quickstart","@type":"BlogPosting","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://bright-softwares.com/img/logos/large/brightsoftwares-light.png"},"name":"Full"},"headline":"How To Create a New Sudo-enabled User on Ubuntu 20.04 [Quickstart]","dateModified":"2020-07-05T00:00:00+00:00","datePublished":"2020-07-05T00:00:00+00:00","image":"https://sergio.afanou.com/assets/images/image-midres-47.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://bright-softwares.com/blog/ubuntu/how-to-create-a-new-sudoenabled-user-on-ubuntu-2004-quickstart"},"author":{"@type":"Person","name":"Full"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+<!-- change your GA id in _config.yml -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-134921119-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+    <img src="/img/logos/large/brightsoftwares-dark.png" alt="Bright Softwares">
+    </a>
+    <!-- End Logo -->
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/#services">Services</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#portfolio">Portfolio</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/blog/index.html">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#team">Team</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/#contact">Contact</a>
+                </li>
+
+                <!--
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/"> Docs</a>
+                </li>
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-wordpress/"><i class="fab fa-wordpress-simple"></i> WP Version</a>
+                </li>
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://www.wowthemes.net/themes/mediumish-ghost/"><i class="fab fa-snapchat-ghost"></i> Ghost Version</a>
+                </li>
+
+                <li class="nav-item">
+                <a target="_blank" class="nav-link" href="https://github.com/wowthemesnet/mediumish-theme-jekyll"><i class="fab fa-github"></i> Fork on Github</a>
+                </li>
+                -->
+
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Site Title
+================================================== -->
+<!-- <div class="mainheading">
+    <h1 class="sitetitle">Bright Softwares</h1>
+    <p class="lead">
+        We provide solutions to our customers challenges. Our teams based in Paris and Lomé provide high value expertise to engineer the best solutions.
+    </p>
+</div>
+-->
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=How To Create a New Sudo-enabled User on Ubuntu 20.04 [Quickstart]&url=https://bright-softwares.com/blog/ubuntu/how-to-create-a-new-sudoenabled-user-on-ubuntu-2004-quickstart" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=https://bright-softwares.com/blog/ubuntu/how-to-create-a-new-sudoenabled-user-on-ubuntu-2004-quickstart" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://bright-softwares.com/blog/ubuntu/how-to-create-a-new-sudoenabled-user-on-ubuntu-2004-quickstart" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+
+    </ul>
+    
+    <div class="sep">
+    </div>
+    <ul>
+        <li>
+        <a class="small smoothscroll" href="#disqus_thread"></a>
+        </li>
+    </ul>
+    
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="https://www.gravatar.com/avatar/?s=250&d=mm&r=x" alt="">
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark" href=""></a><a target="_blank" href="" class="btn follow">Follow</a>
+                        <span class="author-description"></span>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">How To Create a New Sudo-enabled User on Ubuntu 20.04 [Quickstart]</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid" src="https://sergio.afanou.com/assets/images/image-midres-47.jpg" alt="How To Create a New Sudo-enabled User on Ubuntu 20.04 [Quickstart]">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <h3 id="introduction">Introduction</h3>
+
+<p>When managing a server, you’ll sometimes want to allow users to execute commands as “root,” the administrator-level user. The <code>sudo</code> command provides system administrators with a way to grant administrator privileges — ordinarily only available to the <strong>root</strong> user — to normal users. </p>
+
+<p>In this tutorial, you’ll learn how to create a new user with <code>sudo</code> access on Ubuntu 20.04 without having to modify your server&rsquo;s <code>/etc/sudoers</code> file. </p>
+
+<p><span class="note"><strong>Note:</strong> If you want to configure <code>sudo</code> for an existing user, skip to step 3.<br /></span></p>
+
+<h2 id="step-1-—-logging-into-your-server">Step 1 — Logging Into Your Server</h2>
+
+<p>SSH in to your server as the <strong>root</strong> user:</p>
+<pre class="code-pre command prefixed local-environment"><code><ul class="prefixed"><li class="line" prefix="$">ssh root@<span class="highlight">your_server_ip_address</span>
+</li></ul></code></pre>
+<h2 id="step-2-—-adding-a-new-user-to-the-system">Step 2 — Adding a New User to the System</h2>
+
+<p>Use the <code>adduser</code> command to add a new user to your system:</p>
+<pre class="code-pre super_user prefixed"><code><ul class="prefixed"><li class="line" prefix="#">adduser <span class="highlight">sammy</span>
+</li></ul></code></pre>
+<p>Be sure to replace <code><span class="highlight">sammy</span></code> with the username that you want to create. You will be prompted to create and verify a password for the user:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>Enter new UNIX password:
+Retype new UNIX password:
+passwd: password updated successfully
+</code></pre>
+<p>Next, you&rsquo;ll be asked to fill in some information about the new user. It is fine to accept the defaults and leave this information blank:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output">Output</div>Changing the user information for <span class="highlight">sammy</span>
+Enter the new value, or press ENTER for the default
+    Full Name []:
+    Room Number []:
+    Work Phone []:
+    Home Phone []:
+    Other []:
+Is the information correct? [Y/n]
+</code></pre>
+<h2 id="step-3-—-adding-the-user-to-the-sudo-group">Step 3 — Adding the User to the <strong>sudo</strong> Group</h2>
+
+<p>Use the <code>usermod</code> command to add the user to the <strong>sudo</strong> group:</p>
+<pre class="code-pre super_user prefixed"><code><ul class="prefixed"><li class="line" prefix="#">usermod -aG sudo <span class="highlight">sammy</span>
+</li></ul></code></pre>
+<p>Again, be sure to replace <code><span class="highlight">sammy</span></code> with the username you just added. By default on Ubuntu, all members of the <strong>sudo</strong> group have full <code>sudo</code> privileges.</p>
+
+<h2 id="step-4-—-testing-sudo-access">Step 4 — Testing <code>sudo</code> Access</h2>
+
+<p>To test that the new <code>sudo</code> permissions are working, first use the <code>su</code> command to switch to the new user account:</p>
+<pre class="code-pre super_user prefixed"><code><ul class="prefixed"><li class="line" prefix="#">su - <span class="highlight">sammy</span>
+</li></ul></code></pre>
+<p>As the new user, verify that you can use <code>sudo</code> by prepending <code>sudo</code> to the command that you want to run with superuser privileges:</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo <span class="highlight">command_to_run</span>
+</li></ul></code></pre>
+<p>For example, you can list the contents of the <code>/root</code> directory, which is normally only accessible to the root user:</p>
+<pre class="code-pre command prefixed"><code><ul class="prefixed"><li class="line" prefix="$">sudo ls -la /root
+</li></ul></code></pre>
+<p>The first time you use <code>sudo</code> in a session, you will be prompted for the password of that user’s account. Enter the password to proceed:</p>
+<pre class="code-pre "><code><div class="secondary-code-label " title="Output:">Output:</div>[sudo] password for <span class="highlight">sammy</span>:
+</code></pre>
+<p><span class="note"><strong>Note:</strong> This is <em>not</em> asking for the <strong>root</strong> password! Enter the password of the sudo-enabled user you just created.<br /></span></p>
+
+<p>If your user is in the proper group and you entered the password correctly, the command that you issued with <code>sudo</code> will run with <strong>root</strong> privileges.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this quickstart tutorial, we created a new user account and added it to the <strong>sudo</strong> group to enable <code>sudo</code> access. </p>
+
+<p>For your new user to be granted external access, please follow our section on <a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04#step-5-%E2%80%94-enabling-external-access-for-your-regular-user">Enabling External Access for Your Regular User</a>.</p>
+
+<p>If you need more detailed information on setting up an Ubuntu 20.04 server, please read our <a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04">Initial Server Setup with Ubuntu 20.04</a> tutorial.</p>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2020-07-05">05 Jul 2020 (8 months and 1 week ago)</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#ubuntu">ubuntu</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="/blog/docker/how-to-configure-jenkins-with-ssl-using-an-nginx-reverse-proxy-on-ubuntu-2004"> &laquo; How To Configure Jenkins with SSL Using an Nginx Reverse Proxy on Ubuntu 20.04</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="/blog/ubuntu/how-to-create-a-selfsigned-ssl-certificate-for-apache-on-centos-8">How To Create a Self-Signed SSL Certificate for Apache on CentOS 8 &raquo; </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Begin Comments
+================================================== -->
+
+    <div class="container">
+        <div id="comments" class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = ''; 
+        var disqus_developer = 0;
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = window.location.protocol + '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+            </div>
+        </div>
+    </div>
+
+<!--End Comments
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+
+</div>
+
+
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#aws">aws (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#data-analysis">data-analysis (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#kubernetes">kubernetes (5)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#docker">docker (6)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#web-development">web development (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#wordpress">wordpress (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#slack">slack (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#ubuntu">ubuntu (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#javascript">javascript (2)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#database">database (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#productivity">productivity (4)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#backup-restore">backup-restore (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#fax">fax (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#screenshot">screenshot (1)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © 2021 Bright Softwares 
+            </div>
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+                <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+
+<script id="dsq-count-scr" src="//.disqus.com/count.js"></script>
+
+
+</body>
+</html>
